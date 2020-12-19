@@ -44,8 +44,8 @@
                         <h1 class="u-custom-font u-text u-text-palette-1-dark-2 u-text-1">the ​nurtury</h1>
                         <h2 class="u-custom-font u-text u-text-font u-text-palette-1-dark-1 u-text-2">Learn and Grow</h2>
                         <p class="u-text u-text-3">Vitae congue mauris rhoncus aenean vel elit scelerisque. Consequat nisl vel pretium lectus quam id leo in vitae. Dictum sit amet justo donec enim diam vulputate. Sociis natoque penatibus et magnis dis parturient. Molestie ac feugiat sed lectus vestibulum mattis.</p>
-                        <a href="Page-4.html" data-page-id="240486202" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-4-dark-2 u-radius-50 u-btn-1">log in</a>
-                        <a href="Page-3.html" data-page-id="670822574" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-4-dark-2 u-radius-50 u-btn-2">Sign up</a>
+                        <a href="{{route('login')}}" data-page-id="240486202" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-4-dark-2 u-radius-50 u-btn-1">log in</a>
+                        <a href="{{route('signup')}}" data-page-id="670822574" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-4-dark-2 u-radius-50 u-btn-2">Sign up</a>
                     </div>
                 </div>
             </div>

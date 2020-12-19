@@ -17,4 +17,14 @@ Route::get('/', function () {
     return view('landing');
 });
 
+Route::get('login',function (){
+    return view('login');
+})->name('login') ;
+
+Route::get('signup',function (){
+    return view('signUpStudent');
+})->name('signup') ;
+
+
+
 
