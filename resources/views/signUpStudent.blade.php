@@ -9,7 +9,6 @@
     <title>Sign Up Student</title>
     <link rel="stylesheet" href="/css/signUpStudent.css" media="screen">
     <link rel="stylesheet" href="/css/signUpStudent-1.css" media="screen">
-    <script class="u-script" type="text/javascript" src="/js/signUpStudentJquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="/js/signUpStudent.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.1.3, nicepage.com">
 
@@ -30,7 +29,7 @@
 </head>
 <body data-home-page="Page-1.html" data-home-page-title="Page 1" class="u-body u-overlap u-overlap-contrast"><header class="u-clearfix u-header u-header" id="sec-712f"><div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-form-1" id="form-signup-student">
-            <form action="{{ route('studentcreate') }}" method="POST" >
+            <form action="{{ route('studentcreate') }}" method="POST" class="u-clearfix u-form-spacing-0 u-form-vertical u-inner-form" style="padding: 21px;" source="custom" name="form">
                 @csrf
                 <div class="u-form-group u-form-group-1">
                     <label for="text-70fc" class="u-label u-text-palette-4-base u-label-1">Name</label>
