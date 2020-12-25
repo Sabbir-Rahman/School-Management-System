@@ -45,7 +45,7 @@
                         <h2 class="u-custom-font u-text u-text-font u-text-palette-1-dark-1 u-text-2">Learn and Grow</h2>
                         <p class="u-text u-text-3">In this quarentine period we all face new challenges with wducation. Specially child suffer a lot with this. This is out effort to help all the child with there education. We want to ensure that nothing can stop an angel from learning and growing</p>
                         <a href="{{route('login')}}" data-page-id="240486202" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-4-dark-2 u-radius-50 u-btn-1">log in</a>
-                        <a href="{{route('signup')}}" data-page-id="670822574" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-4-dark-2 u-radius-50 u-btn-2">Sign up</a>
+                        <a href="{{route('studentSignUp')}}" data-page-id="670822574" class="u-border-2 u-border-hover-palette-1-base u-border-palette-1-base u-btn u-btn-round u-button-style u-hover-palette-1-base u-palette-4-dark-2 u-radius-50 u-btn-2">Sign up</a>
                     </div>
                 </div>
             </div>
