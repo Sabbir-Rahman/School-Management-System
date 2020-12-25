@@ -1,0 +1,47 @@
+.u-section-1-1 {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("/img/signUpStudent_back.jpg");
+    background-position: 50% 50%;
+}
+
+.u-section-1-1 .u-sheet-1 {
+    min-height: 800px;
+}
+
+@media (max-width: 1199px) {
+    .u-section-1-1 .u-sheet-1 {
+        min-height: 660px;
+    }
+}
+
+@media (max-width: 991px) {
+    .u-section-1-1 .u-sheet-1 {
+        min-height: 506px;
+    }
+}
+
+@media (max-width: 767px) {
+    .u-section-1-1 .u-sheet-1 {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 575px) {
+    .u-section-1-1 .u-sheet-1 {
+        min-height: 239px;
+    }
+}.u-block-13da-2 {
+     position: absolute;
+     bottom: 10px;
+ }
+
+.u-block-13da-3 {
+    position: absolute;
+    left: 0;
+    background-image: none;
+}
+
+.u-block-13da-4 {
+    position: absolute;
+    right: 0;
+    background-image: none;
+}
