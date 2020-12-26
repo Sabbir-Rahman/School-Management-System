@@ -16,12 +16,12 @@ class TriggerStudentId extends Migration
 
     public function up()
     {
-        $unique = new uniqueId();
+        $var = 100;
 
         //
         DB::unprepared('CREATE TRIGGER student_id_auto BEFORE INSERT ON  `student_infos` FOR EACH ROW
                 BEGIN
-                    SET NEW.id = $unique->studentId(10);
+                    SET NEW.id = .$var;
                 END');
     }
 
