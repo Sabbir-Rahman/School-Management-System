@@ -41,7 +41,7 @@ class StudentAuth extends Controller
         $query = $student->save();
 
         if($query){
-            return "Data saved";
+            return view('signUpFather');
         }
         else
             return  "Something went wrong";
