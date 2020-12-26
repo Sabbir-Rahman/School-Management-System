@@ -29,7 +29,7 @@ Route::get('login',function (){
 Route::get('loginMysql',[UserAuth::class,'login']);
 Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp');
 Route::post('create',[StudentAuth::class,'create'])->name('studentcreate');
-Route::get('fatherSignUp',[fatherSignUp::class,'create'])->name('fatherCreate');
+Route::post('fatherSignUp',[fatherSignUp::class,'create'])->name('fatherCreate');
 Route::post('check',[UserAuth::class,'check'])->name('auth.check');
 
 
