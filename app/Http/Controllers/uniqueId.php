@@ -8,9 +8,9 @@ use App\Models\StudentInfo;
 class uniqueId extends Controller
 {
     //
-    function studentId(int $id)
+    function studentId()
     {
-        return $id*10;
+        return 10*10;
 
     }
 }
