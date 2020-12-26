@@ -42,7 +42,8 @@
             <br>
         </h2>
         <div class="u-form u-form-1">
-            <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 12px;" source="custom" name="form">
+            <form action="{{ route('motherCreate') }}" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 12px;" source="custom" name="form">
+                @csrf
                 <div class="u-form-group u-form-group-1">
                     <label for="text-70fc" class="u-label u-text-palette-4-base u-label-1">Mothers name</label>
                     <input type="text" placeholder="Enter mothers name" id="text-70fc" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-1">
