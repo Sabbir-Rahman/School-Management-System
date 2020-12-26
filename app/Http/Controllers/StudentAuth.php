@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\StudentInfo;
 use Illuminate\Http\Request;
 
+
 class StudentAuth extends Controller
 {
     function login()
@@ -42,6 +43,7 @@ class StudentAuth extends Controller
 
         if($query){
             return view('signUpFather');
+            //return redirect()->route('signUpFather');
         }
         else
             return  "Something went wrong";
