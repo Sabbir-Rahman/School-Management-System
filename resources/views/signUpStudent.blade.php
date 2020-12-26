@@ -140,11 +140,11 @@
                     <label for="textarea-93c3" class="u-label u-text-palette-4-base u-label-11">Hobby</label>
                     <textarea placeholder="Enter your hobby" rows="4" cols="50" id="textarea-93c3" name="student_hobby" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-10"></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" id="next-btn">&nbsp;&nbsp;Next&nbsp;&nbsp; </button>
             </form>
         </div>
         <h1 class="u-text u-title u-text-1" id="title-page">SIGN UP<br>
-            <span style="font-size: 1.25rem;">&nbsp; &nbsp; <span class="u-text-palette-1-base">STUDENT</span>
+            <span style="font-size: 1.25rem;">&nbsp; &nbsp; <span class="u-text-palette-1-base" id="sub-title">STUDENT</span>
           </span>
             <br>
         </h1>

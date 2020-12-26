@@ -4,9 +4,30 @@
  * Copyright 2014-2020 Froala Labs
  */
 
+
+
+#next-btn{
+    position: relative;
+    top: 10px;
+    background-color: #00BCD4;
+    opacity: .9;
+    color: #0f0f0f;
+}
+
+#next-btn:hover {
+    opacity: 1;
+    color: white;
+}
+
 #title-page{
     position: relative;
-    top: -55px;
+    top: -40px;
+    font-size: 30px;
+}
+
+#sub-title{
+    position: relative;
+    left: -10px;
 }
 
 #signup-student-btn-next{
@@ -5559,7 +5580,7 @@ a {
 }
 html {
     height: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 body {
