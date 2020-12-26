@@ -1,0 +1,48 @@
+.u-section-1-1 {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("/img/signUpMother_back.jpg");
+    background-position: 50% 50%;
+    height: 800px;
+}
+
+.u-section-1-1 .u-sheet-1 {
+    min-height: 788px;
+}
+
+@media (max-width: 1199px) {
+    .u-section-1-1 .u-sheet-1 {
+        min-height: 650px;
+    }
+}
+
+@media (max-width: 991px) {
+    .u-section-1-1 .u-sheet-1 {
+        min-height: 498px;
+    }
+}
+
+@media (max-width: 767px) {
+    .u-section-1-1 .u-sheet-1 {
+        min-height: 374px;
+    }
+}
+
+@media (max-width: 575px) {
+    .u-section-1-1 .u-sheet-1 {
+        min-height: 235px;
+    }
+}.u-block-13da-2 {
+     position: absolute;
+     bottom: 10px;
+ }
+
+.u-block-13da-3 {
+    position: absolute;
+    left: 0;
+    background-image: none;
+}
+
+.u-block-13da-4 {
+    position: absolute;
+    right: 0;
+    background-image: none;
+}

@@ -4,7 +4,9 @@
  * Copyright 2014-2020 Froala Labs
  */
 
-#next-btn{
+
+
+#submit-btn{
     position: relative;
     top: 10px;
     background-color: #00BCD4;
@@ -12,7 +14,7 @@
     color: #0f0f0f;
 }
 
-#next-btn:hover {
+#submit-btn:hover {
     opacity: 1;
     color: white;
 }
