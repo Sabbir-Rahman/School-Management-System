@@ -1,0 +1,13 @@
+Unique id generation for student
+
+occupation(one digit)/branch no of school(one digit)/batch no (three digit)/ roll no(three digit)
+
+class/section/shift is not included in id because it may be changed for school
+
+year of admission is not included without this batch no of the school is included because one may not always admit in class play
+
+play to six morning shift and greater day shift
+
+section is defined 80 per section
+
+batch roll no system
