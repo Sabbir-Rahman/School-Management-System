@@ -17,6 +17,7 @@ class StudentAuth extends Controller
     private  $rownum=1;
     private  $class;
     private  $uniqueId = "";
+    public $batchNo = array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 
     function login()
@@ -71,6 +72,9 @@ class StudentAuth extends Controller
         else if(strcmp($request->student_class,"Ten")==0)
             $this->batch = abs(($request->student_admission_year)-($this->estd-13))+1;
 
+        //batch wise roll no
+        $this->rownum =$this->batchNo[$this->batch]+1;
+
         //batch single digit
         if($this->batch>0 and $this->batch<10)
         {
@@ -122,7 +126,6 @@ class StudentAuth extends Controller
 
         $student = new StudentInfo();
         $student->id = $this->uniqueId;
-        dd($student->id);
         $student->student_name = $request->student_name;
         $student->student_birthdate = $request->student_birthdate;
         $student->student_blood_group = $request->student_blood_group;
@@ -137,7 +140,8 @@ class StudentAuth extends Controller
         $query = $student->save();
 
         if($query){
-            $this->rownum++;
+            //batch wise roll no increment
+            $this->batchNo[$this->batch]++;
             return view('signUpFather');
             //return redirect()->route('signUpFather');
         }
