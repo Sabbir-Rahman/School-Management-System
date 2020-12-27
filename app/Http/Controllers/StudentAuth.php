@@ -15,7 +15,6 @@ class StudentAuth extends Controller
     private  $shift;
     private  $section;
     private  $rownum=1;
-    private  $class;
     private  $uniqueId = "";
     public $batchNo = array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
@@ -43,34 +42,62 @@ class StudentAuth extends Controller
         $this->occupation = 1;
         $this->branch = 1;
         //batch no calculation
-        if(strcmp($request->student_class,"Play")==0)
-            $this->batch = abs(($request->student_admission_year)-$this->estd)+1;
-        else if(strcmp($request->student_class,"Nursury")==0)
+        if(strcmp($request->student_class,"Play")==0) {
+            $this->batch = abs(($request->student_admission_year) - $this->estd) + 1;
+            $this->shift = 'Morning';
+        }
+        else if(strcmp($request->student_class,"Nursury")==0){
             $this->batch = abs(($request->student_admission_year)-($this->estd-1))+1;
-        else if(strcmp($request->student_class,"KG-1")==0)
+            $this->shift = 'Morning';
+        }
+        else if(strcmp($request->student_class,"KG-1")==0){
             $this->batch = abs(($request->student_admission_year)-($this->estd-2))+1;
-        else if(strcmp($request->student_class,"KG-2")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-3))+1;
-        else if(strcmp($request->student_class,"One")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-4))+1;
-        else if(strcmp($request->student_class,"Two")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-5))+1;
-        else if(strcmp($request->student_class,"Three")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-6))+1;
-        else if(strcmp($request->student_class,"Four")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-7))+1;
-        else if(strcmp($request->student_class,"Five")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-8))+1;
-        else if(strcmp($request->student_class,"Six")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-9))+1;
-        else if(strcmp($request->student_class,"Seven")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-10))+1;
-        else if(strcmp($request->student_class,"Eight")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-11))+1;
-        else if(strcmp($request->student_class,"Nine")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-12))+1;
-        else if(strcmp($request->student_class,"Ten")==0)
-            $this->batch = abs(($request->student_admission_year)-($this->estd-13))+1;
+            $this->shift = 'Morning';
+        }
+        else if(strcmp($request->student_class,"KG-2")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 3)) + 1;
+            $this->shift = 'Morning';
+        }
+        else if(strcmp($request->student_class,"One")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 4)) + 1;
+            $this->shift = 'Morning';
+        }
+        else if(strcmp($request->student_class,"Two")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 5)) + 1;
+            $this->shift = 'Morning';
+        }
+        else if(strcmp($request->student_class,"Three")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 6)) + 1;
+            $this->shift = 'Morning';
+        }
+        else if(strcmp($request->student_class,"Four")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 7)) + 1;
+            $this->shift = 'Morning';
+        }
+        else if(strcmp($request->student_class,"Five")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 8)) + 1;
+            $this->shift = 'Morning';
+        }
+        else if(strcmp($request->student_class,"Six")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 9)) + 1;
+            $this->shift = 'Day';
+        }
+        else if(strcmp($request->student_class,"Seven")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 10)) + 1;
+            $this->shift = 'Day';
+        }
+        else if(strcmp($request->student_class,"Eight")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 11)) + 1;
+            $this->shift = 'Day';
+        }
+        else if(strcmp($request->student_class,"Nine")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 12)) + 1;
+            $this->shift = 'Day';
+        }
+        else if(strcmp($request->student_class,"Ten")==0) {
+            $this->batch = abs(($request->student_admission_year) - ($this->estd - 13)) + 1;
+            $this->shift = 'Day';
+        }
 
         //batch wise roll no
         $this->rownum =$this->batchNo[$this->batch]+1;
@@ -120,6 +147,12 @@ class StudentAuth extends Controller
 
 
 
+        //section no
+        $this->section = (int)($this->rownum/80) +1;
+
+
+
+        dd($this->section);
 
 
         //register new user

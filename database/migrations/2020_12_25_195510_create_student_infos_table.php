@@ -20,17 +20,17 @@ class CreateStudentInfosTable extends Migration
             $table->text('student_blood_group');
             $table->text('student_address');
             $table->text('student_gender');
-            //$table->text('student_school_branch');
+            $table->text('student_school_branch');
             $table->text('student_class');
-            //$table->text('student_shift');
-            //$table->text('student_section');
+            $table->text('student_shift');
+            $table->text('student_section');
             $table->text('student_medium');
             $table->text('student_group');
             $table->text('student_religion');
             $table->text('student_admission_year');
             $table->text('student_hobby');
-            //$table->text('password');
-            //$table->text('extra');
+            $table->text('password');
+            $table->text('extra');
             $table->timestamps();
         });
     }
