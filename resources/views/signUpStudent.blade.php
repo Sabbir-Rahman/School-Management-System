@@ -134,11 +134,19 @@
                 </div>
                 <div class="u-form-group u-form-group-10">
                     <label for="address-ba13" class="u-label u-text-palette-4-base u-label-10">Admission year</label>
-                    <input type="text" placeholder="Enter year you want to take admission" id="address-ba13" name="student_admission_year" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-4" required="">
+                    <input type="number" placeholder="Enter year you want to take admission" id="address-ba13" name="student_admission_year" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-4" required="">
                 </div>
                 <div class="u-form-group u-form-group-11">
-                    <label for="textarea-93c3" class="u-label u-text-palette-4-base u-label-11">Hobby</label>
+                    <label for="address-ba13" class="u-label u-text-palette-4-base u-label-10">Password</label>
+                    <input type="password" placeholder="Password" id="address-ba13" name="student_password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-4" required="">
+                </div>
+                <div class="u-form-group u-form-group-12">
+                    <label for="textarea-93c3" class="u-label u-text-palette-4-base u-label-10">Hobby</label>
                     <textarea placeholder="Enter your hobby" rows="4" cols="50" id="textarea-93c3" name="student_hobby" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-10"></textarea>
+                </div>
+                <div class="u-form-group u-form-group-12">
+                    <label for="textarea-93c3" class="u-label u-text-palette-4-base u-label-10">Comment</label>
+                    <textarea placeholder="Enter anything you want to say" rows="4" cols="50" id="textarea-93c3" name="student_comment" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-10"></textarea>
                 </div>
                 <button type="submit" id="next-btn">&nbsp;&nbsp;Next&nbsp;&nbsp; </button>
             </form>
@@ -150,9 +158,7 @@
         </h1>
     </div></header>
 <section id="carousel_15c4" class="u-carousel u-slide u-block-13da-1" data-u-ride="carousel" data-interval="5000">
-    <ol class="u-absolute-hcenter u-carousel-indicators u-block-13da-2">
-        <li data-u-target="#carousel_15c4" data-u-slide-to="0" class="u-active u-grey-30"></li>
-    </ol>
+
     <div class="u-carousel-inner" role="listbox">
         <div class="u-active u-align-center u-carousel-item u-clearfix u-image u-shading u-section-1-1" src="" data-image-width="1280" data-image-height="720">
             <div class="u-clearfix u-sheet u-sheet-1"></div>

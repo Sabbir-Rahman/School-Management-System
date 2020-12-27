@@ -21,7 +21,7 @@
 
 #title-page{
     position: relative;
-    top: -40px;
+    top: -200px;
     font-size: 30px;
 }
 
@@ -5580,7 +5580,7 @@ a {
 }
 html {
     height: 100%;
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 body {

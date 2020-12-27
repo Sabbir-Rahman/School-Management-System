@@ -46,31 +46,31 @@
                 @csrf
                 <div class="u-form-group u-form-group-1">
                     <label for="text-70fc" class="u-label u-text-palette-4-base u-label-1">Mothers name</label>
-                    <input type="text" placeholder="Enter mothers name" id="text-70fc" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-1">
+                    <input type="text" placeholder="Enter mothers name" id="text-70fc" name="Mother_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-1">
                 </div>
                 <div class="u-form-date u-form-group u-form-group-2" id="form-date-input">
                     <label for="date-c95b" class="u-label u-text-palette-4-base u-label-2">Date of birth mother</label>
-                    <input type="date"  placeholder="Date of birth" id="date-c95b" name="date" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-2">
+                    <input type="date"  placeholder="Date of birth" id="date-c95b" name="Mother_birthdate" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-2">
                 </div>
                 <div class="u-form-group u-form-group-3">
                     <label for="text-aa3f" class="u-label u-text-palette-4-base u-label-3">Occupation</label>
-                    <input type="text" placeholder="Enter your occupation" id="text-aa3f" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-3">
+                    <input type="text" placeholder="Enter your occupation" id="text-aa3f" name="Mother_occupation" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-3">
                 </div>
                 <div class="u-form-group u-form-group-4">
                     <label for="text-af5c" class="u-label u-text-palette-4-base u-label-4">Monthly Income In tk</label>
-                    <input type="text" placeholder="Enter income digit" id="text-af5c" name="text-4" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-4">
+                    <input type="text" placeholder="Enter income digit" id="text-af5c" name="Mother_income" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-4">
                 </div>
                 <div class="u-form-group u-form-group-5">
                     <label for="text-e985" class="u-label u-text-palette-4-base u-label-5">NID</label>
-                    <input type="text" placeholder="National Id" id="text-e985" name="text-2" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-5">
+                    <input type="text" placeholder="National Id" id="text-e985" name="Mother_nid" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-5">
                 </div>
                 <div class="u-form-group u-form-group-6">
                     <label for="text-ba81" class="u-label u-text-palette-4-base u-label-6">Address</label>
-                    <input type="text" placeholder="Enter address" id="text-ba81" name="text-3" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-6">
+                    <input type="text" placeholder="Enter address" id="text-ba81" name="Mother_address" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-6">
                 </div>
                 <div class="u-form-group u-form-phone u-form-group-7">
                     <label for="phone-54c7" class="u-label u-text-palette-4-base u-label-7">Contact no</label>
-                    <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-54c7" name="phone" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-7" required="">
+                    <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-54c7" name="Mother_phone" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-7" required="">
                 </div>
                 <button type="submit" id="submit-btn">&nbsp;&nbsp;Submit&nbsp;&nbsp; </button>
             </form>

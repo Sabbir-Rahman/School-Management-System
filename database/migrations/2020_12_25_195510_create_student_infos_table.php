@@ -30,7 +30,7 @@ class CreateStudentInfosTable extends Migration
             $table->text('student_admission_year');
             $table->text('student_hobby');
             $table->text('password');
-            $table->text('extra');
+            $table->text('comment');
             $table->timestamps();
         });
     }
