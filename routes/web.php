@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentAuth;
 use App\Http\Controllers\fatherSignUp;
 use App\Http\Controllers\motherSignUp;
+use App\Http\Controllers\login;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp')
 Route::post('create',[StudentAuth::class,'create'])->name('studentcreate');
 Route::post('fatherSignUp',[fatherSignUp::class,'create'])->name('fatherCreate');
 Route::post('motherSignUp',[motherSignUp::class,'create'])->name('motherCreate');
+Route::post('loginCheck',[login::class,'loginCheck'])->name('loginCheck');
 
 
 

@@ -36,20 +36,17 @@
         <div class="u-active u-align-left u-carousel-item u-clearfix u-image u-shading u-section-1-1" src="" data-image-width="1280" data-image-height="853">
             <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
                 <div class="u-form u-form-1">
-                    <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+                    <form action="{{ route('loginCheck') }}" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+                        @csrf
                         <div class="u-form-group u-form-name">
                             <label for="name-56ac" class="u-form-control-hidden u-label">Id</label>
                             <input type="number" placeholder="Enter your id" id="name-56ac" name="Login_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-30" required="">
                         </div>
                         <div class="u-form-email u-form-group">
                             <label for="email-56ac" class="u-form-control-hidden u-label">Password</label>
-                            <input type="password" placeholder="Enter your password" id="email-56ac" name="Login_pass" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-30" required="">
+                            <input type="password" placeholder="Enter your password" id="email-56ac" name="Login_password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-radius-30" required="">
                         </div>
-                        <div class="u-align-center u-form-group u-form-submit">
-                            <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-radius-50">Log In<br>
-                            </a>
-                            <input type="submit" value="submit" class="u-form-control-hidden">
-                        </div>
+                        <button type="submit" id="next-btn">&nbsp;&nbsp;Login&nbsp;&nbsp; </button>
 
                     </form>
                 </div>
