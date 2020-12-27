@@ -134,7 +134,7 @@
                 </div>
                 <div class="u-form-group u-form-group-10">
                     <label for="address-ba13" class="u-label u-text-palette-4-base u-label-10">Admission year</label>
-                    <input type="text" placeholder="Enter year you want to take admission" id="address-ba13" name="student_admission_year" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-4" required="">
+                    <input type="number" placeholder="Enter year you want to take admission" id="address-ba13" name="student_admission_year" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-4" required="">
                 </div>
                 <div class="u-form-group u-form-group-11">
                     <label for="textarea-93c3" class="u-label u-text-palette-4-base u-label-11">Hobby</label>
