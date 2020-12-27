@@ -99,15 +99,29 @@ class StudentAuth extends Controller
                 $this->uniqueId = strval($this->occupation).strval($this->branch).'0'.strval($this->batch).'0'.strval($this->rownum);
 
         }
+        //batch three digit
+        else
+        {
+            if($this->rownum>0 and $this->rownum<10)
+                //occupation/branch/batch/no
+                $this->uniqueId = strval($this->occupation).strval($this->branch).strval($this->batch).'00'.strval($this->rownum);
+            else if($this->rownum>9 and $this->rownum<100)
+                //occupation/branch/batch/no
+                $this->uniqueId = strval($this->occupation).strval($this->branch).strval($this->batch).'0'.strval($this->rownum);
+            else
+                //occupation/branch/batch/no
+                $this->uniqueId = strval($this->occupation).strval($this->branch).strval($this->batch).'0'.strval($this->rownum);
+
+        }
 
 
 
-        dd($this->uniqueId);
+
 
         //register new user
 
         $student = new StudentInfo();
-        $student->id = strval($this->rownum).$this->occupation;
+        $student->id = $this->uniqueId;
         dd($student->id);
         $student->student_name = $request->student_name;
         $student->student_birthdate = $request->student_birthdate;
