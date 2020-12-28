@@ -25,14 +25,22 @@ Route::get('login',function (){
     return view('login');
 })->name('login') ;
 
+Route::get('fatherSignUp',function (){
+    return view('signUpFather');
+})->name('fatherSignUp') ;
+
+Route::get('motherSignUp',function (){
+    return view('signUpMother');
+})->name('motherSignUp') ;
+
 
 
 
 Route::get('loginMysql',[UserAuth::class,'login']);
 Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp');
 Route::post('create',[StudentAuth::class,'create'])->name('studentcreate');
-Route::post('fatherSignUp',[fatherSignUp::class,'create'])->name('fatherCreate');
-Route::post('motherSignUp',[motherSignUp::class,'create'])->name('motherCreate');
+Route::post('fatherSignUpCreate',[fatherSignUp::class,'create'])->name('fatherCreate');
+Route::post('motherSignUpCreate',[motherSignUp::class,'create'])->name('motherCreate');
 Route::post('loginCheck',[login::class,'loginCheck'])->name('loginCheck');
 
 
