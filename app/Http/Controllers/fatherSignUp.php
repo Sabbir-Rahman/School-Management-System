@@ -7,11 +7,15 @@ use Illuminate\Http\Request;
 
 class fatherSignUp extends Controller
 {
+    public $studentId;
+    public $fatherId='';
     function create(Request $request){
 
-
+        $this->studentId = $request->Student_id;
+        $this->fatherId = strval($this->studentId).'1';
         //register new user
         $father = new father_info();
+        $father->id = $this->fatherId;
         $father->name = $request->Father_name;
         $father->birthdate = $request->Father_birthdate;
         $father->occupation = $request->Father_occupation;

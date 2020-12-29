@@ -45,6 +45,10 @@
             <form action="{{ route('fatherCreate') }}" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 12px;" source="custom" name="form">
                 @csrf
                 <div class="u-form-group u-form-group-1">
+                    <label for="text-70fc" class="u-label u-text-palette-4-base u-label-1">Student id</label>
+                    <input type="number" placeholder="Enter student id" id="text-70fc" name="Student_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-1">
+                </div>
+                <div class="u-form-group u-form-group-1">
                     <label for="text-70fc" class="u-label u-text-palette-4-base u-label-1">Fathers name</label>
                     <input type="text" placeholder="Enter fathers name" id="text-70fc" name="Father_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-1">
                 </div>
@@ -71,6 +75,14 @@
                 <div class="u-form-group u-form-phone u-form-group-7">
                     <label for="phone-54c7" class="u-label u-text-palette-4-base u-label-7">Contact no</label>
                     <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-54c7" name="Father_phone" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-7" required="">
+                </div>
+                <div class="u-form-group u-form-group-6">
+                    <label for="text-ba81" class="u-label u-text-palette-4-base u-label-6">Password</label>
+                    <input type="password" placeholder="Enter address" id="text-ba81" name="Father_password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-6">
+                </div>
+                <div class="u-form-group u-form-group-6">
+                    <label for="textarea-93c3" class="u-label u-text-palette-4-base u-label-10">Comment</label>
+                    <textarea placeholder="Enter anything you want to say" rows="4" cols="50" id="textarea-93c3" name="Father_comment" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-10"></textarea>
                 </div>
                 <button type="submit" id="next-btn">&nbsp;&nbsp;Next&nbsp;&nbsp; </button>
             </form>
