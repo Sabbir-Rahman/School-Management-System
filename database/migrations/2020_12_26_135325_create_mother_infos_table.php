@@ -23,7 +23,7 @@ class CreateMotherInfosTable extends Migration
             $table->text('address');
             $table->text('phone');
             $table->text('password');
-            $table->text('extra');
+            $table->text('comment');
             $table->timestamps();
         });
     }

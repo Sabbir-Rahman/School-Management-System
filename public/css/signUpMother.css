@@ -5560,7 +5560,7 @@ a {
 }
 html {
     height: 100%;
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 body {
