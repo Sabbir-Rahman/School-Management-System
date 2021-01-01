@@ -9,23 +9,31 @@ use App\Models\mother_info;
 
 class login extends Controller
 {
+    private $afterLoginView = '';
     function loginCheck(Request $request){
 
         //father id
-        if(strlen($request->Login_id)==9 and $request->Login_id[8]==1)
-            $id = father_info::where('id','=',$request->Login_id)->first();
+        if(strlen($request->Login_id)==9 and $request->Login_id[8]==1) {
+            $id = father_info::where('id', '=', $request->Login_id)->first();
+            $this->afterLoginView = 'fatherLandingPage';
+        }
         //mother id
-        else if(strlen($request->Login_id)==9 and $request->Login_id[8]==2)
-            $id = mother_info::where('id','=',$request->Login_id)->first();
+        else if(strlen($request->Login_id)==9 and $request->Login_id[8]==2) {
+            $id = mother_info::where('id', '=', $request->Login_id)->first();
+            $this->afterLoginView = 'motherLandingPage';
+        }
         //student id
-        else if(strlen($request->Login_id)==8)
-            $id = StudentInfo::where('id','=',$request->Login_id)->first();
-        else
+        else if(strlen($request->Login_id)==8) {
+            $id = StudentInfo::where('id', '=', $request->Login_id)->first();
+            $this->afterLoginView = 'studentLandingPage';
+        }
+        else {
             return "No account";
+        }
 
         if($id){
             if($request->Login_password==$id->password){
-                return "Logged in";
+                return view($this->afterLoginView,['name'=>$id->name]);
             }
             else
                 return "Invalid password";
