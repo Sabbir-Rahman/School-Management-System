@@ -15,7 +15,7 @@ class CreateStudentInfosTable extends Migration
     {
         Schema::create('student_infos', function (Blueprint $table) {
             $table->id();
-            $table->text('student_name');
+            $table->text('name');
             $table->text('student_birthdate');
             $table->text('student_blood_group');
             $table->text('student_address');

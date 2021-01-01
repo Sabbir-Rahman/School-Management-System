@@ -162,11 +162,12 @@ class StudentAuth extends Controller
 
 
 
+
         //register new user
 
         $student = new StudentInfo();
         $student->id = $this->uniqueId;
-        $student->student_name = $request->student_name;
+        $student->name = $request->student_name;
         $student->student_birthdate = $request->student_birthdate;
         $student->student_blood_group = $request->student_blood_group;
         $student->student_address = $request->student_address;
@@ -186,7 +187,7 @@ class StudentAuth extends Controller
 
         if($query){
 
-            return view('signUpStudentConfirm',['id'=>$student->id,'name'=> $student->student_name,'batch'=>$this->batch,'class'=> $student->student_class,'shift'=> $student->student_shift,'section'=>$student->student_section]);
+            return view('signUpStudentConfirm',['id'=>$student->id,'name'=> $student->name,'batch'=>$this->batch,'class'=> $student->student_class,'shift'=> $student->student_shift,'section'=>$student->student_section]);
             //return redirect()->route('signUpFather');
         }
         else

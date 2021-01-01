@@ -45,6 +45,10 @@
             <form action="{{ route('motherCreate') }}" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 12px;" source="custom" name="form">
                 @csrf
                 <div class="u-form-group u-form-group-1">
+                    <label for="text-70fc" class="u-label u-text-palette-4-base u-label-1">Student id</label>
+                    <input type="number" placeholder="Enter student id" id="text-70fc" name="Student_id" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-1">
+                </div>
+                <div class="u-form-group u-form-group-1">
                     <label for="text-70fc" class="u-label u-text-palette-4-base u-label-1">Mothers name</label>
                     <input type="text" placeholder="Enter mothers name" id="text-70fc" name="Mother_name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-1">
                 </div>
@@ -72,6 +76,14 @@
                     <label for="phone-54c7" class="u-label u-text-palette-4-base u-label-7">Contact no</label>
                     <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-54c7" name="Mother_phone" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-7" required="">
                 </div>
+                <div class="u-form-group u-form-group-6">
+                    <label for="text-ba81" class="u-label u-text-palette-4-base u-label-6">Password</label>
+                    <input type="password" placeholder="Enter address" id="text-ba81" name="Mother_password" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-6">
+                </div>
+                <div class="u-form-group u-form-group-6">
+                    <label for="textarea-93c3" class="u-label u-text-palette-4-base u-label-6">Comment</label>
+                    <textarea placeholder="Enter anything you want to say" rows="4" cols="50" id="textarea-93c3" name="Mother_comment" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-10"></textarea>
+                </div>
                 <button type="submit" id="submit-btn">&nbsp;&nbsp;Submit&nbsp;&nbsp; </button>
             </form>
         </div>
@@ -83,20 +95,7 @@
             <div class="u-clearfix u-sheet u-sheet-1"></div>
         </div>
     </div>
-    <a class="u-absolute-vcenter u-border-2 u-border-palette-1-base u-carousel-control u-carousel-control-prev u-hidden u-icon-circle u-spacing-10 u-text-palette-1-base u-block-13da-3" href="#carousel_15c4" role="button" data-u-slide="prev">
-        <span aria-hidden="true">
-          <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
-                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
-        </span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="u-absolute-vcenter u-border-2 u-border-palette-1-base u-carousel-control u-carousel-control-next u-hidden u-icon-circle u-spacing-10 u-text-palette-1-base u-block-13da-4" href="#carousel_15c4" role="button" data-u-slide="next">
-        <span aria-hidden="true">
-          <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
-        </span>
-        <span class="sr-only">Next</span>
-    </a>
+
 </section>
 
 
