@@ -42,7 +42,7 @@
                 <h4 color="white"><font color="white">Never forget your student ID!!!</font> </h4>
                 <a href="{{route('fatherSignUp')}}" ><button>Continue to father signup</button></a></div>
         </div>
-        <img src="pubimages/57e3d5434850aa14f6da8c7dda793678153bdee757596c48732f72d1914bcd51b8_1280.png" alt="" class="u-image u-image-default u-image-1" data-image-width="1280" data-image-height="1068">
+        <img src="public/images/57e3d5434850aa14f6da8c7dda793678153bdee757596c48732f72d1914bcd51b8_1280.png" alt="" class="u-image u-image-default u-image-1" data-image-width="1280" data-image-height="1068">
     </div>
     </div>
 </section>
