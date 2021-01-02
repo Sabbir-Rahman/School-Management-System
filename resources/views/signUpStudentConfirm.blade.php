@@ -6,11 +6,10 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Page 1</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-    <link rel="stylesheet" href="Page-1.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <title>Student Added Confirm Page</title>
+    <link rel="stylesheet" href="/css/studentSignUpConfirm.css" media="screen">
+    <link rel="stylesheet" href="/css/studentSignUpConfirm-1.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/js/signUpStudentConfirm.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.2.3, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
 
@@ -30,20 +29,20 @@
 <body data-home-page="Page-1.html" data-home-page-title="Page 1" class="u-body">
 <section class="u-clearfix u-gradient u-section-1" id="sec-e271">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-container-style u-group u-opacity u-opacity-45 u-palette-1-base u-radius-50 u-shape-round u-group-1">
-            <div class="u-container-layout u-container-layout-1">
+        <div id="text-box" class="u-container-style u-group u-opacity u-opacity-45 u-palette-1-base u-radius-50 u-shape-round u-group-1">
+            <div  class="u-container-layout u-container-layout-1">
                 <h6>Student succesfully added to database</h6>
                 <h6>Student name {{$name}}</h6>
-                <h6><font color="white"> Student id: {{$id}}</font></h6>
+                <h4><font color="blue"> Student id: {{$id}}</font></h4>
                 <h6 color="white">Student batch: {{$batch}}</h6>
                 <h6 color="white">Student class: {{$class}}</h6>
                 <h6 color="white">Student shift: {{$shift}}</h6>
                 <h6 color="white">Student section: {{$section}}</h6>
-                <h4 color="white"><font color="white">Never forget your student ID!!!</font> </h4>
+                <h2 color="white"><font color="red">Never forget your student ID!!!</font> </h2>
                 <a href="{{route('fatherSignUp')}}" ><button>Continue to father signup</button></a></div>
         </div>
-        <img src="public/images/57e3d5434850aa14f6da8c7dda793678153bdee757596c48732f72d1914bcd51b8_1280.png" alt="" class="u-image u-image-default u-image-1" data-image-width="1280" data-image-height="1068">
     </div>
+    <img id="back-img" src="/img/signUpStudentConfirmBack.png" alt="" class="u-image u-image-default u-image-1" data-image-width="674" data-image-height="370">
     </div>
 </section>
 
