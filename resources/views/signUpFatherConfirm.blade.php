@@ -31,10 +31,10 @@
     <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-container-style u-group u-opacity u-opacity-85 u-palette-1-base u-radius-50 u-shape-round u-group-1">
             <div class="u-container-layout u-container-layout-1">
-                <h2>Father succesfully added to database</h2>
-                <h2>Father name: {{$name}}</h2>
-                <h2><font color="blue"> Father id: {{$id}}</font></h2>
-                <h1><font color="red">Dont forget the father id you will need it all over your life !!!</font> </h1>
+                <h6>Father succesfully added to database.</h6>
+                <h6>Father name: {{$name}}</h6>
+                <h6><font color="blue"> Father id: {{$id}}</font></h6>
+                <h4><font color="red">Dont forget the father id you will need it all over your life!!!</font> </h4>
                 <a href="{{route('motherSignUp')}}"><button id="button-style,button,button:hover">Continue to mother signup</button></a>
 
             </div>
