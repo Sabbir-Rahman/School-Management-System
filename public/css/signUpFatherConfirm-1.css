@@ -1,0 +1,71 @@
+.u-section-1 {
+    background-image: url("/img/signUpFatherConfirm.jpg");
+    background-position: 50% 50%;
+}
+
+.u-section-1 .u-sheet-1 {
+    min-height: 100vh;
+}
+
+.u-section-1 .u-group-1 {
+    width: 724px;
+    min-height: 511px;
+    height: auto;
+    background-image: none;
+    margin: 43px auto 60px -47px;
+}
+
+.u-section-1 .u-container-layout-1 {
+    padding: 30px;
+}
+
+.u-section-1 .u-text-1 {
+    margin: 17px 224px 0 46px;
+}
+
+@media (max-width: 1199px) {
+    .u-section-1 .u-sheet-1 {
+        min-height: 686px;
+    }
+
+    .u-section-1 .u-group-1 {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .u-section-1 .u-sheet-1 {
+        min-height: 664px;
+    }
+
+    .u-section-1 .u-group-1 {
+        width: 540px;
+        margin-left: 0;
+    }
+
+    .u-section-1 .u-container-layout-1 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .u-section-1 .u-text-1 {
+        margin-right: 126px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .u-section-1 .u-sheet-1 {
+        min-height: 514px;
+    }
+
+    .u-section-1 .u-group-1 {
+        width: 340px;
+    }
+
+    .u-section-1 .u-text-1 {
+        margin-right: 0;
+    }
+
+    }
+
