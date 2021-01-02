@@ -33,6 +33,9 @@ Route::get('motherSignUp',function (){
     return view('signUpMother');
 })->name('motherSignUp') ;
 
+Route::get('signUpOption',function (){
+    return view('signUpOption');
+})->name('signUpOption') ;
 
 
 
