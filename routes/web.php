@@ -5,7 +5,7 @@ use App\Http\Controllers\StudentAuth;
 use App\Http\Controllers\fatherSignUp;
 use App\Http\Controllers\motherSignUp;
 use App\Http\Controllers\login;
-use App\Http\Controllers\teacher_info;
+use App\Http\Controllers\teacherAuth;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ Route::post('fatherSignUpCreate',[fatherSignUp::class,'create'])->name('fatherCr
 Route::post('motherSignUpCreate',[motherSignUp::class,'create'])->name('motherCreate');
 Route::post('loginCheck',[login::class,'loginCheck'])->name('loginCheck');
 
-Route::post('teacherSigningUp',[teacher_info::class,'addData'])->name('teacherSigningUp');
+Route::post('teacherSigningUp',[teacherAuth::class,'addData'])->name('teacherSigningUp');
 
 
 
