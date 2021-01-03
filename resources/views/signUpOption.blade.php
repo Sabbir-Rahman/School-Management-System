@@ -95,7 +95,7 @@
 </g></svg></span>
                         <blockquote class="u-text u-text-3">Any institute is meaningless without it's working force. In our school we have our family. You may be a teacher, an admin, an operator, a watchman or anthying in our working force.<br>Press the button and confirm your registration
                         </blockquote>
-                        <a href="https://nicepage.com/templates" class="u-border-2 u-border-palette-4-base u-btn u-btn-round u-button-style u-hover-palette-4-base u-none u-radius-6 u-text-hover-black u-btn-3">Sign Up As Officials</a>
+                        <a href="{{route('teacherSignUp')}}" class="u-border-2 u-border-palette-4-base u-btn u-btn-round u-button-style u-hover-palette-4-base u-none u-radius-6 u-text-hover-black u-btn-3">Sign Up As Officials</a>
                     </div>
                 </div>
             </div>
