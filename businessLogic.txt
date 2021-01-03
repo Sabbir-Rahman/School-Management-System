@@ -11,3 +11,7 @@ play to six morning shift and greater day shift
 section is defined 80 per section
 
 batch roll no system
+
+
+===staff id=====
+branch no(two digit)/occupation(two digit)/special skill-subject(two digit)/joining year(4 digit)/id(three digit)
