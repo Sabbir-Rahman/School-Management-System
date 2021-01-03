@@ -4,6 +4,13 @@
  * Copyright 2014-2020 Froala Labs
  */
 
+
+
+#form-teacher{
+    position: relative;
+    top: 200px;
+}
+
 .fr-clearfix::after {
     clear: both;
     display: block;
@@ -32116,7 +32123,7 @@ blockquote
 
 
 .u-footer {
-    background-image: url("public/img/teacherSignUpBack.jpg");
+    background-image: url("/img/teacherSignUpBack.jpg");
     background-position: 50% 50%;
     min-height: 1665px;
 }

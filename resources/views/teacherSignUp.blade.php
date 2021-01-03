@@ -6,7 +6,7 @@
     <meta name="keywords" content="Teacher's Sign Up​">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Page 5</title>
+    <title>Teacher sign up</title>
     <link rel="stylesheet" href="/css/teacherSignUp.css" media="screen">
     <link rel="stylesheet" href="/css/teacherSignUp-1.css" media="screen">
     <script class="u-script" type="text/javascript" src="/js/teacherSignUp.js" defer=""></script>
@@ -30,7 +30,7 @@
 
 <footer class="u-align-center u-clearfix u-footer u-image u-footer" id="sec-9343" data-image-width="1280" data-image-height="853"><h1 class="u-text u-text-white u-text-1">
         <span style="font-weight: 700;">Teacher's Sign Up</span>
-    </h1><p class="u-small-text u-text u-text-variant u-text-2">Sample footer text</p><div class="u-align-left u-form u-form-1">
+    </h1><div id="form-teacher" class="u-align-left u-form u-form-1">
         <form action="#" method="POST" class="u-clearfix u-form-spacing-7 u-form-vertical u-inner-form" style="padding: 8px;" source="custom" name="form">
             <div class="u-form-group u-form-name">
                 <label for="name-3b9a" class="u-label u-text-white u-label-1">Teacher's Name</label>
