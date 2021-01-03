@@ -49,23 +49,23 @@
                 <label for="text-ab8d" class="u-label u-text-white u-label-4">Experiences</label>
                 <input type="text" placeholder="Enter your experiences" id="text-ab8d" name="teacher_experience" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
-            <div class="u-form-group u-form-group-3">
+            <div class="u-form-group u-form-group-5">
                 <label for="text-9fa4" class="u-label u-text-white u-label-3">Joining Year</label>
                 <input type="number" placeholder="Enter your joining year" id="text-9fa4" name="teacher_joining_year" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
-            <div class="u-form-group u-form-group-5">
+            <div class="u-form-group u-form-group-6">
                 <label for="text-f143" class="u-label u-text-white u-label-5">Father's Name</label>
                 <input type="text" placeholder="Enter your father's name" id="text-f143" name="teacher_father_name" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
-            <div class="u-form-group u-form-group-6">
+            <div class="u-form-group u-form-group-7">
                 <label for="text-1ec9" class="u-label u-text-white u-label-6">Mother's Name</label>
                 <input type="text" placeholder="Enter your mother's name" id="text-1ec9" name="teacher_mother_name" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
-            <div class="u-form-group u-form-group-7">
+            <div class="u-form-group u-form-group-8">
                 <label for="text-fd11" class="u-label u-text-white u-label-7">NID</label>
                 <input type="text" placeholder="Enter your NID" id="text-fd11" name="teacher_nid" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
-            <div class="u-form-group u-form-select u-form-group-8">
+            <div class="u-form-group u-form-select u-form-group-9">
                 <label for="select-861e" class="u-label u-text-white u-label-8">Gender</label>
                 <div class="u-form-select-wrapper">
                     <select id="select-861e" name="teacher_gender" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" autofocus="autofocus">
@@ -77,32 +77,32 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
                 </div>
             </div>
-            <div class="u-form-group u-form-group-9">
+            <div class="u-form-group u-form-group-10">
                 <label for="text-52d9" class="u-label u-text-white u-label-9">Hobby</label>
                 <input type="text" placeholder="Enter your hobby" id="text-52d9" name="teacher_hobby" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
-            <div class="u-form-address u-form-group u-form-group-10">
+            <div class="u-form-address u-form-group u-form-group-11">
                 <label for="address-dae7" class="u-label u-text-white u-label-10">Address</label>
                 <input type="text" placeholder="Enter your address" id="address-dae7" name="teacher_address" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-11">
+            <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-12">
                 <label for="phone-5737" class="u-label u-text-white u-label-11">Contact No.</label>
                 <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-5737" name="teacher_contact" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-12">
+            <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-13">
                 <label for="phone-19c5" class="u-label u-text-white u-label-12">Optional Contact. No</label>
                 <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-19c5" name="teacher_contact_optional" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-13">
-                <label for="text-7d34" class="u-label u-text-white u-label-13">Password</label>
+            <div class="u-form-group u-form-partition-factor-2 u-form-group-14">
+                <label for="text-7d34" class="u-label u-text-white u-label-14">Password</label>
                 <input type="text" placeholder="Enter your password" id="text-7d34" name="teacher_password" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-14">
-                <label for="text-2e5a" class="u-label u-text-white u-label-14">Confirm password</label>
+            <div class="u-form-group u-form-partition-factor-2 u-form-group-15">
+                <label for="text-2e5a" class="u-label u-text-white u-label-15">Confirm password</label>
                 <input type="text" placeholder="Re-enter your password" id="text-2e5a" name="text-4" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
             <div class="u-form-group u-form-group-15">
-                <label for="textarea-dad0" class="u-label u-text-white u-label-15">Comment</label>
+                <label for="textarea-dad0" class="u-label u-text-white u-label-16">Comment</label>
                 <textarea placeholder="Add your comments if need" rows="4" cols="50" id="textarea-dad0" name="teacher_comment" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white"></textarea>
             </div>
             <button type="submit">Submit</button>
