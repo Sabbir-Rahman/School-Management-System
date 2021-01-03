@@ -27,7 +27,7 @@ Route::get('login',function (){
 
 Route::get('/teacherSignUp', function () {
     return view('teacherSignUp');
-});
+})->name('teacherSignUp');
 
 Route::get('adminDashboard',function (){
     return view('adminDashboard');
