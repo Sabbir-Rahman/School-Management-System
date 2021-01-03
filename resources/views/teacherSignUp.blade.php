@@ -25,7 +25,7 @@
     <link rel="canonical" href="index.html">
     <meta property="og:url" content="index.html">
 </head>
-<body data-home-page="Page-5.html" data-home-page-title="Page 5" class="u-body u-overlap"><header class="u-clearfix u-custom-color-5 u-header u-header" id="sec-ae23"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
+<body data-home-page="Page-5.html" data-home-page-title="Page 5" class="u-body u-overlap">
 
 
 <footer class="u-align-center u-clearfix u-footer u-image u-footer" id="sec-9343" data-image-width="1280" data-image-height="853"><h1 class="u-text u-text-white u-text-1">
@@ -109,16 +109,6 @@
             <input type="hidden" value="" name="recaptchaResponse">
         </form>
     </div></footer>
-<section class="u-backlink u-clearfix u-grey-80">
-    <a class="u-link" href="https://nicepage.com/website-mockup" target="_blank">
-        <span>Website Mockup</span>
-    </a>
-    <p class="u-text">
-        <span>created with</span>
-    </p>
-    <a class="u-link" href="https://nicepage.com/" target="_blank">
-        <span>Web Design Software</span>
-    </a>.
-</section>
+
 </body>
 </html>
