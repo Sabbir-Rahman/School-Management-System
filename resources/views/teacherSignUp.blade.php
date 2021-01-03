@@ -48,6 +48,10 @@
                 <label for="text-ab8d" class="u-label u-text-white u-label-4">Experiences</label>
                 <input type="text" placeholder="Enter your experiences" id="text-ab8d" name="text-7" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
+            <div class="u-form-group u-form-group-3">
+                <label for="text-9fa4" class="u-label u-text-white u-label-3">Joining Year</label>
+                <input type="number" placeholder="Enter your joining year" id="text-9fa4" name="text-6" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+            </div>
             <div class="u-form-group u-form-group-5">
                 <label for="text-f143" class="u-label u-text-white u-label-5">Father's Name</label>
                 <input type="text" placeholder="Enter your father's name" id="text-f143" name="text-1" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
