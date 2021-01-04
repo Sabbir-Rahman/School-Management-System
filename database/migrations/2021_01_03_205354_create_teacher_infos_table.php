@@ -19,6 +19,7 @@ class CreateTeacherInfosTable extends Migration
             $table->text('email');
             $table->text('educational_qualification');
             $table->text('experiences');
+            $table->text('speciality');
             $table->integer('joining_year');
             $table->text('father_name');
             $table->text('mother_name');
