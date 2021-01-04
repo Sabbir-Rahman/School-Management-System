@@ -67,13 +67,16 @@
                         <option value="Hindu Religion">Hindu Religion</option>
                         <option value="Christian Religion">Christian Religion</option>
                         <option value="Buddho Religion">Buddho Religion</option>
+                        <option value="Physical Education">Physical Education</option>
+                        <option value="Music">Music</option>
+                        <option value="Art">Art</option>
                     </select>
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
                 </div>
             </div>
             <div class="u-form-group u-form-group-5">
                 <label for="text-9fa4" class="u-label u-text-white u-label-3">Joining Year</label>
-                <input type="number" placeholder="Enter your joining year" id="text-9fa4" name="teacher_joining_year" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+                <input type="number" placeholder="Enter your joining year(four digit)" id="text-9fa4" name="teacher_joining_year" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
             <div class="u-form-group u-form-group-6">
                 <label for="text-f143" class="u-label u-text-white u-label-5">Father's Name</label>
