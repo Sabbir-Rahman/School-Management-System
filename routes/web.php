@@ -26,9 +26,13 @@ Route::get('login',function (){
     return view('login');
 })->name('login') ;
 
-Route::get('/teacherSignUp', function () {
+Route::get('teacherSignUp', function () {
     return view('teacherSignUp');
 })->name('teacherSignUp');
+
+Route::get('teacherDashboard', function () {
+    return view('teacherDashboard');
+})->name('teacherDashboard');
 
 Route::get('adminDashboard',function (){
     return view('adminDashboard');
