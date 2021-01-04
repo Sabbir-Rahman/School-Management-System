@@ -5,6 +5,7 @@ use App\Http\Controllers\StudentAuth;
 use App\Http\Controllers\fatherSignUp;
 use App\Http\Controllers\motherSignUp;
 use App\Http\Controllers\login;
+use App\Http\Controllers\teacherAuth;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -50,10 +51,12 @@ Route::get('signUpOption',function (){
 Route::get('loginMysql',[UserAuth::class,'login']);
 Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp');
 Route::post('create',[StudentAuth::class,'create'])->name('studentcreate');
+
 Route::post('fatherSignUpCreate',[fatherSignUp::class,'create'])->name('fatherCreate');
 Route::post('motherSignUpCreate',[motherSignUp::class,'create'])->name('motherCreate');
 Route::post('loginCheck',[login::class,'loginCheck'])->name('loginCheck');
 
+Route::post('teacherSigningUp',[teacherAuth::class,'addData'])->name('teacherSigningUp');
 
 
 

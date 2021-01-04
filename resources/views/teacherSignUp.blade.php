@@ -31,39 +31,69 @@
 <footer class="u-align-center u-clearfix u-footer u-image u-footer" id="sec-9343" data-image-width="1280" data-image-height="853"><h1 class="u-text u-text-white u-text-1">
         <span style="font-weight: 700;">Teacher's Sign Up</span>
     </h1><div id="form-teacher" class="u-align-left u-form u-form-1">
-        <form action="#" method="POST" class="u-clearfix u-form-spacing-7 u-form-vertical u-inner-form" style="padding: 8px;" source="custom" name="form">
+        <form action="{{route('teacherSigningUp')}}" method="POST" class="u-clearfix u-form-spacing-7 u-form-vertical u-inner-form" style="padding: 8px;" source="custom" name="form">
+           @csrf
             <div class="u-form-group u-form-name">
                 <label for="name-3b9a" class="u-label u-text-white u-label-1">Teacher's Name</label>
-                <input type="text" placeholder="Enter your name" id="name-3b9a" name="name" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
+                <input type="text" placeholder="Enter your name" id="name-3b9a" name="teacher_name" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
             </div>
             <div class="u-form-email u-form-group u-form-group-2">
                 <label for="email-c1ad" class="u-label u-text-white u-label-2">Email</label>
-                <input type="email" placeholder="Enter your email" id="email-c1ad" name="email-1" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
+                <input type="email" placeholder="Enter your email" id="email-c1ad" name="teacher_email" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
             </div>
             <div class="u-form-group u-form-group-3">
                 <label for="text-9fa4" class="u-label u-text-white u-label-3">Educational Qualification</label>
-                <input type="text" placeholder="Enter your edutional qualifications" id="text-9fa4" name="text-6" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+                <input type="text" placeholder="Enter your edutional qualifications" id="text-9fa4" name="teacher_educational_qualification" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
             <div class="u-form-group u-form-group-4">
                 <label for="text-ab8d" class="u-label u-text-white u-label-4">Experiences</label>
-                <input type="text" placeholder="Enter your experiences" id="text-ab8d" name="text-7" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+                <input type="text" placeholder="Enter your experiences" id="text-ab8d" name="teacher_experience" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+            </div>
+            <div class="u-form-group u-form-select u-form-group-9">
+                <label for="select-861e" class="u-label u-text-white u-label-8">Subject Speciality</label>
+                <div class="u-form-select-wrapper">
+                    <select id="select-861e" name="teacher_subject_speciality" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" autofocus="autofocus">
+                        <option value="Bangla">Bangla</option>
+                        <option value="English">English</option>
+                        <option value="Math">Math</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="History">History</option>
+                        <option value="Accounting">Accounting</option>
+                        <option value="Management">Management</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Social Science">Social Science</option>
+                        <option value="Islam Religion">Islam Religion</option>
+                        <option value="Hindu Religion">Hindu Religion</option>
+                        <option value="Christian Religion">Christian Religion</option>
+                        <option value="Buddho Religion">Buddho Religion</option>
+                        <option value="Physical Education">Physical Education</option>
+                        <option value="Music">Music</option>
+                        <option value="Art">Art</option>
+                    </select>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+                </div>
             </div>
             <div class="u-form-group u-form-group-5">
-                <label for="text-f143" class="u-label u-text-white u-label-5">Father's Name</label>
-                <input type="text" placeholder="Enter your father's name" id="text-f143" name="text-1" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+                <label for="text-9fa4" class="u-label u-text-white u-label-3">Joining Year</label>
+                <input type="number" placeholder="Enter your joining year(four digit)" id="text-9fa4" name="teacher_joining_year" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
             <div class="u-form-group u-form-group-6">
-                <label for="text-1ec9" class="u-label u-text-white u-label-6">Mother's Name</label>
-                <input type="text" placeholder="Enter your mother's name" id="text-1ec9" name="text-2" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+                <label for="text-f143" class="u-label u-text-white u-label-5">Father's Name</label>
+                <input type="text" placeholder="Enter your father's name" id="text-f143" name="teacher_father_name" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
             <div class="u-form-group u-form-group-7">
-                <label for="text-fd11" class="u-label u-text-white u-label-7">NID</label>
-                <input type="text" placeholder="Enter your NID" id="text-fd11" name="text-3" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+                <label for="text-1ec9" class="u-label u-text-white u-label-6">Mother's Name</label>
+                <input type="text" placeholder="Enter your mother's name" id="text-1ec9" name="teacher_mother_name" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
-            <div class="u-form-group u-form-select u-form-group-8">
+            <div class="u-form-group u-form-group-8">
+                <label for="text-fd11" class="u-label u-text-white u-label-7">NID</label>
+                <input type="text" placeholder="Enter your NID" id="text-fd11" name="teacher_nid" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+            </div>
+            <div class="u-form-group u-form-select u-form-group-9">
                 <label for="select-861e" class="u-label u-text-white u-label-8">Gender</label>
                 <div class="u-form-select-wrapper">
-                    <select id="select-861e" name="select" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" autofocus="autofocus">
+                    <select id="select-861e" name="teacher_gender" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" autofocus="autofocus">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Other">Other</option>
@@ -72,42 +102,36 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
                 </div>
             </div>
-            <div class="u-form-group u-form-group-9">
+            <div class="u-form-group u-form-group-10">
                 <label for="text-52d9" class="u-label u-text-white u-label-9">Hobby</label>
-                <input type="text" placeholder="Enter your hobby" id="text-52d9" name="text-5" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+                <input type="text" placeholder="Enter your hobby" id="text-52d9" name="teacher_hobby" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
-            <div class="u-form-address u-form-group u-form-group-10">
+            <div class="u-form-address u-form-group u-form-group-11">
                 <label for="address-dae7" class="u-label u-text-white u-label-10">Address</label>
-                <input type="text" placeholder="Enter your address" id="address-dae7" name="address" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
-            </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-11">
-                <label for="phone-5737" class="u-label u-text-white u-label-11">Contact No.</label>
-                <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-5737" name="phone" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
+                <input type="text" placeholder="Enter your address" id="address-dae7" name="teacher_address" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-12">
-                <label for="phone-19c5" class="u-label u-text-white u-label-12">Optional Contact. No</label>
-                <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-19c5" name="phone-1" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
+                <label for="phone-5737" class="u-label u-text-white u-label-11">Contact No.</label>
+                <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-5737" name="teacher_contact" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-13">
-                <label for="text-7d34" class="u-label u-text-white u-label-13">Password</label>
-                <input type="text" placeholder="Enter your password" id="text-7d34" name="text" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+            <div class="u-form-group u-form-partition-factor-2 u-form-phone u-form-group-13">
+                <label for="phone-19c5" class="u-label u-text-white u-label-12">Optional Contact. No</label>
+                <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter your phone (e.g. +14155552675)" id="phone-19c5" name="teacher_contact_optional" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" required="">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-14">
-                <label for="text-2e5a" class="u-label u-text-white u-label-14">Confirm password</label>
-                <input type="text" placeholder="Re-enter your password" id="text-2e5a" name="text-4" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+                <label for="text-7d34" class="u-label u-text-white u-label-14">Password</label>
+                <input type="password" placeholder="Enter your password" id="text-7d34" name="teacher_password" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-group-15">
+                <label for="text-2e5a" class="u-label u-text-white u-label-15">Confirm password</label>
+                <input type="password" placeholder="Re-enter your password" id="text-2e5a" name="text-4" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
             <div class="u-form-group u-form-group-15">
-                <label for="textarea-dad0" class="u-label u-text-white u-label-15">Comment</label>
-                <textarea placeholder="Add your comments if need" rows="4" cols="50" id="textarea-dad0" name="textarea" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white"></textarea>
+                <label for="textarea-dad0" class="u-label u-text-white u-label-16">Comment</label>
+                <textarea placeholder="Add your comments if need" rows="4" cols="50" id="textarea-dad0" name="teacher_comment" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white"></textarea>
             </div>
-            <div class="u-align-left u-form-group u-form-submit">
-                <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
-                <input type="submit" value="submit" class="u-form-control-hidden">
-            </div>
-            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-            <input type="hidden" value="" name="recaptchaResponse">
-        </form>
+            <button type="submit">Submit</button>
+
     </div></footer>
 
 </body>
