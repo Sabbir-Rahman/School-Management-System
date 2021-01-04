@@ -7,9 +7,9 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Attendance</title>
-    <link rel="stylesheet" href="teacherDashboard.css" media="screen">
-    <link rel="stylesheet" href="teacherDashboard-1.css" media="screen">
-    <script class="u-script" type="text/javascript" src="teacherDashboard.js" defer=""></script>
+    <link rel="stylesheet" href="/css/teacherDashboard.css" media="screen">
+    <link rel="stylesheet" href="/css/teacherDashboard-1.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/js/teacherDashboard.js" defer=""></script>
     <meta name="generator" content="Nicepage 3.2.3, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
 
@@ -62,7 +62,10 @@
             </div>
         </nav>
     </div></header>
+
+
 <section class="u-align-center u-clearfix u-image u-section-1" id="carousel_e567" data-image-width="1280" data-image-height="854">
+    <h1>Welcome boss <font color="aqua">{{$name}}</font></h1>
     <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-repeater u-list-1">
             <div class="u-align-left u-container-style u-gradient u-list-item u-radius-50 u-repeater-item u-shape-round u-list-item-1">
