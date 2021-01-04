@@ -120,11 +120,11 @@
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-14">
                 <label for="text-7d34" class="u-label u-text-white u-label-14">Password</label>
-                <input type="text" placeholder="Enter your password" id="text-7d34" name="teacher_password" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+                <input type="password" placeholder="Enter your password" id="text-7d34" name="teacher_password" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-15">
                 <label for="text-2e5a" class="u-label u-text-white u-label-15">Confirm password</label>
-                <input type="text" placeholder="Re-enter your password" id="text-2e5a" name="text-4" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
+                <input type="password" placeholder="Re-enter your password" id="text-2e5a" name="text-4" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
             <div class="u-form-group u-form-group-15">
                 <label for="textarea-dad0" class="u-label u-text-white u-label-16">Comment</label>

@@ -78,10 +78,11 @@ class teacherAuth extends Controller
             return "Something bad happen";
 
 
-        dd($this->uniqueId);
+
 
         //add to database
         $teacher = new teacher_info();
+        $teacher->id = $this->uniqueId;
         $teacher->name = $request->teacher_name;
         $teacher->email = $request->teacher_email;
         $teacher->educational_qualification = $request->teacher_educational_qualification;
