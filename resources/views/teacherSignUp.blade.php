@@ -49,6 +49,28 @@
                 <label for="text-ab8d" class="u-label u-text-white u-label-4">Experiences</label>
                 <input type="text" placeholder="Enter your experiences" id="text-ab8d" name="teacher_experience" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
             </div>
+            <div class="u-form-group u-form-select u-form-group-9">
+                <label for="select-861e" class="u-label u-text-white u-label-8">Subject Speciality</label>
+                <div class="u-form-select-wrapper">
+                    <select id="select-861e" name="teacher_subject_speciality" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white" autofocus="autofocus">
+                        <option value="Bangla">Bangla</option>
+                        <option value="English">English</option>
+                        <option value="Math">Math</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="History">History</option>
+                        <option value="Accounting">Accounting</option>
+                        <option value="Management">Management</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Social Science">Social Science</option>
+                        <option value="Islam Religion">Islam Religion</option>
+                        <option value="Hindu Religion">Hindu Religion</option>
+                        <option value="Christian Religion">Christian Religion</option>
+                        <option value="Buddho Religion">Buddho Religion</option>
+                    </select>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+                </div>
+            </div>
             <div class="u-form-group u-form-group-5">
                 <label for="text-9fa4" class="u-label u-text-white u-label-3">Joining Year</label>
                 <input type="number" placeholder="Enter your joining year" id="text-9fa4" name="teacher_joining_year" class="u-border-2 u-border-palette-4-light-1 u-input u-input-rectangle u-text-white">
