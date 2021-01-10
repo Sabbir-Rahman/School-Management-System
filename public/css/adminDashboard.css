@@ -8,6 +8,44 @@
 #add-subject{
     position: relative;
     left: 150px;
+    color: #0f0f0f;
+    opacity: .8;
+}
+
+#add-subject:hover{
+    opacity: 1;
+}
+
+#manage-teacher{
+    position: relative;
+    left: 140px;
+    color: #0f0f0f;
+    opacity: .8;
+}
+#manage-teacher:hover{
+    opacity: 1;
+}
+
+#manage-student{
+    position: relative;
+    left: 120px;
+    color: #0f0f0f;
+    opacity: .8;
+}
+
+#manage-student:hover{
+    opacity: 1;
+}
+
+#show-record{
+    position: relative;
+    left: 150px;
+    color: #0f0f0f;
+    opacity: .8;
+}
+
+#show-record:hover{
+    opacity: 1;
 }
 
 .fr-clearfix::after {
@@ -5550,7 +5588,7 @@ a {
 }
 html {
     height: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 body {

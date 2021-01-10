@@ -54,6 +54,18 @@ Route::get('addSubjects',function (){
     return view('addSubject');
 })->name('addSubject') ;
 
+Route::get('manageTeachers',function (){
+    return view('manageTeacher');
+})->name('manageTeacher') ;
+
+Route::get('manageStudents',function (){
+    return view('manageStudents');
+})->name('manageStudent') ;
+
+Route::get('showRecords',function (){
+    return view('showRecords');
+})->name('showRecord') ;
+
 
 Route::get('loginMysql',[UserAuth::class,'login']);
 Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp');
