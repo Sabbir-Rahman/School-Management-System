@@ -26,9 +26,13 @@ Route::get('login',function (){
     return view('login');
 })->name('login') ;
 
-Route::get('/teacherSignUp', function () {
+Route::get('teacherSignUp', function () {
     return view('teacherSignUp');
 })->name('teacherSignUp');
+
+Route::get('teacherDashboard', function () {
+    return view('teacherDashboard');
+})->name('teacherDashboard');
 
 Route::get('adminDashboard',function (){
     return view('adminDashboard');
@@ -46,6 +50,21 @@ Route::get('signUpOption',function (){
     return view('signUpOption');
 })->name('signUpOption') ;
 
+Route::get('addSubjects',function (){
+    return view('addSubject');
+})->name('addSubject') ;
+
+Route::get('manageTeachers',function (){
+    return view('manageTeacher');
+})->name('manageTeacher') ;
+
+Route::get('manageStudents',function (){
+    return view('manageStudents');
+})->name('manageStudent') ;
+
+Route::get('showRecords',function (){
+    return view('showRecords');
+})->name('showRecord') ;
 
 
 Route::get('loginMysql',[UserAuth::class,'login']);

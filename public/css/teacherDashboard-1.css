@@ -1,6 +1,7 @@
 .u-section-1 {
-    background-image: url("public/img/teacherDashboard.jpg");
+    background-image: url("/img/teacherDashboard.jpg");
     background-position: 50% 50%;
+    height: 900px;
 }
 
 .u-section-1 .u-sheet-1 {

@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\StudentInfo;
 use App\Models\father_info;
 use App\Models\mother_info;
+use App\Models\teacher_info;
 
 class login extends Controller
 {
+
     private $afterLoginView = '';
     function loginCheck(Request $request){
 
@@ -26,6 +28,10 @@ class login extends Controller
         else if(strlen($request->Login_id)==8) {
             $id = StudentInfo::where('id', '=', $request->Login_id)->first();
             $this->afterLoginView = 'studentLandingPage';
+        }
+        else if(strlen($request->Login_id)==12) {
+            $id = teacher_info::where('id', '=', $request->Login_id)->first();
+            $this->afterLoginView = 'teacherDashboard';
         }
         else {
             return "No account";
