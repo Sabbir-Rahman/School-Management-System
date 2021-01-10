@@ -50,6 +50,9 @@ Route::get('signUpOption',function (){
     return view('signUpOption');
 })->name('signUpOption') ;
 
+Route::get('addSubjects',function (){
+    return view('addSubject');
+})->name('addSubject') ;
 
 
 Route::get('loginMysql',[UserAuth::class,'login']);

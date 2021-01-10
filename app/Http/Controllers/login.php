@@ -10,6 +10,7 @@ use App\Models\teacher_info;
 
 class login extends Controller
 {
+
     private $afterLoginView = '';
     function loginCheck(Request $request){
 
