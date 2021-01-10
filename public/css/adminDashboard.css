@@ -4,9 +4,6 @@
  * Copyright 2014-2020 Froala Labs
  */
 
-
-
-
 .fr-clearfix::after {
     clear: both;
     display: block;
@@ -5547,7 +5544,7 @@ a {
 }
 html {
     height: 100%;
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 body {
@@ -31202,7 +31199,7 @@ blockquote
 }
 
 .u-header .u-sheet-1 {
-    min-height: 921px;
+    min-height: 178px;
 }
 
 .u-header .u-menu-1 {
@@ -31245,35 +31242,31 @@ blockquote
 }
 
 .u-header .u-group-1 {
-    min-height: 150px;
+    min-height: 86px;
     width: 801px;
     height: auto;
-    margin: 44px auto 60px;
+    margin: 22px auto 12px;
 }
 
 .u-header .u-container-layout-1 {
-    padding: 30px 60px;
+    padding: 30px 60px 13px;
 }
 
 .u-header .u-text-1 {
-    margin: 3px 0 0;
+    margin: -3px 0 14px;
 }
 @media (max-width: 1199px) {
-    .u-header {
-        min-height: 581px;
+    .u-header .u-sheet-1 {
+        min-height: 173px;
     }
 
-    .u-header .u-sheet-1 {
-        min-height: 759px;
+    .u-header .u-group-1 {
+        margin-bottom: 0;
     }
 }
 @media (max-width: 991px) {
-    .u-header {
-        min-height: 351px;
-    }
-
     .u-header .u-sheet-1 {
-        min-height: 581px;
+        min-height: 165px;
     }
 
     .u-header .u-group-1 {
@@ -31286,14 +31279,6 @@ blockquote
     }
 }
 @media (max-width: 767px) {
-    .u-header {
-        min-height: 451px;
-    }
-
-    .u-header .u-sheet-1 {
-        min-height: 436px;
-    }
-
     .u-header .u-group-1 {
         width: 540px;
     }
@@ -31305,7 +31290,7 @@ blockquote
 }
 @media (max-width: 575px) {
     .u-header .u-sheet-1 {
-        min-height: 275px;
+        min-height: 158px;
     }
 
     .u-header .u-group-1 {
