@@ -50,9 +50,9 @@ Route::get('signUpOption',function (){
     return view('signUpOption');
 })->name('signUpOption') ;
 
-Route::get('addSubjects',function (){
-    return view('addSubject');
-})->name('addSubject') ;
+Route::get('academicDashboard',function (){
+    return view('academicDashboard');
+})->name('academicDashboard') ;
 
 Route::get('manageTeachers',function (){
     return view('manageTeacher');

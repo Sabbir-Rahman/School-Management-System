@@ -65,7 +65,9 @@
 
 
 <section class="u-align-center u-clearfix u-image u-section-1" id="carousel_e567" data-image-width="1280" data-image-height="854">
-    <h1>Welcome boss <font color="aqua">{{$name}}</font></h1>
+    <!--
+    <h1>Welcome boss <font color="aqua"></font></h1>
+    -->
     <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-repeater u-list-1">
             <div class="u-align-left u-container-style u-gradient u-list-item u-radius-50 u-repeater-item u-shape-round u-list-item-1">
