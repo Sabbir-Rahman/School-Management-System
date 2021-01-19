@@ -58,6 +58,16 @@ Route::get('academicDashboard',function (){
     return view('academicDashboard');
 })->name('academicDashboard') ;
 
+Route::get('adminAcademics',function (){
+    return view('admin/adminAcademics');
+})->name('adminAcademics') ;
+
+
+
+
+
+
+
 Route::get('manageTeachers',function (){
     return view('manageTeacher');
 })->name('manageTeacher') ;
