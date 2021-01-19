@@ -17,7 +17,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="/assetsAdmin/img/apple-icon.png">
     <link rel="icon" type="image/png" href="/assetsAdmin/img/favicon.png">
@@ -25,14 +25,14 @@
         Admin Academics
     </title>
     <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet"/>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <!-- Nucleo Icons -->
-    <link href="/assetsAdmin/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="/assetsAdmin/css/nucleo-icons.css" rel="stylesheet"/>
     <!-- CSS Files -->
-    <link href="/assetsAdmin/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+    <link href="/assetsAdmin/css/black-dashboard.css?v=1.0.0" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="/assetsAdmin/demo/demo.css" rel="stylesheet" />
+    <link href="/assetsAdmin/demo/demo.css" rel="stylesheet"/>
 </head>
 
 <body class="">
@@ -52,7 +52,7 @@
             </div>
             <ul class="nav">
                 <li>
-                    <a href="./dashboard.html">
+                    <a href="{{route('admin.adminDashboard')}}">
                         <p>Dashboard</p>
                     </a>
                 </li>
@@ -79,7 +79,8 @@
                     </div>
                     <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                        aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar navbar-kebab"></span>
                     <span class="navbar-toggler-bar navbar-kebab"></span>
                     <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -87,7 +88,8 @@
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="navbar-nav ml-auto">
                         <li class="search-bar input-group">
-                            <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i>
+                            <button class="btn btn-link" id="search-button" data-toggle="modal"
+                                    data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
                                 <span class="d-lg-none d-md-block">Search</span>
                             </button>
                         </li>
@@ -100,11 +102,16 @@
                                 </p>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
-                                <li class="nav-link"><a href="#" class="nav-item dropdown-item">Mike John responded to your email</a></li>
-                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more tasks</a></li>
-                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Your friend Michael is in town</a></li>
-                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another notification</a></li>
-                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another one</a></li>
+                                <li class="nav-link"><a href="#" class="nav-item dropdown-item">Mike John responded to
+                                        your email</a></li>
+                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">You
+                                        have 5 more tasks</a></li>
+                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Your
+                                        friend Michael is in town</a></li>
+                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another
+                                        notification</a></li>
+                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another
+                                        one</a></li>
                             </ul>
                         </li>
                         <li class="dropdown nav-item">
@@ -118,10 +125,13 @@
                                 </p>
                             </a>
                             <ul class="dropdown-menu dropdown-navbar">
-                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Profile</a></li>
-                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a></li>
+                                <li class="nav-link"><a href="javascript:void(0)"
+                                                        class="nav-item dropdown-item">Profile</a></li>
+                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a>
+                                </li>
                                 <li class="dropdown-divider"></li>
-                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a></li>
+                                <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Log
+                                        out</a></li>
                             </ul>
                         </li>
                         <li class="separator d-lg-none"></li>
@@ -129,7 +139,8 @@
                 </div>
             </div>
         </nav>
-        <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal"
+             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -145,32 +156,40 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="/assetsAdmin/img/classAdmin.jpg" alt="Card image cap" height="175px">
-                        <div class="card-body">
-                            <h4 class="card-title">Class</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="{{route('admin.class')}}">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/assetsAdmin/img/classAdmin.jpg" alt="Card image cap"
+                                 height="175px">
+                            <div class="card-body">
+                                <h4 class="card-title">Class</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-4">
+
                     <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="/assetsAdmin/img/sectionAdmin.jpg" alt="Card image class" height="175px">
+                        <img class="card-img-top" src="/assetsAdmin/img/sectionAdmin.jpg" alt="Card image class"
+                             height="175px">
                         <div class="card-body">
                             <h4 class="card-title">Section</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="/assetsAdmin/img/roomAdmin.jpg" alt="Card image cap" height="175px">
+                        <img class="card-img-top" src="/assetsAdmin/img/roomAdmin.jpg" alt="Card image cap"
+                             height="175px">
                         <div class="card-body">
                             <h4 class="card-title">Room</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+
                         </div>
                     </div>
                 </div>
@@ -178,31 +197,25 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <img class="card-img-top" src="/assetsAdmin/img/courseAdmin.png" alt="Card image cap"
+                             height="175px">
                         <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h4 class="card-title">Course</h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <img class="card-img-top" src="/assetsAdmin/img/routineAdmin.jpg" alt="Card image cap"
+                             height="175px">
                         <div class="card-body">
                             <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+
                         </div>
                     </div>
                 </div>
@@ -213,32 +226,7 @@
             </div>
         </div>
         <footer class="footer">
-            <div class="container-fluid">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link">
-                            Creative Tim
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link">
-                            About Us
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link">
-                            Blog
-                        </a>
-                    </li>
-                </ul>
-                <div class="copyright">
-                    ©
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>2018 made with <i class="tim-icons icon-heart-2"></i> by
-                    <a href="javascript:void(0)" target="_blank">Creative Tim</a> for a better web.
-                </div>
-            </div>
+
         </footer>
     </div>
 </div>
@@ -256,11 +244,12 @@
 <!--  Notifications Plugin    -->
 <script src="/assetsAdmin/js/plugins/bootstrap-notify.js"></script>
 <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="/assetsAdmin/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+<script src="/assetsAdmin/js/black-dashboard.min.js?v=1.0.0"></script>
+<!-- Black Dashboard DEMO methods, don't include it in your project! -->
 <script src="/assetsAdmin/demo/demo.js"></script>
 <script>
-    $(document).ready(function() {
-        $().ready(function() {
+    $(document).ready(function () {
+        $().ready(function () {
             $sidebar = $('.sidebar');
             $navbar = $('.navbar');
             $main_panel = $('.main-panel');
@@ -276,8 +265,7 @@
             fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
 
 
-
-            $('.fixed-plugin a').click(function(event) {
+            $('.fixed-plugin a').click(function (event) {
                 if ($(this).hasClass('switch-trigger')) {
                     if (event.stopPropagation) {
                         event.stopPropagation();
@@ -287,7 +275,7 @@
                 }
             });
 
-            $('.fixed-plugin .background-color span').click(function() {
+            $('.fixed-plugin .background-color span').click(function () {
                 $(this).siblings().removeClass('active');
                 $(this).addClass('active');
 
@@ -310,7 +298,7 @@
                 }
             });
 
-            $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+            $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function () {
                 var $btn = $(this);
 
                 if (sidebar_mini_active == true) {
@@ -324,23 +312,23 @@
                 }
 
                 // we simulate the window Resize so the charts will get updated in realtime.
-                var simulateWindowResize = setInterval(function() {
+                var simulateWindowResize = setInterval(function () {
                     window.dispatchEvent(new Event('resize'));
                 }, 180);
 
                 // we stop the simulation of Window Resize after the animations are completed
-                setTimeout(function() {
+                setTimeout(function () {
                     clearInterval(simulateWindowResize);
                 }, 1000);
             });
 
-            $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+            $('.switch-change-color input').on("switchChange.bootstrapSwitch", function () {
                 var $btn = $(this);
 
                 if (white_color == true) {
 
                     $('body').addClass('change-background');
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $('body').removeClass('change-background');
                         $('body').removeClass('white-content');
                     }, 900);
@@ -348,7 +336,7 @@
                 } else {
 
                     $('body').addClass('change-background');
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $('body').removeClass('change-background');
                         $('body').addClass('white-content');
                     }, 900);
@@ -359,18 +347,18 @@
 
             });
 
-            $('.light-badge').click(function() {
+            $('.light-badge').click(function () {
                 $('body').addClass('white-content');
             });
 
-            $('.dark-badge').click(function() {
+            $('.dark-badge').click(function () {
                 $('body').removeClass('white-content');
             });
         });
     });
 </script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         // Javascript method's body can be found in assets/js/demos.js
         demo.initDashboardPageCharts();
 
