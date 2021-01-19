@@ -47,9 +47,6 @@
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-3">Add Class which you are currently giving&nbsp;<br>lessons<br>
                         <br>
                     </p>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-1">Show</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-2">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-3">ADD</a>
                 </div>
             </div>
             <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-2">
@@ -63,9 +60,6 @@
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-6">Add section details info with medium ,groups, class teachers etc<br>
                         <br>
                     </p>
-                    <a href="https://nicepage.com/templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-4">SHOW</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-5">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-6">ADD</a>
                 </div>
             </div>
             <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-3">
@@ -79,9 +73,6 @@
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-9">Add room details info with building location etc<br>
                         <br>
                     </p>
-                    <a href="https://nicepage.com/website-mockup" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-7">SHOW</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-8">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-9">ADD</a>
                 </div>
             </div>
             <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-3">
@@ -95,9 +86,6 @@
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-12">Add courses in which we are currently giving lessons<br>
                         <br>
                     </p>
-                    <a href="https://nicepage.com" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-7">SHOW</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-11">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-12">ADD</a>
                 </div>
             </div>
             <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-3">
@@ -111,9 +99,6 @@
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-12">Recent highlights of our school that should be know by others<br>
                         <br>
                     </p>
-                    <a href="https://nicepage.com/website-mockup" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-7">SHOW</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-14">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-15">ADD</a>
                 </div>
             </div>
             <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-3">
@@ -127,9 +112,6 @@
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-12">Notices of our school that should be known by all<br>
                         <br>
                     </p>
-                    <a href="https://nicepage.com/html-templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-7">SHOW</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-17">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-18">ADD</a>
                 </div>
             </div>
         </div>
@@ -143,9 +125,6 @@
                     </div>
                     <h5 class="u-align-center u-text u-text-body-alt-color u-text-20">Events</h5>
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-21">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-19">Show</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-20">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-21">ADD</a>
                 </div>
             </div>
             <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-8">
@@ -157,9 +136,6 @@
                     </div>
                     <h5 class="u-align-center u-text u-text-body-alt-color u-text-23">Club</h5>
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-24">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                    <a href="https://nicepage.com/templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-22">SHOW</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-23">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-24">ADD</a>
                 </div>
             </div>
             <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-9">
@@ -171,9 +147,6 @@
                     </div>
                     <h5 class="u-align-center u-text u-text-body-alt-color u-text-26">Honor Board</h5>
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-27">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                    <a href="https://nicepage.com/website-mockup" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-25">SHOW</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-26">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-27">ADD</a>
                 </div>
             </div>
             <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-10">
@@ -185,9 +158,6 @@
                     </div>
                     <h5 class="u-align-center u-text u-text-body-alt-color u-text-29">Important links</h5>
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-30">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                    <a href="https://nicepage.com" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-28">SHOW</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-29">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-30">ADD</a>
                 </div>
             </div>
             <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-11">
@@ -199,9 +169,6 @@
                     </div>
                     <h5 class="u-align-center u-text u-text-body-alt-color u-text-32">Comming soon</h5>
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-33">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                    <a href="https://nicepage.com/website-mockup" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-31">SHOW</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-32">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-33">ADD</a>
                 </div>
             </div>
             <div class="u-container-style u-list-item u-palette-5-dark-3 u-repeater-item u-shape-rectangle u-list-item-12">
@@ -213,9 +180,6 @@
                     </div>
                     <h5 class="u-align-center u-text u-text-body-alt-color u-text-35">Comming Soon</h5>
                     <p class="u-align-center u-text u-text-default u-text-grey-30 u-text-36">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                    <a href="https://nicepage.com/html-templates" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-4-light-2 u-btn-34">SHOW</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-1-dark-1 u-palette-1-light-2 u-btn-35">EDIT</a>
-                    <a href="https://nicepage.com/wordpress-themes" class="u-btn u-button-style u-hover-palette-2-light-1 u-palette-2-light-2 u-btn-36">ADD</a>
                 </div>
             </div>
         </div>

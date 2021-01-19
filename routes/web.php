@@ -38,6 +38,10 @@ Route::get('adminDashboard',function (){
     return view('adminDashboard');
 });
 
+Route::get('admin',function (){
+    return view('admin\adminDashboard');
+});
+
 Route::get('fatherSignUp',function (){
     return view('signUpFather');
 })->name('fatherSignUp') ;
