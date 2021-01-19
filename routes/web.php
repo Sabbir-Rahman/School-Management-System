@@ -40,7 +40,12 @@ Route::get('adminDashboard',function (){
 
 Route::get('admin',function (){
     return view('admin\adminDashboard');
-});
+})->name('admin.adminDashboard');
+
+Route::get('admin/class',function (){
+    return view('admin\adminClass');
+})->name('admin.class');
+
 
 Route::get('fatherSignUp',function (){
     return view('signUpFather');
