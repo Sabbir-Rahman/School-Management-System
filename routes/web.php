@@ -65,6 +65,17 @@ Route::get('adminAcademics',function (){
 })->name('adminAcademics') ;
 
 
+Route::get('adminStudents',function (){
+    return view('admin/adminStudents');
+})->name('adminStudents') ;
+
+Route::get('adminTeachers',function (){
+    return view('admin/adminTeachers');
+})->name('adminTeachers') ;
+
+Route::get('adminInfrastructures',function (){
+    return view('admin/adminInfrastructures');
+})->name('adminInfrastructures') ;
 
 
 
