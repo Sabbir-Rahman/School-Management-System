@@ -13,4 +13,23 @@ class adminClass extends Controller
         $data = classTable::all();
         return view('admin\adminClass',['class'=>$data]);
     }
+
+    function addData(Request $request){
+
+        $this->validate($request,[
+            'class' => 'required',
+        ]);
+
+        $cls = new classTable();
+        $cls->class = $request->input('class');
+
+        $query = $cls->save();
+
+        if($query)
+            return redirect('/admin/class')->with('success','Data Saved');
+        else
+            return "Data not insert";
+
+
+    }
 }
