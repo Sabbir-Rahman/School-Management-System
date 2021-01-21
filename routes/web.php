@@ -83,11 +83,11 @@ Route::get('showRecords',function (){
 })->name('showRecord') ;
 
 
-Route::get('loginMysql',[UserAuth::class,'login']);
 Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp');
 Route::post('create',[StudentAuth::class,'create'])->name('studentcreate');
-Route::get('admin/class',[adminClass::class,'index'])->name('admin.class');
 
+Route::get('admin/class',[adminClass::class,'index'])->name('admin.class');
+Route::post('admin/addClass',[adminClass::class,'addData'])->name('addClass');
 
 
 
@@ -101,9 +101,8 @@ Route::post('teacherSigningUp',[teacherAuth::class,'addData'])->name('teacherSig
 
 
 
-Route::post('check',[UserAuth::class,'check'])->name('auth.check');
 
 
 
 
-//hello sabbir.
+
