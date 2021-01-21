@@ -7,7 +7,7 @@ use App\Models\classTable;
 
 class adminClass extends Controller
 {
-    //
+    private $id;
     function index(){
 
         $data = classTable::all();
@@ -19,6 +19,7 @@ class adminClass extends Controller
         $this->validate($request,[
             'class' => 'required',
         ]);
+
 
         $cls = new classTable();
         $cls->class = $request->input('class');
