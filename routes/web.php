@@ -6,6 +6,7 @@ use App\Http\Controllers\fatherSignUp;
 use App\Http\Controllers\motherSignUp;
 use App\Http\Controllers\login;
 use App\Http\Controllers\teacherAuth;
+use App\Http\Controllers\adminClass;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,11 @@ Route::get('adminDashboard',function (){
     return view('adminDashboard');
 });
 
+Route::get('admin',function (){
+    return view('admin\adminDashboard');
+})->name('admin.adminDashboard');
+
+
 Route::get('fatherSignUp',function (){
     return view('signUpFather');
 })->name('fatherSignUp') ;
@@ -53,6 +59,16 @@ Route::get('signUpOption',function (){
 Route::get('academicDashboard',function (){
     return view('academicDashboard');
 })->name('academicDashboard') ;
+
+Route::get('adminAcademics',function (){
+    return view('admin/adminAcademics');
+})->name('adminAcademics') ;
+
+
+
+
+
+
 
 Route::get('manageTeachers',function (){
     return view('manageTeacher');
@@ -70,6 +86,12 @@ Route::get('showRecords',function (){
 Route::get('loginMysql',[UserAuth::class,'login']);
 Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp');
 Route::post('create',[StudentAuth::class,'create'])->name('studentcreate');
+Route::get('admin/class',[adminClass::class,'index'])->name('admin.class');
+
+
+
+
+
 
 Route::post('fatherSignUpCreate',[fatherSignUp::class,'create'])->name('fatherCreate');
 Route::post('motherSignUpCreate',[motherSignUp::class,'create'])->name('motherCreate');
