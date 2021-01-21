@@ -43,12 +43,7 @@
       -->
         <div class="sidebar-wrapper" >
             <div class="logo">
-                <a href="javascript:void(0)" class="simple-text logo-mini">
-                    CT
-                </a>
-                <a href="javascript:void(0)" class="simple-text logo-normal">
-                    Creative Tim
-                </a>
+                <font color="white">Admin</font>
             </div>
             <ul class="nav">
                 <li>

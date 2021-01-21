@@ -43,12 +43,7 @@
       -->
         <div class="sidebar-wrapper" >
             <div class="logo">
-                <a href="javascript:void(0)" class="simple-text logo-mini">
-                    CT
-                </a>
-                <a href="javascript:void(0)" class="simple-text logo-normal">
-                    Creative Tim
-                </a>
+                <font color="white">Admin</font>
             </div>
             <ul class="nav">
                 <li>
@@ -170,7 +165,7 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-4">
-                    <a href="{{route('admin.class')}}">
+                    <a href="{{route('admin.studentInfo')}}">
                         <div class="card" style="width: 20rem;">
                             <img class="card-img-top" src="/assetsAdmin/img/adminStudents.jpg" alt="Card image cap"
                                  height="175px">

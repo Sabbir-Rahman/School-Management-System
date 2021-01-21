@@ -36,19 +36,14 @@
 </head>
 
 <body class="">
-<div class="wrapper" >
-    <div class="sidebar" >
+<div class="wrapper">
+    <div class="sidebar">
         <!--
           Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
       -->
-        <div class="sidebar-wrapper" >
+        <div class="sidebar-wrapper">
             <div class="logo">
-                <a href="javascript:void(0)" class="simple-text logo-mini">
-                    CT
-                </a>
-                <a href="javascript:void(0)" class="simple-text logo-normal">
-                    Creative Tim
-                </a>
+                <font color="white">Admin</font>
             </div>
             <ul class="nav">
                 <li>
@@ -170,7 +165,7 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-4">
-                    <a href="{{route('admin.class')}}">
+                    <a href="{{route('admin.buildingInfo')}}">
                         <div class="card" style="width: 20rem;">
                             <img class="card-img-top" src="/assetsAdmin/img/adminBuilding.jpg" alt="Card image cap"
                                  height="175px">
@@ -184,16 +179,19 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="/assetsAdmin/img/roomAdmin.jpg" alt="Card image cap"
-                             height="175px">
-                        <div class="card-body">
-                            <h4 class="card-title">Rooms</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                    <a href="{{route('admin.roomInfo')}}">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/assetsAdmin/img/roomAdmin.jpg" alt="Card image cap"
+                                 height="175px">
+                            <div class="card-body">
+                                <h4 class="card-title">Rooms</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
 
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
 
