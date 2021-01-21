@@ -7,6 +7,10 @@ use App\Http\Controllers\motherSignUp;
 use App\Http\Controllers\login;
 use App\Http\Controllers\teacherAuth;
 use App\Http\Controllers\adminClass;
+use App\Http\Controllers\adminBuildingInfo;
+use App\Http\Controllers\adminRoomInfo;
+use App\Http\Controllers\adminStudentInfo;
+use App\Http\Controllers\adminTeacherInfo;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -111,6 +115,10 @@ Route::post('loginCheck',[login::class,'loginCheck'])->name('loginCheck');
 Route::post('teacherSigningUp',[teacherAuth::class,'addData'])->name('teacherSigningUp');
 
 
+Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
+Route::get('admin/TeacherInfo',[adminTeacherInfo::class,'index'])->name('admin.teacherInfo');
+Route::get('admin/BuildingInfo',[adminBuildingInfo::class,'index'])->name('admin.buildingInfo');
+Route::get('admin/RoomInfo',[adminRoomInfo::class,'index'])->name('admin.roomInfo');
 
 
 
