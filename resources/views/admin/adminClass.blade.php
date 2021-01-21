@@ -108,11 +108,16 @@
         <th scope="col">Action</th>
         </thead>
         <tbody>
+        @foreach($class as $cls)
             <tr>
-                <td scope="row">A</td>
-                <td scope="row">A</td>
-                <td scope="row">A</td>
+                <td scope="row">{{$cls['id']}}</td>
+                <td scope="row">{{$cls['class']}}</td>
+                <td scope="row">
+                    <a href="{{route('form.edit',$employee->id)}}" class="btn btn-primary">EDIT</a>
+                    <a href="{{route('delete',$employee->id)}}" class="btn btn-danger">DELETE</a>
+                </td>
             </tr>
+        @endforeach
         </tbody>
     </table>
 </div>
