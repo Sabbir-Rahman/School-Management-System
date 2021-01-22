@@ -36,12 +36,12 @@
 </head>
 
 <body class="">
-<div class="wrapper" >
-    <div class="sidebar" >
+<div class="wrapper">
+    <div class="sidebar">
         <!--
           Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
       -->
-        <div class="sidebar-wrapper" >
+        <div class="sidebar-wrapper">
             <div class="logo">
                 <font color="white">Admin</font>
             </div>
@@ -196,7 +196,7 @@
                         <img class="card-img-top" src="/assetsAdmin/img/routineAdmin.jpg" alt="Card image cap"
                              height="175px">
                         <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
+                            <h4 class="card-title">Routine</h4>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card's content.</p>
 
@@ -216,6 +216,36 @@
 
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-4">
+                    <a href="{{route('Medium')}}">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/assetsAdmin/img/adminMedium.jpg" alt="Card image cap"
+                                 height="175px">
+                            <div class="card-body">
+                                <h4 class="card-title">Medium</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4">
+                    <a href="{{route('Group')}}">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/assetsAdmin/img/adminGroup.jpg" alt="Card image cap"
+                                 height="175px">
+                            <div class="card-body">
+                                <h4 class="card-title">Group</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+
+                            </div>
+                        </div>
+                    </a>
                 </div>
 
 

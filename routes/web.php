@@ -11,6 +11,8 @@ use App\Http\Controllers\adminBuildingInfo;
 use App\Http\Controllers\adminRoomInfo;
 use App\Http\Controllers\adminStudentInfo;
 use App\Http\Controllers\adminTeacherInfo;
+use App\Http\Controllers\adminMedium;
+use App\Http\Controllers\adminGroup;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -106,7 +108,12 @@ Route::post('admin/addClass',[adminClass::class,'addData'])->name('addClass');
 
 Route::post('admin/addBuilding',[adminBuildingInfo::class,'addData']);
 
+Route::post('admin/addMedium',[adminMedium::class,'addData']);
+Route::post('admin/addGroup',[adminGroup::class,'addData']);
 
+
+Route::get('admin/Medium',[adminMedium::class,'index'])->name('Medium');
+Route::get('admin/Group',[adminGroup::class,'index'])->name('Group');
 
 
 
