@@ -21,6 +21,7 @@ class CreateBuildingsTable extends Migration
             $table->text('totalRoom');
             $table->text('comment');
             $table->timestamps();
+            $table->unique(['branch','name'],'branch_building_unique');
         });
     }
 

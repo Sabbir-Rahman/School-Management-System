@@ -41,7 +41,11 @@
                     </div>
                     <div class="mb-3">
                         <label>Enter building name</label>
-                        <input type="number" name="buildingName" class="form-control" placeholder="Enter building name">
+                        <select name="search_option" class="form-select" aria-label="Default select example">
+                            @foreach($buildings as $building)
+                            <option value="buildingName" selected>{{$building['name']}}</option>
+                            @endforeach
+                        </select>
 
                     </div>
 
