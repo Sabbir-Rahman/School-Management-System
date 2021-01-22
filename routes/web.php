@@ -104,6 +104,8 @@ Route::post('create',[StudentAuth::class,'create'])->name('studentcreate');
 Route::get('admin/class',[adminClass::class,'index'])->name('admin.class');
 Route::post('admin/addClass',[adminClass::class,'addData'])->name('addClass');
 
+Route::post('admin/addBuilding',[adminBuildingInfo::class,'addData']);
+
 
 
 
