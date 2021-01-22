@@ -11,49 +11,29 @@
 <body>
 
 {{--add data modal--}}
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalSchoolBranch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Enter branch id</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addBuilding" method="POST">
+            <form action="addRoomsView" method="POST">
                 @csrf
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>School Branch</label>
-                        <input type="number" name="branch" class="form-control" placeholder="Enter school branch">
+                        <label>School Branch No</label>
+                        <input type="number" name="branchNo" class="form-control" placeholder="Enter school branch no">
 
                     </div>
-                    <div class="mb-3">
-                        <label>Name</label>
-                        <input type="text" name="buildingName" class="form-control" placeholder="Enter building name">
-
-                    </div>
-                    <div class="mb-3">
-                        <label>Total Floor</label>
-                        <input type="number" name="totalFloor" class="form-control" placeholder="Total Floor Number">
-
-                    </div>
-                    <div class="mb-3">
-                        <label>Total Room</label>
-                        <input type="number" name="totalRoom" class="form-control" placeholder="Total Room Number">
-
-                    </div>
-                    <div class="mb-3">
-                        <label>Comment</label>
-                        <input type="text" name="comment" class="form-control" placeholder="Anything want to add">
-
-                    </div>
-
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit"  class="btn btn-primary">Save data</button>
+                    <a href="{{route('addRooms')}}">
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </a>
                 </div>
             </form>
         </div>
@@ -66,7 +46,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Building Table</font></h3>
+    <h3><font color="white">Room Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -85,14 +65,14 @@
 @endif
 
 <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add buildings
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSchoolBranch">
+        Add rooms
     </button>
 
     <br><br>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Building Table</a>
+            <a class="navbar-brand">Room Table</a>
             <form action="" method="POST" class="d-flex">
                 @csrf
                 <input class="form-control me-2" type="search" name="search_data" placeholder="Search"
@@ -104,32 +84,18 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">School Branch</th>
-        <th scope="col">Name</th>
-        <th scope="col">Total Floor</th>
-        <th scope="col">Total Room</th>
-        <th scope="col">Comment</th>
+        <th scope="col">Room no</th>
+        <th scope="col">Student Capacity</th>
+        <th scope="col">Building Id</th>
+        <th scope="col">Building Name</th>
         <th scope="col">Created</th>
         <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($buildings as $building)
             <tr>
-                <td scope="row">{{$building['id']}}</td>
-                <td scope="row">{{$building['branch']}}</td>
-                <td scope="row">{{$building['name']}}</td>
-                <td scope="row">{{$building['totalFloor']}}</td>
-                <td scope="row">{{$building['totalRoom']}}</td>
-                <td scope="row">{{$building['comment']}}</td>
-                <td scope="row">{{$building['created_at']}}</td>
-                <td scope="row">{{$building['updated_at']}}</td>
-                <td scope="row">
-                    <a href="" class="btn btn-primary">EDIT</a>
-                    <a href="" class="btn btn-danger">DELETE</a>
-                </td>
+
             </tr>
-        @endforeach
         </tbody>
     </table>
 </div>
