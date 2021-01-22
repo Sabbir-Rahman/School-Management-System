@@ -93,9 +93,21 @@
         <th scope="col">Action</th>
         </thead>
         <tbody>
+        @foreach($rooms as $room)
             <tr>
-
+                <td scope="row">{{$room['id']}}</td>
+                <td scope="row">{{$room['roomNo']}}</td>
+                <td scope="row">{{$room['studentCapacity']}}</td>
+                <td scope="row">{{$room['buildingId']}}</td>
+                <td scope="row">{{$room['buildingName']}}</td>
+                <td scope="row">{{$room['created_at']}}</td>
+                <td scope="row">{{$room['updated_at']}}</td>
+                <td scope="row">
+                    <a href="" class="btn btn-primary">EDIT</a>
+                    <a href="" class="btn btn-danger">DELETE</a>
+                </td>
             </tr>
+        @endforeach
         </tbody>
     </table>
 </div>
