@@ -8,6 +8,7 @@ use App\Models\buildings;
 class adminRoomInfo extends Controller
 {
     private $branchNo;
+    private $buildingId;
 
     function index(){
         return view('admin/adminRoomInfo');
@@ -19,15 +20,24 @@ class adminRoomInfo extends Controller
 
         $data = buildings::where('branch',$this->branchNo)->get();
 
-        return view('admin/adminAddRooms');
+        return view('admin/adminAddRooms',['buildings'=>$data]);
     }
 
     function addData(Request $request){
 
+        //$this->buildingId = buildings::where('branch',$this->branchNo)->where('name',)
         $room = new room();
         $room->roomNo = $request->input('roomNo');
-        $room->roomNo = $request->input('roomNo');
+        $room->studentCapacity = $request->input('studentCapacity');
+        $room->buildingId =
+        $room->buildingName = $request->input('search_option');
 
-        return $request->input();
+        $query = $room->save();
+
+
+        if($query)
+            return redirect('/admin/class')->with('success','Data Saved');
+        else
+            return "Data not insert";
     }
 }
