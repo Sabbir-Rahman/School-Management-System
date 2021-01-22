@@ -11,28 +11,29 @@
 <body>
 
 {{--add data modal--}}
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalSchoolBranch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Enter branch id</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addClass" method="POST">
+            <form action="addRoomsView" method="POST">
                 @csrf
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>Class name</label>
-                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
+                        <label>School Branch No</label>
+                        <input type="number" name="branchNo" class="form-control" placeholder="Enter school branch no">
 
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit"  class="btn btn-primary">Save data</button>
+                    <a href="{{route('addRooms')}}">
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </a>
                 </div>
             </form>
         </div>
@@ -45,7 +46,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Class Table</font></h3>
+    <h3><font color="white">Room Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -64,14 +65,14 @@
 @endif
 
 <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add data with modal
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSchoolBranch">
+        Add rooms
     </button>
 
     <br><br>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Data Table</a>
+            <a class="navbar-brand">Room Table</a>
             <form action="" method="POST" class="d-flex">
                 @csrf
                 <input class="form-control me-2" type="search" name="search_data" placeholder="Search"
@@ -83,14 +84,24 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Class Name</th>
+        <th scope="col">Room no</th>
+        <th scope="col">Student Capacity</th>
+        <th scope="col">Building Id</th>
+        <th scope="col">Building Name</th>
+        <th scope="col">Created</th>
+        <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($class as $cls)
+        @foreach($rooms as $room)
             <tr>
-                <td scope="row">{{$cls['id']}}</td>
-                <td scope="row">{{$cls['class']}}</td>
+                <td scope="row">{{$room['id']}}</td>
+                <td scope="row">{{$room['roomNo']}}</td>
+                <td scope="row">{{$room['studentCapacity']}}</td>
+                <td scope="row">{{$room['buildingId']}}</td>
+                <td scope="row">{{$room['buildingName']}}</td>
+                <td scope="row">{{$room['created_at']}}</td>
+                <td scope="row">{{$room['updated_at']}}</td>
                 <td scope="row">
                     <a href="" class="btn btn-primary">EDIT</a>
                     <a href="" class="btn btn-danger">DELETE</a>
@@ -112,3 +123,4 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+

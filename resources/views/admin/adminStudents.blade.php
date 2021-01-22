@@ -51,12 +51,12 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="{{route('adminAcademics')}}">
                         <p>Academics</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="{{route('adminStudents')}}">
                         <p>Students</p>
                     </a>
@@ -71,7 +71,6 @@
                         <p>Infrastructures</p>
                     </a>
                 </li>
-
             </ul>
         </div>
     </div>
@@ -166,63 +165,22 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-4">
-                    <a href="{{route('admin.class')}}">
+                    <a href="{{route('admin.studentInfo')}}">
                         <div class="card" style="width: 20rem;">
-                            <img class="card-img-top" src="/assetsAdmin/img/classAdmin.jpg" alt="Card image cap"
+                            <img class="card-img-top" src="/assetsAdmin/img/adminStudents.jpg" alt="Card image cap"
                                  height="175px">
                             <div class="card-body">
-                                <h4 class="card-title">Class</h4>
+                                <h4 class="card-title">Student Info</h4>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's content.</p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4">
-
-                    <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="/assetsAdmin/img/sectionAdmin.jpg" alt="Card image class"
-                             height="175px">
-                        <div class="card-body">
-                            <h4 class="card-title">Section</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="/assetsAdmin/img/routineAdmin.jpg" alt="Card image cap"
-                             height="175px">
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="/assetsAdmin/img/courseAdmin.png" alt="Card image cap"
-                             height="175px">
-                        <div class="card-body">
-                            <h4 class="card-title">Course</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-
-                        </div>
-                    </div>
-                </div>
 
 
             </div>
-            <div class="row">
 
-            </div>
         </div>
         <footer class="footer">
 
@@ -374,3 +332,4 @@
 </body>
 
 </html>
+

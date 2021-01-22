@@ -7,6 +7,10 @@ use App\Http\Controllers\motherSignUp;
 use App\Http\Controllers\login;
 use App\Http\Controllers\teacherAuth;
 use App\Http\Controllers\adminClass;
+use App\Http\Controllers\adminBuildingInfo;
+use App\Http\Controllers\adminRoomInfo;
+use App\Http\Controllers\adminStudentInfo;
+use App\Http\Controllers\adminTeacherInfo;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +69,17 @@ Route::get('adminAcademics',function (){
 })->name('adminAcademics') ;
 
 
+Route::get('adminStudents',function (){
+    return view('admin/adminStudents');
+})->name('adminStudents') ;
+
+Route::get('adminTeachers',function (){
+    return view('admin/adminTeachers');
+})->name('adminTeachers') ;
+
+Route::get('adminInfrastructures',function (){
+    return view('admin/adminInfrastructures');
+})->name('adminInfrastructures') ;
 
 
 
@@ -83,11 +98,13 @@ Route::get('showRecords',function (){
 })->name('showRecord') ;
 
 
-Route::get('loginMysql',[UserAuth::class,'login']);
 Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp');
 Route::post('create',[StudentAuth::class,'create'])->name('studentcreate');
-Route::get('admin/class',[adminClass::class,'index'])->name('admin.class');
 
+Route::get('admin/class',[adminClass::class,'index'])->name('admin.class');
+Route::post('admin/addClass',[adminClass::class,'addData'])->name('addClass');
+
+Route::post('admin/addBuilding',[adminBuildingInfo::class,'addData']);
 
 
 
@@ -100,10 +117,16 @@ Route::post('loginCheck',[login::class,'loginCheck'])->name('loginCheck');
 Route::post('teacherSigningUp',[teacherAuth::class,'addData'])->name('teacherSigningUp');
 
 
+Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
+Route::get('admin/TeacherInfo',[adminTeacherInfo::class,'index'])->name('admin.teacherInfo');
+Route::get('admin/BuildingInfo',[adminBuildingInfo::class,'index'])->name('admin.buildingInfo');
+Route::get('admin/RoomInfo',[adminRoomInfo::class,'index'])->name('admin.roomInfo');
 
-Route::post('check',[UserAuth::class,'check'])->name('auth.check');
+Route::post('admin/addRoomsView',[adminRoomInfo::class,'addDataView'])->name('addRooms');
+Route::post('admin/addRooms',[adminRoomInfo::class,'addData'])->name('addRooms');
 
 
 
 
-//hello sabbir.
+
+

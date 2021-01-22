@@ -4,7 +4,7 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Admin Class</title>
-    <link rel="stylesheet" href="/css/adminClass.css" media="screen">
+    <link rel="stylesheet" href="/css/adminTeacherInfo.css" media="screen">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -45,7 +45,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Class Table</font></h3>
+    <h3><font color="white">Teacher Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -69,7 +69,7 @@
     </button>
 
     <br><br>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand">Data Table</a>
             <form action="" method="POST" class="d-flex">
@@ -81,18 +81,53 @@
         </div>
     </nav>
     <table id="datatable" class="table table-dark table-striped">
+
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Class Name</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Education</th>
+        <th scope="col">Experience</th>
+        <th scope="col">Speciality</th>
+        <th scope="col">Joining</th>
+        <th scope="col">Father</th>
+        <th scope="col">Mother</th>
+        <th scope="col">NID</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Hobby</th>
+        <th scope="col">Address</th>
+        <th scope="col">Contact1</th>
+        <th scope="col">Contact2</th>
+        <th scope="col">Comment</th>
+        <th scope="col">Leaving</th>
+        <th scope="col">Created</th>
+        <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($class as $cls)
+        @foreach($teachers as $teacher)
             <tr>
-                <td scope="row">{{$cls['id']}}</td>
-                <td scope="row">{{$cls['class']}}</td>
-                <td scope="row">
-                    <a href="" class="btn btn-primary">EDIT</a>
+                <td scope="col">{{$teacher['id']}}</td>
+                <td scope="col">{{$teacher['name']}}</td>
+                <td scope="col">{{$teacher['email']}}</td>
+                <td scope="col">{{$teacher['educational_qualification']}}</td>
+                <td scope="col">{{$teacher['experiences']}}</td>
+                <td scope="col">{{$teacher['speciality']}}</td>
+                <td scope="col">{{$teacher['joining_year']}}</td>
+                <td scope="col">{{$teacher['father_name']}}</td>
+                <td scope="col">{{$teacher['mother_name']}}</td>
+                <td scope="col">{{$teacher['nid']}}</td>
+                <td scope="col">{{$teacher['gender']}}</td>
+                <td scope="col">{{$teacher['hobby']}}</td>
+                <td scope="col">{{$teacher['address']}}</td>
+                <td scope="col">{{$teacher['contact']}}</td>
+                <td scope="col">{{$teacher['optional_contact']}}</td>
+                <td scope="col">{{$teacher['comment']}}</td>
+                <td scope="col">{{$teacher['leaving_year']}}</td>
+                <td scope="col">{{$teacher['created_at']}}</td>
+                <td scope="col">{{$teacher['updated_at']}}</td>
+                <td scope="col">
+                    <a href="" class="btn btn-primary">EDIT</a><br>
                     <a href="" class="btn btn-danger">DELETE</a>
                 </td>
             </tr>
