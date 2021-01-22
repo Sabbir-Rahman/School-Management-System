@@ -29,6 +29,11 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
+
+                        <input type="hidden" name="branchNo" value="{{$branchNo}}" class="form-control" placeholder="Enter room no">
+
+                    </div>
+                    <div class="mb-3">
                         <label>Room No</label>
                         <input type="number" name="roomNo" class="form-control" placeholder="Enter room no">
 
@@ -43,7 +48,7 @@
                         <label>Enter building name</label>
                         <select name="search_option" class="form-select" aria-label="Default select example">
                             @foreach($buildings as $building)
-                            <option value="buildingName" selected>{{$building['name']}}</option>
+                                <option value="{{$building['name']}}" selected>{{$building['name']}}</option>
                             @endforeach
                         </select>
 

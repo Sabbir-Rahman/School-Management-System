@@ -11,7 +11,9 @@ class adminRoomInfo extends Controller
     private $buildingId;
 
     function index(){
-        return view('admin/adminRoomInfo');
+
+        $data = room::all();
+        return view('admin/adminRoomInfo',['rooms'=>$data]);
     }
 
     function addDataView(Request $request){
@@ -20,23 +22,23 @@ class adminRoomInfo extends Controller
 
         $data = buildings::where('branch',$this->branchNo)->get();
 
-        return view('admin/adminAddRooms',['buildings'=>$data]);
+        return view('admin/adminAddRooms',['buildings'=>$data,'branchNo'=>$this->branchNo]);
     }
 
     function addData(Request $request){
 
-        //$this->buildingId = buildings::where('branch',$this->branchNo)->where('name',)
+        $building = buildings::where('branch',$request->input('branchNo'))->where('name',$request->input('search_option'))->first();
         $room = new room();
         $room->roomNo = $request->input('roomNo');
         $room->studentCapacity = $request->input('studentCapacity');
-        $room->buildingId =
+        $room->buildingId = $building->id;
         $room->buildingName = $request->input('search_option');
 
         $query = $room->save();
 
 
         if($query)
-            return redirect('/admin/class')->with('success','Data Saved');
+            return redirect('/admin/RoomInfo')->with('success','Data Saved');
         else
             return "Data not insert";
     }
