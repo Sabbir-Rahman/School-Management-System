@@ -45,7 +45,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Class Table</font></h3>
+    <h3><font color="white">Student Info Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
