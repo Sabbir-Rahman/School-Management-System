@@ -86,7 +86,7 @@
 
 <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add data with modal
+        Add buildings
     </button>
 
     <br><br>
