@@ -4,7 +4,7 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Admin Class</title>
-    <link rel="stylesheet" href="/css/adminClass.css" media="screen">
+    <link rel="stylesheet" href="/css/adminStudentInfo.css" media="screen">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -100,7 +100,31 @@
         <th scope="col">Action</th>
         </thead>
         <tbody>
+            @foreach($sections as $section)
+                <tr>
+                    <td scope="col">{{$section['id']}}</td>
+                    <td scope="col">{{$section['branch']}}</td>
+                    <td scope="col">{{$section['class']}}</td>
+                    <td scope="col">{{$section['classId']}}</td>
+                    <td scope="col">{{$section['sectionName']}}</td>
+                    <td scope="col">{{$section['roomNo']}}</td>
+                    <td scope="col">{{$section['roomId']}}</td>
+                    <td scope="col">{{$section['buildingName']}}</td>
+                    <td scope="col">{{$section['buildingId']}}</td>
+                    <td scope="col">{{$section['shift']}}</td>
+                    <td scope="col">{{$section['medium']}}</td>
+                    <td scope="col">{{$section['mediumId']}}</td>
+                    <td scope="col">{{$section['groupName']}}</td>
+                    <td scope="col">{{$section['groupId']}}</td>
+                    <td scope="col">{{$section['created_at']}}</td>
+                    <td scope="col">{{$section['updated_at']}}</td>
+                    <td scope="col">
+                        <a href="" class="btn btn-primary">EDIT</a><br>
+                        <a href="" class="btn btn-danger">DELETE</a>
+                    </td>
 
+                </tr>
+            @endforeach
         </tbody>
     </table>
 </div>

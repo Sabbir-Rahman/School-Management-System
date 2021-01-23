@@ -10,10 +10,12 @@ use App\Models\room;
 use App\Models\mediumTable;
 use App\Models\group;
 
+
 class adminSection extends Controller
 {
     function index(){
-        return view('admin/adminSection');
+        $data = sectionTable::all();
+        return view('admin/adminSection',['sections'=>$data]);
     }
 
     function addDataView(Request $request){
