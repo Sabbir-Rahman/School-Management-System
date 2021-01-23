@@ -19,16 +19,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addClass" method="POST">
+            <form action="addSectionView" method="POST">
                 @csrf
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>Class name</label>
-                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
+                        <label>Branch no</label>
+                        <input type="number" name="branchNo" class="form-control" placeholder="Enter branch no">
 
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
