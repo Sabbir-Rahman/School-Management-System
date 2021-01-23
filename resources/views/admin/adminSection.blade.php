@@ -83,7 +83,21 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
+        <th scope="col">Branch</th>
         <th scope="col">Class</th>
+        <th scope="col">ClassId</th>
+        <th scope="col">Section Name</th>
+        <th scope="col">Room no</th>
+        <th scope="col">Room Id</th>
+        <th scope="col">Building Name</th>
+        <th scope="col">Building Id</th>
+        <th scope="col">Shift</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Medium Id</th>
+        <th scope="col">Group</th>
+        <th scope="col">Group Id</th>
+        <th scope="col">Created</th>
+        <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>

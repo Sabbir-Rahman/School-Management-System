@@ -10,6 +10,7 @@ class adminGroup extends Controller
     //
     function index(){
 
+        //test
         $data = group::all();
         return view('admin/adminGroup',['groups'=>$data]);
     }
@@ -18,6 +19,7 @@ class adminGroup extends Controller
 
         $grp = new group();
         $grp->name = $request->input('name');
+        $grp->branch = $request->input('branchNo');
 
         $query = $grp->save();
 

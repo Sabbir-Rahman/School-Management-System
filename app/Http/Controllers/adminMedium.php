@@ -18,6 +18,7 @@ class adminMedium extends Controller
 
         $medium = new mediumTable();
         $medium->name = $request->input('name');
+        $medium->branch = $request->input('branchNo');
 
         $query = $medium->save();
 

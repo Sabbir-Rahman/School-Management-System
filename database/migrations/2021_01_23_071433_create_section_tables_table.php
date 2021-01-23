@@ -15,7 +15,22 @@ class CreateSectionTablesTable extends Migration
     {
         Schema::create('section_tables', function (Blueprint $table) {
             $table->id();
+            $table->Integer('branch');
             $table->text('class');
+            $table->unsignedBigInteger('classId');
+            $table->text('sectionName');
+            $table->integer('roomNo');
+            $table->unsignedBigInteger('roomId');
+            $table->text('buildingName');
+            $table->unsignedBigInteger('buildingId');
+            $table->string('shift');
+            $table->text('medium');
+            $table->integer('mediumId');
+            $table->text('groupName');
+            $table->integer('groupId');
+            $table->foreign('buildingId')->references('id')->on('buildings');
+            $table->foreign('roomId')->references('id')->on('rooms');
+            $table->foreign('classId')->references('id')->on('class_tables');
             $table->timestamps();
         });
     }
