@@ -27,7 +27,7 @@ class adminRoomInfo extends Controller
 
     function addData(Request $request){
 
-        $building = buildings::where('branch',$request->input('branchNo'))->where('name',$request->input('search_option'))->first();
+        $building = buildings::where('branch',$request->input('branchNo'))->where('buildingName',$request->input('search_option'))->first();
         $room = new room();
         $room->roomNo = $request->input('roomNo');
         $room->studentCapacity = $request->input('studentCapacity');

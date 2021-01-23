@@ -16,6 +16,8 @@ class CreateClassTablesTable extends Migration
         Schema::create('class_tables', function (Blueprint $table) {
             $table->id();
             $table->text('class');
+            $table->integer('branch');
+            $table->unique(['branch','class'],'branch_class_unique');
             $table->timestamps();
         });
     }

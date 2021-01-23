@@ -24,6 +24,11 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
+                        <label>Branch No</label>
+                        <input type="text" name="branchNo" class="form-control" placeholder="Enter group name">
+
+                    </div>
+                    <div class="mb-3">
                         <label>Group name</label>
                         <input type="text" name="name" class="form-control" placeholder="Enter group name">
 
@@ -83,6 +88,7 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
+        <th scope="col">Branch</th>
         <th scope="col">Group Name</th>
         <th scope="col">Created</th>
         <th scope="col">Updated</th>
@@ -92,6 +98,7 @@
         @foreach($groups as $group)
             <tr>
                 <td scope="row">{{$group['id']}}</td>
+                <td scope="row">{{$group['branch']}}</td>
                 <td scope="row">{{$group['name']}}</td>
                 <td scope="row">{{$group['created_at']}}</td>
                 <td scope="row">{{$group['updated_at']}}</td>

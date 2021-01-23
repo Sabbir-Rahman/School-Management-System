@@ -20,6 +20,7 @@ class CreateRoomsTable extends Migration
             $table->unsignedBigInteger('buildingId');
             $table->text('buildingName');
             $table->timestamps();
+            $table->unique(['buildingName','roomNo'],'room_building_unique');
             $table->foreign('buildingId')->references('id')->on('buildings');
         });
 
