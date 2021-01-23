@@ -133,7 +133,9 @@ Route::get('admin/RoomInfo',[adminRoomInfo::class,'index'])->name('admin.roomInf
 
 Route::post('admin/addRoomsView',[adminRoomInfo::class,'addDataView']);
 Route::post('admin/addRooms',[adminRoomInfo::class,'addData']);
-Route::post('admin/addSectionView',[adminSection::class,'addDataView'])->name('addR');
+Route::post('admin/addSectionView',[adminSection::class,'addDataView']);
+
+Route::post('admin/addSectionAdmin',[adminSection::class,'addData']);
 
 
 
