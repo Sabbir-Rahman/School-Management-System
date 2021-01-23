@@ -16,12 +16,12 @@ class CreateBuildingsTable extends Migration
         Schema::create('buildings', function (Blueprint $table) {
             $table->id();
             $table->integer('branch');
-            $table->string('name');
+            $table->text('buildingName');
             $table->text('totalFloor');
             $table->text('totalRoom');
             $table->text('comment');
             $table->timestamps();
-            $table->unique(['branch','name'],'branch_building_unique');
+            $table->unique(['branch','buildingName'],'branch_building_unique');
         });
     }
 

@@ -18,7 +18,7 @@ class adminBuildingInfo extends Controller
         $buildings = new buildings();
 
         $buildings->branch = $request->input('branch');
-        $buildings->name = $request->input('buildingName');
+        $buildings->buildingName = $request->input('buildingName');
         $buildings->totalFloor = $request->input('totalFloor');
         $buildings->totalRoom = $request->input('totalRoom');
         $buildings->comment = $request->input('comment');

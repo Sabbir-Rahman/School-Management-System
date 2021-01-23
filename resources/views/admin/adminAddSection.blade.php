@@ -29,15 +29,56 @@
                     <div class="modal-body">
 
                         <div class="mb-3">
-                            <label>Branch No</label>
-                            <input type="number" name="branchNo" class="form-control" placeholder="Enter branch no">
+                            <label>Class name</label>
+                            <select name="search_option_class" class="form-select" aria-label="Default select example">
+                                @foreach($class as $cls)
+                                    <option value="{{$cls['class']}}" selected>{{$cls['class']}}</option>
+                                @endforeach
+                            </select>
+
 
                         </div>
                         <div class="mb-3">
-                            <label>Class name</label>
-                            <input type="text" name="class" class="form-control" placeholder="Enter class name">
+                            <label>Section name</label>
+                            <input type="text" name="class" class="form-control" placeholder="Enter section name">
 
                         </div>
+                        <div class="mb-3">
+                            <label>Room no</label>
+                            <input type="number" name="class" class="form-control" placeholder="Enter room no">
+
+                        </div>
+                        <div class="mb-3">
+                            <label>Building name</label>
+                            <select name="search_option_building" class="form-select" aria-label="Default select example">
+                                @foreach($buildings as $building)
+                                    <option value="{{$building->buildingName}}" selected>{{$building->buildingName}}</option>
+                                @endforeach
+                            </select>
+
+
+                        </div>
+                        <div class="mb-3">
+                            <label>Shift</label>
+                            <input type="text" name="class" class="form-control" placeholder="Enter shift name">
+
+                        </div>
+                        <div class="mb-3">
+                            <label>Medium</label>
+                            <select name="search_option_medium" class="form-select" aria-label="Default select example">
+                                @foreach($mediums as $medium)
+                                    <option value="{{$medium->name}}" selected>{{$medium->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select name="search_option_group" class="form-select" aria-label="Default select example">
+                                @foreach($groups as $group)
+                                    <option value="{{$group->name}}" selected>{{$group->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
 
                     </div>
                     <div class="modal-footer">
