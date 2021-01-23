@@ -24,11 +24,6 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>Branch No</label>
-                        <input type="number" name="branchNo" class="form-control" placeholder="Enter branch no">
-
-                    </div>
-                    <div class="mb-3">
                         <label>Class name</label>
                         <input type="text" name="class" class="form-control" placeholder="Enter class name">
 
@@ -50,7 +45,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Class Table</font></h3>
+    <h3><font color="white">Section Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -76,7 +71,7 @@
     <br><br>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Data Table</a>
+            <a class="navbar-brand">Section Table</a>
             <form action="" method="POST" class="d-flex">
                 @csrf
                 <input class="form-control me-2" type="search" name="search_data" placeholder="Search"
@@ -88,22 +83,11 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Branch No</th>
-        <th scope="col">Class Name</th>
+        <th scope="col">Class</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($class as $cls)
-            <tr>
-                <td scope="row">{{$cls['id']}}</td>
-                <td scope="row">{{$cls['branch']}}</td>
-                <td scope="row">{{$cls['class']}}</td>
-                <td scope="row">
-                    <a href="" class="btn btn-primary">EDIT</a>
-                    <a href="" class="btn btn-danger">DELETE</a>
-                </td>
-            </tr>
-        @endforeach
+
         </tbody>
     </table>
 </div>

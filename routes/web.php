@@ -13,6 +13,7 @@ use App\Http\Controllers\adminStudentInfo;
 use App\Http\Controllers\adminTeacherInfo;
 use App\Http\Controllers\adminMedium;
 use App\Http\Controllers\adminGroup;
+use App\Http\Controllers\adminSection;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -115,6 +116,7 @@ Route::post('admin/addGroup',[adminGroup::class,'addData']);
 Route::get('admin/Medium',[adminMedium::class,'index'])->name('Medium');
 Route::get('admin/Group',[adminGroup::class,'index'])->name('Group');
 
+Route::get('admin/section',[adminSection::class,'index'])->name('admin.section');
 
 
 Route::post('fatherSignUpCreate',[fatherSignUp::class,'create'])->name('fatherCreate');

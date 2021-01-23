@@ -15,7 +15,7 @@ class CreateMediumTablesTable extends Migration
     {
         Schema::create('medium_tables', function (Blueprint $table) {
             $table->id();
-            $table->text('name');
+            $table->text('name')->unique();
             $table->timestamps();
         });
     }
