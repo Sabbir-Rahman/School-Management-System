@@ -24,10 +24,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
-                <form action="addClass" method="POST">
+                <form action="addSectionAdmin" method="POST">
                     @csrf
                     <div class="modal-body">
 
+                        <div class="mb-3">
+                            <input type="hidden" name="branchNo" value="{{$branch}}" class="form-control" placeholder="Enter section name">
+                        </div>
                         <div class="mb-3">
                             <label>Class name</label>
                             <select name="search_option_class" class="form-select" aria-label="Default select example">
@@ -40,12 +43,12 @@
                         </div>
                         <div class="mb-3">
                             <label>Section name</label>
-                            <input type="text" name="class" class="form-control" placeholder="Enter section name">
+                            <input type="text" name="sectionName" class="form-control" placeholder="Enter section name">
 
                         </div>
                         <div class="mb-3">
                             <label>Room no</label>
-                            <input type="number" name="class" class="form-control" placeholder="Enter room no">
+                            <input type="number" name="roomNo" class="form-control" placeholder="Enter room no">
 
                         </div>
                         <div class="mb-3">
@@ -60,8 +63,10 @@
                         </div>
                         <div class="mb-3">
                             <label>Shift</label>
-                            <input type="text" name="class" class="form-control" placeholder="Enter shift name">
-
+                            <select name="search_option_shift" class="form-select" aria-label="Default select example">
+                                    <option value="Morning" selected>Morning</option>
+                                    <option value="Day" >Day</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label>Medium</label>
