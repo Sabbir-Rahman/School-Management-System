@@ -31,6 +31,7 @@ class CreateSectionTablesTable extends Migration
             $table->foreign('buildingId')->references('id')->on('buildings');
             $table->foreign('roomId')->references('id')->on('rooms');
             $table->foreign('classId')->references('id')->on('class_tables');
+            $table->unique(['branch','shift','roomNo'],'shift_room_branch_unique');
             $table->timestamps();
         });
     }

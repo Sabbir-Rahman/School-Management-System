@@ -48,7 +48,7 @@
                         <label>Enter building name</label>
                         <select name="search_option" class="form-select" aria-label="Default select example">
                             @foreach($buildings as $building)
-                                <option value="{{$building['name']}}" selected>{{$building['name']}}</option>
+                                <option value="{{$building['buildingName']}}" selected>{{$building['buildingName']}}</option>
                             @endforeach
                         </select>
 
