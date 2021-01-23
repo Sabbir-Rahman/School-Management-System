@@ -131,9 +131,9 @@ Route::get('admin/TeacherInfo',[adminTeacherInfo::class,'index'])->name('admin.t
 Route::get('admin/BuildingInfo',[adminBuildingInfo::class,'index'])->name('admin.buildingInfo');
 Route::get('admin/RoomInfo',[adminRoomInfo::class,'index'])->name('admin.roomInfo');
 
-Route::post('admin/addRoomsView',[adminRoomInfo::class,'addDataView'])->name('addRooms');
-Route::post('admin/addRooms',[adminRoomInfo::class,'addData'])->name('addRooms');
-
+Route::post('admin/addRoomsView',[adminRoomInfo::class,'addDataView']);
+Route::post('admin/addRooms',[adminRoomInfo::class,'addData']);
+Route::post('admin/addSectionView',[adminSection::class,'addDataView'])->name('addR');
 
 
 
