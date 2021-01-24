@@ -14,6 +14,8 @@ use App\Http\Controllers\adminTeacherInfo;
 use App\Http\Controllers\adminMedium;
 use App\Http\Controllers\adminGroup;
 use App\Http\Controllers\adminSection;
+use App\Http\Controllers\adminCourse;
+use App\Http\Controllers\mediumGroupBranchController;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -131,11 +133,17 @@ Route::get('admin/TeacherInfo',[adminTeacherInfo::class,'index'])->name('admin.t
 Route::get('admin/BuildingInfo',[adminBuildingInfo::class,'index'])->name('admin.buildingInfo');
 Route::get('admin/RoomInfo',[adminRoomInfo::class,'index'])->name('admin.roomInfo');
 
+Route::get('admin/course',[adminCourse::class,'index'])->name('admin.course');
+
 Route::post('admin/addRoomsView',[adminRoomInfo::class,'addDataView']);
 Route::post('admin/addRooms',[adminRoomInfo::class,'addData']);
-Route::post('admin/addSectionView',[adminSection::class,'addDataView'])->name('addR');
+Route::post('admin/addSectionView',[adminSection::class,'addDataView']);
 
+Route::post('admin/addSectionAdmin',[adminSection::class,'addData']);
 
+Route::post('admin/mediumGroupBranch',[mediumGroupBranchController::class,'addData']);
+
+Route::get('admin/mediumGroupBranchView',[mediumGroupBranchController::class,'index'])->name('admin.mediumGroupBranch');
 
 
 
