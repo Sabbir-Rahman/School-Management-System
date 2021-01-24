@@ -42,6 +42,11 @@ class adminSection extends Controller
         $objectMediumGroupBranch = '';
 
 
+        $cls = classTable::where('branch', $request->input('branchNo'))->where('class', $request->input('search_option_class'))->first();
+        $building = buildings::where('branch', $request->input('branchNo'))->where('buildingName', $request->input('search_option_building'))->first();
+        $room = room::where('buildingId', $building['id'])->where('roomNo', $request->input('roomNo'))->first();
+        $medium = mediumTable::where('branch', $request->input('branchNo'))->where('name', $request->input('search_option_medium'))->first();
+        $group = group::where('branch', $request->input('branchNo'))->where('name', $request->input('search_option_group'))->first();
 
         $objectMediumGroupBranch = mediumGroupBranch::where('mediumName',$request->input('search_option_medium'))->where('groupName', $request->input('search_option_group'))->where('branch', $request->input('branchNo'))->first();
 
@@ -49,6 +54,11 @@ class adminSection extends Controller
         $sectionCount = count(sectionTable::all());
 
 
+        if ($cls['id']< 10) {
+            $idClass = '0'.strval($cls['id']);
+        }
+        else
+            $idClass = strval($cls['id']);
 
         if ($sectionCount< 10) {
             $idSection = '000'.strval($sectionCount+1);
@@ -62,13 +72,13 @@ class adminSection extends Controller
         else
             $idSection = strval($sectionCount+1);
 
-        $uniqueId = $objectMediumGroupBranch['id'].$idSection;
+        $uniqueId = $objectMediumGroupBranch['id'].$idClass.$idSection;
 
 
 
-        if(strlen($uniqueId)==7)
+        if(strlen($uniqueId)==9)
            $uniqueId = '0'.$uniqueId;
-        elseif (strlen($uniqueId)>8)
+        elseif (strlen($uniqueId)>10)
             return "Data overlimit";
 
         $section = new sectionTable();
