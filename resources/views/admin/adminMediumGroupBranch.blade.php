@@ -108,6 +108,34 @@
         <th scope="col">Action</th>
         </thead>
         <tbody>
+        @foreach($mediumGroups as $mediumGroup)
+        <tr>
+            @if(intval($mediumGroup['id'])<1000)
+                <td scope="row">0{{$mediumGroup['id']}}</td>
+                <td scope="row">{{$mediumGroup['branch']}}</td>
+                <td scope="row">{{$mediumGroup['mediumName']}}</td>
+                <td scope="row">{{$mediumGroup['groupName']}}</td>
+                <td scope="row">{{$mediumGroup['created_at']}}</td>
+                <td scope="row">{{$mediumGroup['updated_at']}}</td>
+                <td scope="row">
+                    <a href="" class="btn btn-primary">EDIT</a>
+                    <a href="" class="btn btn-danger">DELETE</a>
+                </td>
+            @else
+                <td scope="row">{{$mediumGroup['id']}}</td>
+                <td scope="row">{{$mediumGroup['branch']}}</td>
+                <td scope="row">{{$mediumGroup['mediumName']}}</td>
+                <td scope="row">{{$mediumGroup['groupName']}}</td>
+                <td scope="row">{{$mediumGroup['created_at']}}</td>
+                <td scope="row">{{$mediumGroup['updated_at']}}</td>
+                <td scope="row">
+                    <a href="" class="btn btn-primary">EDIT</a>
+                    <a href="" class="btn btn-danger">DELETE</a>
+                </td>
+            @endif
+
+        </tr>
+        @endforeach
         </tbody>
     </table>
 </div>
