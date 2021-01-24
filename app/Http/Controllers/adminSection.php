@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\mediumGroupBranch;
 use App\Models\sectionTable;
 use Illuminate\Http\Request;
 use App\Models\classTable;
@@ -33,49 +34,21 @@ class adminSection extends Controller
 
     function addData(Request $request)
     {
-        //Branch(1)+Class (3)+Medium(3)+Group(3)+SectionNo(4)
+
+             //Branch(1)+Class (3)+Medium(3)+Group(3)+SectionNo(4)
         $uniqueId = '';
-        $idClass = '';
-        $idMedium = '';
-        $idGroup = '';
-        $idSection = '';
+
+        $idMediumGroupBranch = '';
+        $objectMediumGroupBranch = '';
 
 
 
-        $cls = classTable::where('branch', $request->input('branchNo'))->where('class', $request->input('search_option_class'))->first();
-        $building = buildings::where('branch', $request->input('branchNo'))->where('buildingName', $request->input('search_option_building'))->first();
-        $room = room::where('buildingId', $building['id'])->where('roomNo', $request->input('roomNo'))->first();
-        $medium = mediumTable::where('branch', $request->input('branchNo'))->where('name', $request->input('search_option_medium'))->first();
-        $group = group::where('branch', $request->input('branchNo'))->where('name', $request->input('search_option_group'))->first();
+        $objectMediumGroupBranch = mediumGroupBranch::where('mediumName',$request->input('search_option_medium'))->where('groupName', $request->input('search_option_group'))->where('branch', $request->input('branchNo'))->first();
+
+
         $sectionCount = count(sectionTable::all());
 
-        if ($cls->id < 10) {
-            $idClass = '00'.strval($cls->id);
-        }
-        else if (($cls->id> 9) and ($cls->id < 100)) {
-            $idClass = '0'.strval($cls->id);
-        }
-        else
-            $idClass = strval($cls->id);
 
-
-        if ($medium['id'] < 10) {
-            $idMedium = '00'.strval($medium->id);
-        }
-        else if (($medium['id'] > 9) and ($medium->id < 100)) {
-            $idMedium = '0'.strval($medium->id);
-        }
-        else
-            $idMedium = strval($medium['id']);
-
-        if ($group['id']< 10) {
-            $idGroup = '00'.strval($group->id);
-        }
-        else if (($group['id'] > 9) and ($group['id'] < 100)) {
-            $idGroup = '0'.strval($group->id);
-        }
-        else
-            $idGroup = strval($group['id']);
 
         if ($sectionCount< 10) {
             $idSection = '000'.strval($sectionCount+1);
@@ -89,11 +62,14 @@ class adminSection extends Controller
         else
             $idSection = strval($sectionCount+1);
 
-        $uniqueId = strval($request->input('branchNo')).$idClass.$idMedium.$idGroup.$idSection;
+        $uniqueId = $objectMediumGroupBranch['id'].$idSection;
 
-        if(strlen($uniqueId)>14)
-            return "Data Insert Failed";
 
+
+        if(strlen($uniqueId)==7)
+           $uniqueId = '0'.$uniqueId;
+        elseif (strlen($uniqueId)>8)
+            return "Data overlimit";
 
         $section = new sectionTable();
         $section->id = $uniqueId;
