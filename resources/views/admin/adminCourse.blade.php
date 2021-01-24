@@ -4,7 +4,7 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Admin Class</title>
-    <link rel="stylesheet" href="/css/adminStudentInfo.css" media="screen">
+    <link rel="stylesheet" href="/css/adminClass.css" media="screen">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -19,15 +19,21 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addSectionView" method="POST">
+            <form action="addClass" method="POST">
                 @csrf
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>Branch no</label>
+                        <label>Branch No</label>
                         <input type="number" name="branchNo" class="form-control" placeholder="Enter branch no">
 
                     </div>
+                    <div class="mb-3">
+                        <label>Class name</label>
+                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
+
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -44,7 +50,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Section Table</font></h3>
+    <h3><font color="white">Course Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -66,12 +72,11 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Add data with modal
     </button>
-    <br><br>
-<p><font color="#d3d3d3">Section id format:branch(1 digit)+class(3 digit)+medium(3 digit)+group(3 digit)+sectionCount(4 digit)</font></p>
 
+    <br><br>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Section Table</a>
+            <a class="navbar-brand">Data Table</a>
             <form action="" method="POST" class="d-flex">
                 @csrf
                 <input class="form-control me-2" type="search" name="search_data" placeholder="Search"
@@ -83,49 +88,15 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Branch</th>
-        <th scope="col">Class</th>
-        <th scope="col">ClassId</th>
-        <th scope="col">Section Name</th>
-        <th scope="col">Room no</th>
-        <th scope="col">Room Id</th>
-        <th scope="col">Building Name</th>
-        <th scope="col">Building Id</th>
-        <th scope="col">Shift</th>
+        <th scope="col">Branch No</th>
+        <th scope="col">Class </th>
+        <th scope="col">Course </th>
         <th scope="col">Medium</th>
-        <th scope="col">Medium Id</th>
         <th scope="col">Group</th>
-        <th scope="col">Group Id</th>
-        <th scope="col">Created</th>
-        <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-            @foreach($sections as $section)
-                <tr>
-                    <td scope="col">{{$section['id']}}</td>
-                    <td scope="col">{{$section['branch']}}</td>
-                    <td scope="col">{{$section['class']}}</td>
-                    <td scope="col">{{$section['classId']}}</td>
-                    <td scope="col">{{$section['sectionName']}}</td>
-                    <td scope="col">{{$section['roomNo']}}</td>
-                    <td scope="col">{{$section['roomId']}}</td>
-                    <td scope="col">{{$section['buildingName']}}</td>
-                    <td scope="col">{{$section['buildingId']}}</td>
-                    <td scope="col">{{$section['shift']}}</td>
-                    <td scope="col">{{$section['medium']}}</td>
-                    <td scope="col">{{$section['mediumId']}}</td>
-                    <td scope="col">{{$section['groupName']}}</td>
-                    <td scope="col">{{$section['groupId']}}</td>
-                    <td scope="col">{{$section['created_at']}}</td>
-                    <td scope="col">{{$section['updated_at']}}</td>
-                    <td scope="col">
-                        <a href="" class="btn btn-primary">EDIT</a><br>
-                        <a href="" class="btn btn-danger">DELETE</a>
-                    </td>
 
-                </tr>
-            @endforeach
         </tbody>
     </table>
 </div>
