@@ -67,7 +67,7 @@
         Add data with modal
     </button>
     <br><br>
-<p><font color="#d3d3d3">Section id format:branch(1 digit)+class(3 digit)+medium(3 digit)+group(3 digit)+sectionCount(4 digit)</font></p>
+<p><font color="#d3d3d3">Section id format:branch(1 digit)+medium(1 digit)+group(1 digit)+class(2 digit)+sectionCount(4 digit)</font></p>
 
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
@@ -103,7 +103,8 @@
         <tbody>
             @foreach($sections as $section)
                 <tr>
-                    <td scope="col">{{$section['id']}}</td>
+                    @if(intval($section['id'])<1000000000)
+                    <td scope="col">0{{$section['id']}}</td>
                     <td scope="col">{{$section['branch']}}</td>
                     <td scope="col">{{$section['class']}}</td>
                     <td scope="col">{{$section['classId']}}</td>
@@ -123,6 +124,28 @@
                         <a href="" class="btn btn-primary">EDIT</a><br>
                         <a href="" class="btn btn-danger">DELETE</a>
                     </td>
+                    @else
+                        <td scope="col">{{$section['id']}}</td>
+                        <td scope="col">{{$section['branch']}}</td>
+                        <td scope="col">{{$section['class']}}</td>
+                        <td scope="col">{{$section['classId']}}</td>
+                        <td scope="col">{{$section['sectionName']}}</td>
+                        <td scope="col">{{$section['roomNo']}}</td>
+                        <td scope="col">{{$section['roomId']}}</td>
+                        <td scope="col">{{$section['buildingName']}}</td>
+                        <td scope="col">{{$section['buildingId']}}</td>
+                        <td scope="col">{{$section['shift']}}</td>
+                        <td scope="col">{{$section['medium']}}</td>
+                        <td scope="col">{{$section['mediumId']}}</td>
+                        <td scope="col">{{$section['groupName']}}</td>
+                        <td scope="col">{{$section['groupId']}}</td>
+                        <td scope="col">{{$section['created_at']}}</td>
+                        <td scope="col">{{$section['updated_at']}}</td>
+                        <td scope="col">
+                            <a href="" class="btn btn-primary">EDIT</a><br>
+                            <a href="" class="btn btn-danger">DELETE</a>
+                        </td>
+                    @endif
 
                 </tr>
             @endforeach

@@ -19,49 +19,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addCourse" method="POST">
+            <form action="addSubjectName" method="POST">
                 @csrf
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>Class name</label>
-                        <select name="search_option_class" class="form-select" aria-label="Default select example">
-                            @foreach($classes as $class)
-                                <option value="{{$class['class']}}" selected>{{$class['class']}}</option>
-                            @endforeach
-                        </select>
+                        <label>Subject Name</label>
+                        <input type="text" name="subjectName" class="form-control" placeholder="Enter subject name">
 
-                    </div>
-                    <div class="mb-3">
-                        <label>Subject name</label>
-                        <select name="search_option_subject" class="form-select" aria-label="Default select example">
-                            @foreach($subjects as $subject)
-                                <option value="{{$subject['subjectName']}}" selected>{{$subject['subjectName']}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label>Paper</label>
-                        <select name="search_option_paper" class="form-select" aria-label="Default select example">
-                            <option value="First" selected>First</option>
-                            <option value="Second" selected>Second</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label>Medium name</label>
-                        <select name="search_option_medium" class="form-select" aria-label="Default select example">
-                            @foreach($mediums as $medium)
-                                <option value="{{$medium['name']}}" selected>{{$medium['name']}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label>Group name</label>
-                        <select name="search_option_group" class="form-select" aria-label="Default select example">
-                            @foreach($groups as $group)
-                                <option value="{{$group['name']}}" selected>{{$group['name']}}</option>
-                            @endforeach
-                        </select>
                     </div>
 
                 </div>
@@ -80,7 +45,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Course Table</font></h3>
+    <h3><font color="white">Subject Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -118,33 +83,25 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Class</th>
-        <th scope="col">Subject</th>
-        <th scope="col">Paper</th>
-        <th scope="col">Medium</th>
-        <th scope="col">Group</th>
+        <th scope="col">Subject Name</th>
         <th scope="col">Created</th>
         <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($courses as $course)
-        <tr>
-            <td scope="row">{{$course['id']}}</td>
-            <td scope="row">{{$course['class']}}</td>
-            <td scope="row">{{$course['subject']}}</td>
-            <td scope="row">{{$course['paper']}}</td>
-            <td scope="row">{{$course['medium']}}</td>
-            <td scope="row">{{$course['group']}}</td>
-            <td scope="row">{{$course['created_at']}}</td>
-            <td scope="row">{{$course['updated_at']}}</td>
-            <td scope="row">
-                <a href="" class="btn btn-primary">EDIT</a>
-                <a href="" class="btn btn-danger">DELETE</a>
-            </td>
-        </tr>
-        @endforeach
+        @foreach($subjects as $subject)
+            <tr>
 
+                <td scope="row">{{$subject['id']}}</td>
+                <td scope="row">{{$subject['subjectName']}}</td>
+                <td scope="row">{{$subject['created_at']}}</td>
+                <td scope="row">{{$subject['updated_at']}}</td>
+                <td scope="row">
+                    <a href="" class="btn btn-primary">EDIT</a>
+                    <a href="" class="btn btn-danger">DELETE</a>
+                </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 </div>
