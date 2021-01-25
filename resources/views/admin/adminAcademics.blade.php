@@ -260,7 +260,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4">
-                    <a href="{{route('admin.mediumGroupBranch')}}">
+                    <a href="{{route('admin.mediumClassGroupBranch')}}">
                         <div class="card" style="width: 20rem;">
                             <img class="card-img-top" src="/assetsAdmin/img/adminGroup.jpg" alt="Card image cap"
                                  height="175px">
