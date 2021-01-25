@@ -24,12 +24,22 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>Branch No</label>
-                        <input type="number" name="branchNo" class="form-control" placeholder="Enter branch no">
+                        <label>Class name</label>
+                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
 
                     </div>
                     <div class="mb-3">
-                        <label>Class name</label>
+                        <label>Subject name</label>
+                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>Medium name</label>
+                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>Group name</label>
                         <input type="text" name="class" class="form-control" placeholder="Enter class name">
 
                     </div>
