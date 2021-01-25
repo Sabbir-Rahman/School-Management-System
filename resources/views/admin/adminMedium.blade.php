@@ -24,11 +24,6 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>Branch no</label>
-                        <input type="text" name="branchNo" class="form-control" placeholder="Enter branch no">
-
-                    </div>
-                    <div class="mb-3">
                         <label>Medium name</label>
                         <input type="text" name="name" class="form-control" placeholder="Enter medium name">
 
@@ -88,7 +83,6 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Branch no</th>
         <th scope="col">Medium Name</th>
         <th scope="col">Created</th>
         <th scope="col">Updated</th>
@@ -98,7 +92,6 @@
         @foreach($mediums as $medium)
             <tr>
                 <td scope="row">{{$medium['id']}}</td>
-                <td scope="row">{{$medium['branch']}}</td>
                 <td scope="row">{{$medium['name']}}</td>
                 <td scope="row">{{$medium['created_at']}}</td>
                 <td scope="row">{{$medium['updated_at']}}</td>

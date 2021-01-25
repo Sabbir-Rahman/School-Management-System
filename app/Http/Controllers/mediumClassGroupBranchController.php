@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\classTable;
 use Illuminate\Http\Request;
 use App\Models\mediumTable;
 use App\Models\group;
@@ -16,18 +17,18 @@ class mediumClassGroupBranchController extends Controller
         $data1 = mediumTable::all();
         $data2 = group::all();
         $data3 = mediumClassGroupBranch::all();
-        return view('admin/adminMediumGroupBranch',['mediums'=>$data1,'groups'=>$data2,'mediumGroups'=>$data3]);
+        $data4 = classTable::all();
+
+        return view('admin/adminClassMediumGroupBranch',['mediums'=>$data1,'groups'=>$data2,'mediumGroupsClasses'=>$data3,'classes'=>$data4]);
     }
 
     function addData(Request $request){
 
-        $uniqueId = '';
-        $branchId = '';
-        $mediumGroupId = '';
 
 
         $medium = mediumTable::where('name',$request->input('select_option_medium'))->first();
         $group = group::where('name',$request->input('select_option_group'))->first();
+        $class = classTable::where('class',$request->input('select_option_class'))->first();
 
         if($group['id']<10 and $medium['id']<10)
             $mediumGroupId = strval($medium['id']<10).strval($group['id']);
@@ -39,13 +40,20 @@ class mediumClassGroupBranchController extends Controller
         else
             $branchId = strval($request->input('branchNo'));
 
-        $uniqueId = $branchId.$mediumGroupId;
+        if(($class['id'])<10)
+            $classId = '0'.strval($class['id']);
+        else
+            $classId = strval($class['id']);
+
+
+        $uniqueId = $branchId.$classId.$mediumGroupId;
 
 
         $mediumGroupsBranch = new mediumClassGroupBranch();
 
         $mediumGroupsBranch->id = $uniqueId;
         $mediumGroupsBranch->branch = $request->input('branchNo') ;
+        $mediumGroupsBranch->className = $request->input('select_option_class') ;
         $mediumGroupsBranch->mediumName = $request->input('select_option_medium') ;
         $mediumGroupsBranch->groupName = $request->input('select_option_group') ;
 

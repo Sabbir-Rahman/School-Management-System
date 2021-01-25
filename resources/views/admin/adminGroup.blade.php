@@ -84,7 +84,6 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Branch</th>
         <th scope="col">Group Name</th>
         <th scope="col">Created</th>
         <th scope="col">Updated</th>
@@ -94,7 +93,6 @@
         @foreach($groups as $group)
             <tr>
                 <td scope="row">{{$group['id']}}</td>
-                <td scope="row">{{$group['branch']}}</td>
                 <td scope="row">{{$group['name']}}</td>
                 <td scope="row">{{$group['created_at']}}</td>
                 <td scope="row">{{$group['updated_at']}}</td>

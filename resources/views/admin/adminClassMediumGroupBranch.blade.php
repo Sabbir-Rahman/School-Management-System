@@ -19,7 +19,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="mediumGroupBranch" method="POST">
+            <form action="mediumClassGroupBranch" method="POST">
                 @csrf
                 <div class="modal-body">
 
@@ -27,6 +27,14 @@
                         <label>Branch no</label>
                         <input type="text" name="branchNo" class="form-control" placeholder="Enter branch no">
 
+                    </div>
+                    <div class="mb-3">
+                        <label>Class name</label>
+                        <select name="select_option_class" class="form-select" aria-label="Default select example">
+                            @foreach($classes as $class)
+                                <option value="{{$class['class']}}" selected>{{$class['class']}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label>Medium name</label>
@@ -101,33 +109,35 @@
         <thead>
         <th scope="col">Id</th>
         <th scope="col">Branch no</th>
-        <th scope="col">Medium Name</th>
-        <th scope="col">Group Name</th>
+        <th scope="col">Class</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Group</th>
         <th scope="col">Created</th>
         <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($mediumGroups as $mediumGroup)
+        @foreach($mediumGroupsClasses as $mediumGroupClass)
         <tr>
-            @if(intval($mediumGroup['id'])<1000)
-                <td scope="row">0{{$mediumGroup['id']}}</td>
-                <td scope="row">{{$mediumGroup['branch']}}</td>
-                <td scope="row">{{$mediumGroup['mediumName']}}</td>
-                <td scope="row">{{$mediumGroup['groupName']}}</td>
-                <td scope="row">{{$mediumGroup['created_at']}}</td>
-                <td scope="row">{{$mediumGroup['updated_at']}}</td>
+            @if(intval($mediumGroupClass['id'])<100000)
+                <td scope="row">0{{$mediumGroupClass['id']}}</td>
+                <td scope="row">{{$mediumGroupClass['branch']}}</td>
+                <td scope="row">{{$mediumGroupClass['className']}}</td>
+                <td scope="row">{{$mediumGroupClass['mediumName']}}</td>
+                <td scope="row">{{$mediumGroupClass['groupName']}}</td>
+                <td scope="row">{{$mediumGroupClass['created_at']}}</td>
+                <td scope="row">{{$mediumGroupClass['updated_at']}}</td>
                 <td scope="row">
                     <a href="" class="btn btn-primary">EDIT</a>
                     <a href="" class="btn btn-danger">DELETE</a>
                 </td>
             @else
-                <td scope="row">{{$mediumGroup['id']}}</td>
-                <td scope="row">{{$mediumGroup['branch']}}</td>
-                <td scope="row">{{$mediumGroup['mediumName']}}</td>
-                <td scope="row">{{$mediumGroup['groupName']}}</td>
-                <td scope="row">{{$mediumGroup['created_at']}}</td>
-                <td scope="row">{{$mediumGroup['updated_at']}}</td>
+                <td scope="row">{{$mediumGroupClass['id']}}</td>
+                <td scope="row">{{$mediumGroupClass['branch']}}</td>
+                <td scope="row">{{$mediumGroupClass['mediumName']}}</td>
+                <td scope="row">{{$mediumGroupClass['groupName']}}</td>
+                <td scope="row">{{$mediumGroupClass['created_at']}}</td>
+                <td scope="row">{{$mediumGroupClass['updated_at']}}</td>
                 <td scope="row">
                     <a href="" class="btn btn-primary">EDIT</a>
                     <a href="" class="btn btn-danger">DELETE</a>
