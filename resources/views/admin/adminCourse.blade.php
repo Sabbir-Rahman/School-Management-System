@@ -88,7 +88,6 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Branch No</th>
         <th scope="col">Class </th>
         <th scope="col">Course </th>
         <th scope="col">Medium</th>
