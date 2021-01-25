@@ -16,6 +16,7 @@ use App\Http\Controllers\adminGroup;
 use App\Http\Controllers\adminSection;
 use App\Http\Controllers\adminCourse;
 use App\Http\Controllers\mediumGroupBranchController;
+use App\Http\Controllers\adminSubject;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -144,6 +145,6 @@ Route::post('admin/addSectionAdmin',[adminSection::class,'addData']);
 Route::post('admin/mediumGroupBranch',[mediumGroupBranchController::class,'addData']);
 
 Route::get('admin/mediumGroupBranchView',[mediumGroupBranchController::class,'index'])->name('admin.mediumGroupBranch');
-
+Route::get('admin/addSubjects',[adminSubject::class,'index'])->name('adminSubjects');
 
 
