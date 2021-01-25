@@ -123,9 +123,27 @@
         <th scope="col">Paper</th>
         <th scope="col">Medium</th>
         <th scope="col">Group</th>
+        <th scope="col">Created</th>
+        <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
+        @foreach($courses as $course)
+        <tr>
+            <td scope="row">{{$course['id']}}</td>
+            <td scope="row">{{$course['class']}}</td>
+            <td scope="row">{{$course['subject']}}</td>
+            <td scope="row">{{$course['paper']}}</td>
+            <td scope="row">{{$course['medium']}}</td>
+            <td scope="row">{{$course['group']}}</td>
+            <td scope="row">{{$course['created_at']}}</td>
+            <td scope="row">{{$course['updated_at']}}</td>
+            <td scope="row">
+                <a href="" class="btn btn-primary">EDIT</a>
+                <a href="" class="btn btn-danger">DELETE</a>
+            </td>
+        </tr>
+        @endforeach
 
         </tbody>
     </table>

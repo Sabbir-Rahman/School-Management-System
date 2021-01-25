@@ -18,8 +18,9 @@ class adminCourse extends Controller
         $data2 = mediumTable::all();
         $data3 = group::all();
         $data4 = subject::all();
+        $data5 = course::all();
 
-        return view('admin/adminCourse',['classes'=>$data1,'mediums'=>$data2,'groups'=>$data3,'subjects'=>$data4]);
+        return view('admin/adminCourse',['classes'=>$data1,'mediums'=>$data2,'groups'=>$data3,'subjects'=>$data4,'courses'=>$data5]);
     }
 
     function addData(Request $request){
