@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\mediumGroupBranch;
+use App\Models\mediumClassGroupBranch;
 use App\Models\sectionTable;
 use Illuminate\Http\Request;
 use App\Models\classTable;
@@ -48,7 +48,7 @@ class adminSection extends Controller
         $medium = mediumTable::where('branch', $request->input('branchNo'))->where('name', $request->input('search_option_medium'))->first();
         $group = group::where('branch', $request->input('branchNo'))->where('name', $request->input('search_option_group'))->first();
 
-        $objectMediumGroupBranch = mediumGroupBranch::where('mediumName',$request->input('search_option_medium'))->where('groupName', $request->input('search_option_group'))->where('branch', $request->input('branchNo'))->first();
+        $objectMediumGroupBranch = mediumClassGroupBranch::where('mediumName',$request->input('search_option_medium'))->where('groupName', $request->input('search_option_group'))->where('branch', $request->input('branchNo'))->first();
 
 
         $sectionCount = count(sectionTable::all());

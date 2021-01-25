@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\mediumTable;
 use App\Models\group;
-use App\Models\mediumGroupBranch;
+use App\Models\mediumClassGroupBranch;
 
-class mediumGroupBranchController extends Controller
+class mediumClassGroupBranchController extends Controller
 {
 
     function index(){
@@ -15,7 +15,7 @@ class mediumGroupBranchController extends Controller
 
         $data1 = mediumTable::all();
         $data2 = group::all();
-        $data3 = mediumGroupBranch::all();
+        $data3 = mediumClassGroupBranch::all();
         return view('admin/adminMediumGroupBranch',['mediums'=>$data1,'groups'=>$data2,'mediumGroups'=>$data3]);
     }
 
@@ -42,7 +42,7 @@ class mediumGroupBranchController extends Controller
         $uniqueId = $branchId.$mediumGroupId;
 
 
-        $mediumGroupsBranch = new mediumGroupBranch();
+        $mediumGroupsBranch = new mediumClassGroupBranch();
 
         $mediumGroupsBranch->id = $uniqueId;
         $mediumGroupsBranch->branch = $request->input('branchNo') ;

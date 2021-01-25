@@ -23,11 +23,7 @@
                 @csrf
                 <div class="modal-body">
 
-                    <div class="mb-3">
-                        <label>Branch No</label>
-                        <input type="text" name="branchNo" class="form-control" placeholder="Enter group name">
 
-                    </div>
                     <div class="mb-3">
                         <label>Group name</label>
                         <input type="text" name="name" class="form-control" placeholder="Enter group name">
