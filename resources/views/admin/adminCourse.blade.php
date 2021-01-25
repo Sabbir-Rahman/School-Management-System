@@ -19,29 +19,49 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addClass" method="POST">
+            <form action="addCourse" method="POST">
                 @csrf
                 <div class="modal-body">
 
                     <div class="mb-3">
                         <label>Class name</label>
-                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
+                        <select name="search_option_class" class="form-select" aria-label="Default select example">
+                            @foreach($classes as $class)
+                                <option value="{{$class['class']}}" selected>{{$class['class']}}</option>
+                            @endforeach
+                        </select>
 
                     </div>
                     <div class="mb-3">
                         <label>Subject name</label>
-                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
-
+                        <select name="search_option_subject" class="form-select" aria-label="Default select example">
+                            @foreach($subjects as $subject)
+                                <option value="{{$subject['subjectName']}}" selected>{{$subject['subjectName']}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label>Paper</label>
+                        <select name="search_option_paper" class="form-select" aria-label="Default select example">
+                            <option value="First" selected>First</option>
+                            <option value="Second" selected>Second</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label>Medium name</label>
-                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
-
+                        <select name="search_option_medium" class="form-select" aria-label="Default select example">
+                            @foreach($mediums as $medium)
+                                <option value="{{$medium['name']}}" selected>{{$medium['name']}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label>Group name</label>
-                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
-
+                        <select name="search_option_group" class="form-select" aria-label="Default select example">
+                            @foreach($groups as $group)
+                                <option value="{{$group['name']}}" selected>{{$group['name']}}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                 </div>
@@ -98,8 +118,9 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Class </th>
-        <th scope="col">Course </th>
+        <th scope="col">Class</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Paper</th>
         <th scope="col">Medium</th>
         <th scope="col">Group</th>
         <th scope="col">Action</th>
