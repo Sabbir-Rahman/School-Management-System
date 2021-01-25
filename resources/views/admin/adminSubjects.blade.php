@@ -19,13 +19,13 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addClass" method="POST">
+            <form action="addSubjectName" method="POST">
                 @csrf
                 <div class="modal-body">
 
                     <div class="mb-3">
                         <label>Subject Name</label>
-                        <input type="text" name="subjectName" class="form-control" placeholder="Enter branch no">
+                        <input type="text" name="subjectName" class="form-control" placeholder="Enter subject name">
 
                     </div>
 
@@ -84,10 +84,24 @@
         <thead>
         <th scope="col">Id</th>
         <th scope="col">Subject Name</th>
+        <th scope="col">Created</th>
+        <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
+        @foreach($subjects as $subject)
+            <tr>
 
+                <td scope="row">{{$subject['id']}}</td>
+                <td scope="row">{{$subject['subjectName']}}</td>
+                <td scope="row">{{$subject['created_at']}}</td>
+                <td scope="row">{{$subject['updated_at']}}</td>
+                <td scope="row">
+                    <a href="" class="btn btn-primary">EDIT</a>
+                    <a href="" class="btn btn-danger">DELETE</a>
+                </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 </div>

@@ -143,6 +143,7 @@ Route::post('admin/addSectionView',[adminSection::class,'addDataView']);
 Route::post('admin/addSectionAdmin',[adminSection::class,'addData']);
 
 Route::post('admin/mediumGroupBranch',[mediumGroupBranchController::class,'addData']);
+Route::post('admin/addSubjectName',[adminSubject::class,'addData']);
 
 Route::get('admin/mediumGroupBranchView',[mediumGroupBranchController::class,'index'])->name('admin.mediumGroupBranch');
 Route::get('admin/addSubjects',[adminSubject::class,'index'])->name('adminSubjects');
