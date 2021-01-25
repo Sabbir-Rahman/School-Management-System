@@ -23,7 +23,6 @@ class adminClass extends Controller
 
         $cls = new classTable();
         $cls->class = $request->input('class');
-        $cls->branch = $request->input('branchNo');
 
         $query = $cls->save();
 
