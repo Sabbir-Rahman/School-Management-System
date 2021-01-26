@@ -67,7 +67,7 @@
         Add data with modal
     </button>
     <br><br>
-<p><font color="#d3d3d3">Section id format:branch(1 digit)+medium(1 digit)+group(1 digit)+class(2 digit)+sectionCount(4 digit)</font></p>
+<p><font color="#d3d3d3">Section id format:branch(2 digit)+class(2 digit)+medium(1 digit)+group(1 digit)+sectionCount(4 digit)</font></p>
 
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
