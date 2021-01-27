@@ -41,7 +41,7 @@ class sectionCourseTeacher extends Controller
         $courseSection->medium = $section->medium;
         $courseSection->group = $section->groupName;
         $courseSection->sectionName = $section->sectionName;
-        $courseSection->sectionId = $section->id;
+        $courseSection->sectionId = $section_id;
         $courseSection->courseName = $course->subject;
         $courseSection->coursePaper = $course->paper;
         $courseSection->courseId = $course->id;
