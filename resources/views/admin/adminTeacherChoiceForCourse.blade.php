@@ -105,7 +105,7 @@
                 <td scope="col">{{$teacher['joining_year']}}</td>
                 <td scope="col">{{$teacher['gender']}}</td>
                 <td scope="col">
-                    <a href="" class="btn btn-info">SELECT</a><br>
+                    <a href="{{route('admin.addTeacherToCourse',['sectionCourse_id'=>$sectionCourseId,'teacher_id'=>$teacher->id])}}" class="btn btn-info">SELECT</a><br>
                 </td>
             </tr>
         @endforeach
