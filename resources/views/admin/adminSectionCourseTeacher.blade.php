@@ -4,7 +4,7 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Admin Class</title>
-    <link rel="stylesheet" href="/css/adminClass.css" media="screen">
+    <link rel="stylesheet" href="/css/adminTeacherInfo.css" media="screen">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -19,13 +19,13 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addMedium" method="POST">
+            <form action="addClass" method="POST">
                 @csrf
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>Medium name</label>
-                        <input type="text" name="name" class="form-control" placeholder="Enter medium name">
+                        <label>Class name</label>
+                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
 
                     </div>
 
@@ -45,7 +45,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Medium Table</font></h3>
+    <h3><font color="white">Section Course Teacher Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -64,14 +64,25 @@
 @endif
 
 <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add data with modal
-    </button>
+
+    <span>
+        <a href="{{route('admin.sectionView')}}">
+        <button type="button" class="btn btn-primary" >
+        Add course
+        </button>
+            </a>
+        <a href="{{route('admin.addTeacherView')}}">
+        <button type="button" class="btn btn-primary">
+        Add teacher
+        </button>
+        </a>
+
+    </span>
 
     <br><br>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Medium Table</a>
+            <a class="navbar-brand">Data Table</a>
             <form action="" method="POST" class="d-flex">
                 @csrf
                 <input class="form-control me-2" type="search" name="search_data" placeholder="Search"
@@ -83,23 +94,41 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Medium Name</th>
-        <th scope="col">Created</th>
-        <th scope="col">Updated</th>
+        <th scope="col">Branch</th>
+        <th scope="col">Class</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Group</th>
+        <th scope="col">Section</th>
+        <th scope="col">Section Id</th>
+        <th scope="col">Course</th>
+        <th scope="col">Course Paper</th>
+        <th scope="col">Course Id</th>
+        <th scope="col">Teacher</th>
+        <th scope="col">Teacher Id</th>
+        <th scope="col">Created_at</th>
+        <th scope="col">Updated_at</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($mediums as $medium)
-            <tr>
-                <td scope="row">{{$medium['id']}}</td>
-                <td scope="row">{{$medium['name']}}</td>
-                <td scope="row">{{$medium['created_at']}}</td>
-                <td scope="row">{{$medium['updated_at']}}</td>
-                <td scope="row">
-                    <a href="" class="btn btn-primary">EDIT</a>
-                    <a href="" class="btn btn-danger">DELETE</a>
-                </td>
-            </tr>
+        @foreach($sectionTeachers as $sectionTeacher)
+            <td scope="row">{{$sectionTeacher['id']}}</td>
+            <td scope="row">{{$sectionTeacher['branch']}}</td>
+            <td scope="row">{{$sectionTeacher['class']}}</td>
+            <td scope="row">{{$sectionTeacher['medium']}}</td>
+            <td scope="row">{{$sectionTeacher['group']}}</td>
+            <td scope="row">{{$sectionTeacher['sectionName']}}</td>
+            <td scope="row">{{$sectionTeacher['sectionId']}}</td>
+            <td scope="row">{{$sectionTeacher['courseName']}}</td>
+            <td scope="row">{{$sectionTeacher['coursePaper']}}</td>
+            <td scope="row">{{$sectionTeacher['courseId']}}</td>
+            <td scope="row">{{$sectionTeacher['teacherName']}}</td>
+            <td scope="row">{{$sectionTeacher['teacherId']}}</td>
+            <td scope="row">{{$sectionTeacher['created_at']}}</td>
+            <td scope="row">{{$sectionTeacher['updated_at']}}</td>
+            <td scope="row">
+                <a href="" class="btn btn-primary">EDIT</a>
+                <a href="" class="btn btn-danger">DELETE</a>
+            </td>
         @endforeach
         </tbody>
     </table>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\mediumGroupBranch;
+use App\Models\mediumClassGroupBranch;
 use App\Models\sectionTable;
 use Illuminate\Http\Request;
 use App\Models\classTable;
@@ -24,10 +24,10 @@ class adminSection extends Controller
     {
 
         $data = $request->input('branchNo');
-        $cls = classTable::where('branch', $request->input('branchNo'))->orderBy('created_at', 'DESC')->get();
+        $cls = classTable::all();
         $building = buildings::where('branch', $request->input('branchNo'))->orderBy('created_at', 'DESC')->get();
-        $medium = mediumTable::where('branch', $request->input('branchNo'))->orderBy('created_at', 'DESC')->get();
-        $group = group::where('branch', $request->input('branchNo'))->orderBy('created_at', 'DESC')->get();
+        $medium = mediumTable::all();
+        $group = group::all();
         return view('admin/adminAddSection', ['branch' => $data, 'class' => $cls, 'buildings' => $building, 'mediums' => $medium, 'groups' => $group]);
     }
 
@@ -42,16 +42,17 @@ class adminSection extends Controller
         $objectMediumGroupBranch = '';
 
 
-        $cls = classTable::where('branch', $request->input('branchNo'))->where('class', $request->input('search_option_class'))->first();
+        $cls = classTable::where('class', $request->input('search_option_class'))->first();
         $building = buildings::where('branch', $request->input('branchNo'))->where('buildingName', $request->input('search_option_building'))->first();
         $room = room::where('buildingId', $building['id'])->where('roomNo', $request->input('roomNo'))->first();
-        $medium = mediumTable::where('branch', $request->input('branchNo'))->where('name', $request->input('search_option_medium'))->first();
-        $group = group::where('branch', $request->input('branchNo'))->where('name', $request->input('search_option_group'))->first();
+        $medium = mediumTable::where('name', $request->input('search_option_medium'))->first();
+        $group = group::where('name', $request->input('search_option_group'))->first();
 
-        $objectMediumGroupBranch = mediumGroupBranch::where('mediumName',$request->input('search_option_medium'))->where('groupName', $request->input('search_option_group'))->where('branch', $request->input('branchNo'))->first();
+        $objectMediumGroupBranch = mediumClassGroupBranch::where('mediumName',$request->input('search_option_medium'))->where('groupName', $request->input('search_option_group'))->where('branch', $request->input('branchNo'))->where('className', $request->input('search_option_class'))->first();
 
 
         $sectionCount = count(sectionTable::all());
+
 
 
         if ($cls['id']< 10) {
@@ -72,7 +73,7 @@ class adminSection extends Controller
         else
             $idSection = strval($sectionCount+1);
 
-        $uniqueId = $objectMediumGroupBranch['id'].$idClass.$idSection;
+        $uniqueId = $objectMediumGroupBranch['id'].$idSection;
 
 
 

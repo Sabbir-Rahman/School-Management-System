@@ -10,35 +10,6 @@
 </head>
 <body>
 
-{{--add data modal--}}
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <form action="addSectionView" method="POST">
-                @csrf
-                <div class="modal-body">
-
-                    <div class="mb-3">
-                        <label>Branch no</label>
-                        <input type="number" name="branchNo" class="form-control" placeholder="Enter branch no">
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit"  class="btn btn-primary">Save data</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-{{--end add data modal--}}
-
 
 <div id="particles-js">
 
@@ -62,12 +33,9 @@
         </div>
 @endif
 
-<!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add data with modal
-    </button>
-    <br><br>
-<p><font color="#d3d3d3">Section id format:branch(2 digit)+class(2 digit)+medium(1 digit)+group(1 digit)+sectionCount(4 digit)</font></p>
+
+
+    <p><font color="#d3d3d3">Select section you want to edit</font></p>
 
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
@@ -101,9 +69,9 @@
         <th scope="col">Action</th>
         </thead>
         <tbody>
-            @foreach($sections as $section)
-                <tr>
-                    @if(intval($section['id'])<1000000000)
+        @foreach($sections as $section)
+            <tr>
+                @if(intval($section['id'])<1000000000)
                     <td scope="col">0{{$section['id']}}</td>
                     <td scope="col">{{$section['branch']}}</td>
                     <td scope="col">{{$section['class']}}</td>
@@ -121,34 +89,33 @@
                     <td scope="col">{{$section['created_at']}}</td>
                     <td scope="col">{{$section['updated_at']}}</td>
                     <td scope="col">
-                        <a href="" class="btn btn-primary">EDIT</a><br>
-                        <a href="" class="btn btn-danger">DELETE</a>
+                        <a href="{{route('admin.goToCourse',$section->id)}}" class="btn btn-info"><font color="white">Select</font></a><br>
                     </td>
-                    @else
-                        <td scope="col">{{$section['id']}}</td>
-                        <td scope="col">{{$section['branch']}}</td>
-                        <td scope="col">{{$section['class']}}</td>
-                        <td scope="col">{{$section['classId']}}</td>
-                        <td scope="col">{{$section['sectionName']}}</td>
-                        <td scope="col">{{$section['roomNo']}}</td>
-                        <td scope="col">{{$section['roomId']}}</td>
-                        <td scope="col">{{$section['buildingName']}}</td>
-                        <td scope="col">{{$section['buildingId']}}</td>
-                        <td scope="col">{{$section['shift']}}</td>
-                        <td scope="col">{{$section['medium']}}</td>
-                        <td scope="col">{{$section['mediumId']}}</td>
-                        <td scope="col">{{$section['groupName']}}</td>
-                        <td scope="col">{{$section['groupId']}}</td>
-                        <td scope="col">{{$section['created_at']}}</td>
-                        <td scope="col">{{$section['updated_at']}}</td>
-                        <td scope="col">
-                            <a href="" class="btn btn-primary">EDIT</a><br>
-                            <a href="" class="btn btn-danger">DELETE</a>
-                        </td>
-                    @endif
+                @else
+                    <td scope="col">{{$section['id']}}</td>
+                    <td scope="col">{{$section['branch']}}</td>
+                    <td scope="col">{{$section['class']}}</td>
+                    <td scope="col">{{$section['classId']}}</td>
+                    <td scope="col">{{$section['sectionName']}}</td>
+                    <td scope="col">{{$section['roomNo']}}</td>
+                    <td scope="col">{{$section['roomId']}}</td>
+                    <td scope="col">{{$section['buildingName']}}</td>
+                    <td scope="col">{{$section['buildingId']}}</td>
+                    <td scope="col">{{$section['shift']}}</td>
+                    <td scope="col">{{$section['medium']}}</td>
+                    <td scope="col">{{$section['mediumId']}}</td>
+                    <td scope="col">{{$section['groupName']}}</td>
+                    <td scope="col">{{$section['groupId']}}</td>
+                    <td scope="col">{{$section['created_at']}}</td>
+                    <td scope="col">{{$section['updated_at']}}</td>
+                    <td scope="col">
+                        <a href="{{route('admin.goToCourse',$section->id)}}" class="btn btn-info">Select</a><br>
+                    </td>
 
-                </tr>
-            @endforeach
+                @endif
+
+            </tr>
+        @endforeach
         </tbody>
     </table>
 </div>

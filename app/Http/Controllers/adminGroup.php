@@ -19,7 +19,7 @@ class adminGroup extends Controller
 
         $grp = new group();
         $grp->name = $request->input('name');
-        $grp->branch = $request->input('branchNo');
+
 
         $query = $grp->save();
 

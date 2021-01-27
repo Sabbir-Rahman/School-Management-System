@@ -10,42 +10,15 @@
 </head>
 <body>
 
-{{--add data modal--}}
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
 
-            <form action="addMedium" method="POST">
-                @csrf
-                <div class="modal-body">
 
-                    <div class="mb-3">
-                        <label>Medium name</label>
-                        <input type="text" name="name" class="form-control" placeholder="Enter medium name">
-
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save data</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-{{--end add data modal--}}
 
 
 <div id="particles-js">
 
 </div>
 <div id="container">
-    <h3><font color="white">Medium Table</font></h3>
+    <h3><font color="white">Course Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -71,7 +44,7 @@
     <br><br>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Medium Table</a>
+            <a class="navbar-brand">Data Table</a>
             <form action="" method="POST" class="d-flex">
                 @csrf
                 <input class="form-control me-2" type="search" name="search_data" placeholder="Search"
@@ -83,24 +56,32 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Medium Name</th>
+        <th scope="col">Class</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Paper</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Group</th>
         <th scope="col">Created</th>
         <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($mediums as $medium)
+        @foreach($courses as $course)
             <tr>
-                <td scope="row">{{$medium['id']}}</td>
-                <td scope="row">{{$medium['name']}}</td>
-                <td scope="row">{{$medium['created_at']}}</td>
-                <td scope="row">{{$medium['updated_at']}}</td>
+                <td scope="row">{{$course['id']}}</td>
+                <td scope="row">{{$course['class']}}</td>
+                <td scope="row">{{$course['subject']}}</td>
+                <td scope="row">{{$course['paper']}}</td>
+                <td scope="row">{{$course['medium']}}</td>
+                <td scope="row">{{$course['group']}}</td>
+                <td scope="row">{{$course['created_at']}}</td>
+                <td scope="row">{{$course['updated_at']}}</td>
                 <td scope="row">
-                    <a href="" class="btn btn-primary">EDIT</a>
-                    <a href="" class="btn btn-danger">DELETE</a>
+                    <a href="{{route('admin.addCourse',['section_id'=>$sectionId,'course_id'=>$course->id])}}" class="btn btn-info">Select</a>
                 </td>
             </tr>
-        @endforeach
+            @endforeach
+
         </tbody>
     </table>
 </div>

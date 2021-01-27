@@ -15,8 +15,9 @@ use App\Http\Controllers\adminMedium;
 use App\Http\Controllers\adminGroup;
 use App\Http\Controllers\adminSection;
 use App\Http\Controllers\adminCourse;
-use App\Http\Controllers\mediumGroupBranchController;
+use App\Http\Controllers\mediumClassGroupBranchController;
 use App\Http\Controllers\adminSubject;
+use App\Http\Controllers\sectionCourseTeacher;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -142,11 +143,18 @@ Route::post('admin/addSectionView',[adminSection::class,'addDataView']);
 
 Route::post('admin/addSectionAdmin',[adminSection::class,'addData']);
 
-Route::post('admin/mediumGroupBranch',[mediumGroupBranchController::class,'addData']);
+Route::post('admin/mediumClassGroupBranch',[mediumClassGroupBranchController::class,'addData']);
 Route::post('admin/addSubjectName',[adminSubject::class,'addData']);
 Route::post('admin/addCourse',[adminCourse::class,'addData']);
 
-Route::get('admin/mediumGroupBranchView',[mediumGroupBranchController::class,'index'])->name('admin.mediumGroupBranch');
+Route::get('admin/mediumGroupBranchView',[mediumClassGroupBranchController::class,'index'])->name('admin.mediumClassGroupBranch');
 Route::get('admin/addSubjects',[adminSubject::class,'index'])->name('adminSubjects');
 
+Route::get('admin/addSectionView',[sectionCourseTeacher::class, 'goToAddSection'])->name('admin.sectionView');
 
+Route::get('admin/sectionTeacherCourse',[sectionCourseTeacher::class,'index'])->name('admin.sectionCourseTeacher');
+Route::get('admin/addTeacherSectionChoice',[sectionCourseTeacher::class,'goToAddTeacherSectionChoice'])->name('admin.addTeacherView');
+Route::get('admin/addTeacherTeacherChoice/{id}',[sectionCourseTeacher::class,'goToAddTeacherTeacherChoice'])->name('admin.goToAddTeacherTeacherChoice');
+
+Route::get('admin/addSectionGoCourse/{id}',[sectionCourseTeacher::class,'goCourseAdd'])->name('admin.goToCourse');
+Route::get('admin/addSectionCourse/{section_id}/course/{course_id}',[sectionCourseTeacher::class,'addCourse'])->name('admin.addCourse');

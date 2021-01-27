@@ -260,7 +260,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4">
-                    <a href="{{route('admin.mediumGroupBranch')}}">
+                    <a href="{{route('admin.mediumClassGroupBranch')}}">
                         <div class="card" style="width: 20rem;">
                             <img class="card-img-top" src="/assetsAdmin/img/adminGroup.jpg" alt="Card image cap"
                                  height="175px">
@@ -281,6 +281,22 @@
                                  height="175px">
                             <div class="card-body">
                                 <h4 class="card-title">Subjects</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4">
+                    <a href="{{route('admin.sectionCourseTeacher')}}">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/assetsAdmin/img/adminSectionTeacherCourse.png" alt="Card image cap"
+                                 height="175px">
+                            <div class="card-body">
+                                <h4 class="card-title">Section Course Teacher</h4>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk
                                     of the card's content.</p>
