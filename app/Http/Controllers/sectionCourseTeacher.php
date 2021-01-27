@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\course;
 use App\Models\sectionTable;
+use App\Models\teacher_info;
 use Illuminate\Http\Request;
 use App\Models\courseSectionTeacher;
 
@@ -45,6 +46,9 @@ class sectionCourseTeacher extends Controller
         $courseSection->courseName = $course->subject;
         $courseSection->coursePaper = $course->paper;
         $courseSection->courseId = $course->id;
+//        $courseSection->teacherName = 'Unassigned';
+//        $courseSection->teacherId = 0;
+
 
         $query = $courseSection->save();
 
@@ -65,8 +69,29 @@ class sectionCourseTeacher extends Controller
     function goToAddTeacherTeacherChoice($id){
 
         $data = courseSectionTeacher::all();
+        $data1 = teacher_info::all();
 
-        return view('admin/adminTeacherChoiceForCourse',['sectionTeachers'=>$data,'sectionCourseId'=>$id]);
+        return view('admin/adminTeacherChoiceForCourse',['sectionTeachers'=>$data,'sectionCourseId'=>$id,'teachers'=>$data1]);
+    }
+
+    function addTeacherToCourse($sectionCourse_id,$teacher_id){
+
+
+        $section = courseSectionTeacher::find($sectionCourse_id);
+        $teacher = teacher_info::find($teacher_id);
+
+
+        $section->teacherName = $teacher->name;
+        $section->teacherId = $teacher->id;
+
+        $query = $section->save();
+        if($query)
+            return redirect('admin/sectionTeacherCourse')->with('success','Data Saved');
+        else
+            return "Data not insert";
+
+
+
     }
 
 }
