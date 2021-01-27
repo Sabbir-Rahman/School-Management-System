@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\course;
 use App\Models\sectionTable;
+use App\Models\teacher_info;
 use Illuminate\Http\Request;
 use App\Models\courseSectionTeacher;
 
@@ -65,8 +66,9 @@ class sectionCourseTeacher extends Controller
     function goToAddTeacherTeacherChoice($id){
 
         $data = courseSectionTeacher::all();
+        $data1 = teacher_info::all();
 
-        return view('admin/adminTeacherChoiceForCourse',['sectionTeachers'=>$data,'sectionCourseId'=>$id]);
+        return view('admin/adminTeacherChoiceForCourse',['sectionTeachers'=>$data,'sectionCourseId'=>$id,'teachers'=>$data1]);
     }
 
 }
