@@ -45,7 +45,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Section Course Teacher Table</font></h3>
+
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -65,21 +65,8 @@
 
 <!-- Button trigger modal -->
 
-    <span>
-        <a href="{{route('admin.sectionView')}}">
-        <button type="button" class="btn btn-primary" >
-        Add course
-        </button>
-            </a>
-        <a href="{{route('admin.addTeacherView')}}">
-        <button type="button" class="btn btn-primary">
-        Add teacher
-        </button>
-        </a>
-
-    </span>
-
     <br><br>
+        <h5><font color="white">Select in which section you want to add teacher</font></h5>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand">Data Table</a>
@@ -126,8 +113,7 @@
             <td scope="row">{{$sectionTeacher['created_at']}}</td>
             <td scope="row">{{$sectionTeacher['updated_at']}}</td>
             <td scope="row">
-                <a href="" class="btn btn-primary">EDIT</a>
-                <a href="" class="btn btn-danger">DELETE</a>
+                <a href="" class="btn btn-info">SELECT</a>
             </td>
         @endforeach
         </tbody>
