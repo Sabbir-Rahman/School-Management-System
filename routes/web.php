@@ -153,6 +153,7 @@ Route::get('admin/addSubjects',[adminSubject::class,'index'])->name('adminSubjec
 Route::get('admin/addSectionView',[sectionCourseTeacher::class, 'goToAddSection'])->name('admin.sectionView');
 
 Route::get('admin/sectionTeacherCourse',[sectionCourseTeacher::class,'index'])->name('admin.sectionCourseTeacher');
+Route::get('admin/addTeacherSectionChoice',[sectionCourseTeacher::class,'goToAddTeacher'])->name('admin.addTeacherView');
 
 Route::get('admin/addSectionGoCourse/{id}',[sectionCourseTeacher::class,'goCourseAdd'])->name('admin.goToCourse');
 Route::get('admin/addSectionCourse/{section_id}/course/{course_id}',[sectionCourseTeacher::class,'addCourse'])->name('admin.addCourse');
