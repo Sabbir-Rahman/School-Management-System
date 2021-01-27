@@ -77,7 +77,7 @@
                 <td scope="row">{{$course['created_at']}}</td>
                 <td scope="row">{{$course['updated_at']}}</td>
                 <td scope="row">
-                    <a href="{{route('admin.addCourse',$sectionId)}}" class="btn btn-info">Select</a>
+                    <a href="{{route('admin.addCourse',['section_id'=>$sectionId,'course_id'=>$course->id])}}" class="btn btn-info">Select</a>
                 </td>
             </tr>
             @endforeach
