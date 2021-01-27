@@ -32,7 +32,7 @@ class sectionCourseTeacher extends Controller
 
     function addCourse($section_id,$course_id){
 
-        dd($course_id);
+
         $course = course::find($course_id);
         $section = sectionTable::find($section_id);
         $courseSection = new courseSectionTeacher();
