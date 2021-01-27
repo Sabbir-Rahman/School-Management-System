@@ -30,10 +30,30 @@ class sectionCourseTeacher extends Controller
         return view('admin/courseSectionTeacherAddCourse',['sectionId'=>$id,'courses'=>$course]);
     }
 
-    function addCourse($id){
+    function addCourse($section_id,$course_id){
 
-        dd($id);
-        return "success";
+        dd($course_id);
+        $course = course::find($course_id);
+        $section = sectionTable::find($section_id);
+        $courseSection = new courseSectionTeacher();
+        $courseSection->branch = $section->branch;
+        $courseSection->class = $section->class;
+        $courseSection->medium = $section->medium;
+        $courseSection->group = $section->groupName;
+        $courseSection->sectionName = $section->sectionName;
+        $courseSection->sectionId = $section->id;
+        $courseSection->courseName = $course->subject;
+        $courseSection->coursePaper = $course->paper;
+        $courseSection->courseId = $course->id;
+
+        $query = $courseSection->save();
+
+        if($query)
+            return redirect('admin/sectionTeacherCourse')->with('success','Data Saved');
+        else
+            return "Data not insert";
+
+
     }
 
 }
