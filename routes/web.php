@@ -150,8 +150,9 @@ Route::post('admin/addCourse',[adminCourse::class,'addData']);
 Route::get('admin/mediumGroupBranchView',[mediumClassGroupBranchController::class,'index'])->name('admin.mediumClassGroupBranch');
 Route::get('admin/addSubjects',[adminSubject::class,'index'])->name('adminSubjects');
 
-Route::get('admin/addSectionView',[sectionCourseTeacher::class,'goToAddCourse'])->name('admin.sectionView');
+Route::get('admin/addSectionView',[sectionCourseTeacher::class, 'goToAddSection'])->name('admin.sectionView');
 
 Route::get('admin/sectionTeacherCourse',[sectionCourseTeacher::class,'index'])->name('admin.sectionCourseTeacher');
 
 Route::get('admin/addSectionGoCourse/{id}',[sectionCourseTeacher::class,'goCourseAdd'])->name('admin.goToCourse');
+Route::get('admin/addSectionCourse/{id}',[sectionCourseTeacher::class,'addCourse'])->name('admin.addCourse');
