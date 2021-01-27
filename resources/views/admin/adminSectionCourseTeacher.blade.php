@@ -66,9 +66,11 @@
 <!-- Button trigger modal -->
 
     <span>
+        <a href="{{route('admin.sectionView')}}">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Add course
         </button>
+            </a>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Add teacher
         </button>
