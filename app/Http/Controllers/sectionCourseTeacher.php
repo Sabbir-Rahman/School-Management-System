@@ -56,10 +56,17 @@ class sectionCourseTeacher extends Controller
 
     }
 
-    function goToAddTeacher(){
+    function goToAddTeacherSectionChoice(){
 
         $data = courseSectionTeacher::all();
         return view('admin/courseSectionTeacherAddTeacherSectionChoice',['sectionTeachers'=>$data]);
+    }
+
+    function goToAddTeacherTeacherChoice($id){
+
+        $data = courseSectionTeacher::all();
+
+        return view('admin/adminTeacherChoiceForCourse',['sectionTeachers'=>$data,'sectionCourseId'=>$id]);
     }
 
 }
