@@ -45,7 +45,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Class Table</font></h3>
+    <h3><font color="white">Section Course Teacher Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -67,7 +67,7 @@
 
     <span>
         <a href="{{route('admin.sectionView')}}">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-primary" >
         Add course
         </button>
             </a>
@@ -92,7 +92,19 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Class Name</th>
+        <th scope="col">Branch</th>
+        <th scope="col">Class</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Group</th>
+        <th scope="col">Section</th>
+        <th scope="col">Section Id</th>
+        <th scope="col">Course</th>
+        <th scope="col">Course Paper</th>
+        <th scope="col">Course Id</th>
+        <th scope="col">Teacher</th>
+        <th scope="col">Teacher Id</th>
+        <th scope="col">Created_at</th>
+        <th scope="col">Updated_at</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>

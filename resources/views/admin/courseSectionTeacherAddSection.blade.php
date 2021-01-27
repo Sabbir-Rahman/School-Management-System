@@ -10,35 +10,6 @@
 </head>
 <body>
 
-{{--add data modal--}}
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <form action="addSectionView" method="POST">
-                @csrf
-                <div class="modal-body">
-
-                    <div class="mb-3">
-                        <label>Branch no</label>
-                        <input type="number" name="branchNo" class="form-control" placeholder="Enter branch no">
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit"  class="btn btn-primary">Save data</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-{{--end add data modal--}}
-
 
 <div id="particles-js">
 
@@ -62,7 +33,7 @@
         </div>
 @endif
 
-<!-- Button trigger modal -->
+
 
     <p><font color="#d3d3d3">Select section you want to edit</font></p>
 
@@ -138,8 +109,9 @@
                     <td scope="col">{{$section['created_at']}}</td>
                     <td scope="col">{{$section['updated_at']}}</td>
                     <td scope="col">
-                        <a href={{route('admin.goToCourse',$section->id)}}"" class="btn btn-info"><font color="white">Select</font></a><br>
+                        <a href="{{route('admin.goToCourse',$section->id)}}" class="btn btn-info">Select</a><br>
                     </td>
+
                 @endif
 
             </tr>
