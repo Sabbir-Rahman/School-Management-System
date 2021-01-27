@@ -113,7 +113,7 @@
             <td scope="row">{{$sectionTeacher['created_at']}}</td>
             <td scope="row">{{$sectionTeacher['updated_at']}}</td>
             <td scope="row">
-                <a href="" class="btn btn-info">SELECT</a>
+                <a href="{{route('admin.goToAddTeacherTeacherChoice',$sectionTeacher->id)}}" class="btn btn-info">SELECT</a>
             </td>
         @endforeach
         </tbody>
