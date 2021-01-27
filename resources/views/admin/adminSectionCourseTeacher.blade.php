@@ -4,7 +4,7 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Admin Class</title>
-    <link rel="stylesheet" href="/css/adminClass.css" media="screen">
+    <link rel="stylesheet" href="/css/adminTeacherInfo.css" media="screen">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -108,7 +108,26 @@
         <th scope="col">Action</th>
         </thead>
         <tbody>
-
+        @foreach($sectionTeachers as $sectionTeacher)
+            <td scope="row">{{$sectionTeacher['id']}}</td>
+            <td scope="row">{{$sectionTeacher['branch']}}</td>
+            <td scope="row">{{$sectionTeacher['class']}}</td>
+            <td scope="row">{{$sectionTeacher['medium']}}</td>
+            <td scope="row">{{$sectionTeacher['group']}}</td>
+            <td scope="row">{{$sectionTeacher['sectionName']}}</td>
+            <td scope="row">{{$sectionTeacher['sectionId']}}</td>
+            <td scope="row">{{$sectionTeacher['courseName']}}</td>
+            <td scope="row">{{$sectionTeacher['coursePaper']}}</td>
+            <td scope="row">{{$sectionTeacher['courseId']}}</td>
+            <td scope="row">{{$sectionTeacher['teacherName']}}</td>
+            <td scope="row">{{$sectionTeacher['teacherId']}}</td>
+            <td scope="row">{{$sectionTeacher['created_at']}}</td>
+            <td scope="row">{{$sectionTeacher['updated_at']}}</td>
+            <td scope="row">
+                <a href="" class="btn btn-primary">EDIT</a>
+                <a href="" class="btn btn-danger">DELETE</a>
+            </td>
+        @endforeach
         </tbody>
     </table>
 </div>
