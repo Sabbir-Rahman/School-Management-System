@@ -31,7 +31,7 @@ class login extends Controller
         }
         else if(strlen($request->Login_id)==12) {
             $id = teacher_info::where('id', '=', $request->Login_id)->first();
-            $this->afterLoginView = 'teacherDashboard';
+            $this->afterLoginView = 'teacher/teacherDashboard';
         }
         else {
             return "No account";
