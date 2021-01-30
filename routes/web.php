@@ -104,6 +104,10 @@ Route::get('showRecords',function (){
     return view('showRecords');
 })->name('showRecord') ;
 
+Route::get('teacher/teacherDashboard',function (){
+    return view('teacher/teacherDashboard');
+})->name('teacherDashboard') ;
+
 
 Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp');
 Route::post('create',[StudentAuth::class,'create'])->name('studentcreate');
