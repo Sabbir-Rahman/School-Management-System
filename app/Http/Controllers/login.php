@@ -39,6 +39,7 @@ class login extends Controller
 
         if($id){
             if($request->Login_password==$id->password){
+                $request->session()->put('userId',$request->Login_id);
                 return view($this->afterLoginView,['name'=>$id->name]);
             }
             else
