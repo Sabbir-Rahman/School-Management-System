@@ -18,6 +18,7 @@ use App\Http\Controllers\adminCourse;
 use App\Http\Controllers\mediumClassGroupBranchController;
 use App\Http\Controllers\adminSubject;
 use App\Http\Controllers\sectionCourseTeacher;
+use App\Http\Controllers\teacherDashboard;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -104,9 +105,7 @@ Route::get('showRecords',function (){
     return view('showRecords');
 })->name('showRecord') ;
 
-Route::get('teacher/teacherDashboard',function (){
-    return view('teacher/teacherDashboard');
-})->name('teacherDashboard') ;
+Route::get('teacher/teacherDashboard',[teacherDashboard::class,'index']);
 
 
 Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp');

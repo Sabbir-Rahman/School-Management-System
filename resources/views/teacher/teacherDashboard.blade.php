@@ -163,7 +163,7 @@
         </nav>
         <!-- End Navbar -->
         <div class="content">
-            <h3><font color="#d3d3d3">Welcome {{session('userId')}}</font></h3>
+            <h3><font color="#d3d3d3 ">Welcome {{$teacher->name}}</font></h3>
             <div class="container-fluid">
 
                 <div class="row">
