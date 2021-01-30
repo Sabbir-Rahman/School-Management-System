@@ -236,40 +236,19 @@
                     </div>
                 </div>
                 <div class="row">
+                    @foreach($teacherCoursesSections as $teacherCourseSection)
                     <div class="card card-nav-tabs text-center">
                         <div class="card-header card-header-info">
-                            Math
+                            {{$teacherCourseSection->courseName}} {{$teacherCourseSection->coursePaper}}
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional
-                                content.</p>
+                            <h4 class="card-title">Class:{{$teacherCourseSection->class}}&nbsp&nbsp||&nbsp&nbsp Section:{{$teacherCourseSection->sectionName}}</h4>
+                            <p class="card-text">Medium:{{$teacherCourseSection->medium}}&nbsp&nbsp||&nbsp&nbsp Group:{{$teacherCourseSection->group}}</p>
                         </div>
 
                     </div>
-                    <div class="card card-nav-tabs text-center">
-                        <div class="card-header card-header-info">
-                            Physics
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional
-                                content.</p>
+                    @endforeach
 
-                        </div>
-                    </div>
-                    <div class="card card-nav-tabs text-center">
-                        <div class="card-header card-header-info">
-                            English
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Special title treatment</h4>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional
-                                content.</p>
-
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </div>
