@@ -103,7 +103,7 @@
         <tbody>
             @foreach($sections as $section)
                 <tr>
-                    @if(intval($section['id'])<1000000000)
+                    @if(intval($section['id'])<10000000)
                     <td scope="col">0{{$section['id']}}</td>
                     <td scope="col">{{$section['branch']}}</td>
                     <td scope="col">{{$section['class']}}</td>

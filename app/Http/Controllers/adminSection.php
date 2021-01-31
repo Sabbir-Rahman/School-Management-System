@@ -51,8 +51,7 @@ class adminSection extends Controller
         $objectMediumGroupBranch = mediumClassGroupBranch::where('mediumName',$request->input('search_option_medium'))->where('groupName', $request->input('search_option_group'))->where('branch', $request->input('branchNo'))->where('className', $request->input('search_option_class'))->first();
 
 
-        $sectionCount = count(sectionTable::all());
-
+        $sectionCount = count(sectionTable::where('medium',$request->input('search_option_medium'))->where('groupName', $request->input('search_option_group'))->where('branch', $request->input('branchNo'))->where('class', $request->input('search_option_class'))->get());
 
 
         if ($cls['id']< 10) {
@@ -62,22 +61,16 @@ class adminSection extends Controller
             $idClass = strval($cls['id']);
 
         if ($sectionCount< 10) {
-            $idSection = '000'.strval($sectionCount+1);
-        }
-        else if (($sectionCount > 9) and ($sectionCount < 100)) {
-            $idSection = '00'.strval($sectionCount+1);
-        }
-        else if (($sectionCount > 99) and ($sectionCount < 1000)) {
-            $idSection = '0'.strval($sectionCount+1);
+            $idSectionCount = '0'.strval($sectionCount+1);
         }
         else
-            $idSection = strval($sectionCount+1);
+            $idSectionCount = strval($sectionCount+1);
 
-        $uniqueId = $objectMediumGroupBranch['id'].$idSection;
+        $uniqueId = $objectMediumGroupBranch['id'].$idSectionCount;
 
 
 
-        if(strlen($uniqueId)==9)
+        if(strlen($uniqueId)==7)
            $uniqueId = '0'.$uniqueId;
         elseif (strlen($uniqueId)>10)
             return "Data overlimit";
