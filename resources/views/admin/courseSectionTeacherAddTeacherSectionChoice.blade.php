@@ -98,6 +98,7 @@
         </thead>
         <tbody>
         @foreach($sectionTeachers as $sectionTeacher)
+            <tr>
             <td scope="row">{{$sectionTeacher['id']}}</td>
             <td scope="row">{{$sectionTeacher['branch']}}</td>
             <td scope="row">{{$sectionTeacher['class']}}</td>
@@ -115,6 +116,7 @@
             <td scope="row">
                 <a href="{{route('admin.goToAddTeacherTeacherChoice',$sectionTeacher->id)}}" class="btn btn-info">SELECT</a>
             </td>
+            </tr>
         @endforeach
         </tbody>
     </table>
