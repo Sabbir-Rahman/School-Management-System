@@ -118,7 +118,7 @@
             <tr>
                 <td scope="row">{{$building['id']}}</td>
                 <td scope="row">{{$building['branch']}}</td>
-                <td scope="row">{{$building['name']}}</td>
+                <td scope="row">{{$building['buildingName']}}</td>
                 <td scope="row">{{$building['totalFloor']}}</td>
                 <td scope="row">{{$building['totalRoom']}}</td>
                 <td scope="row">{{$building['comment']}}</td>

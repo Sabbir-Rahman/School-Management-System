@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoursesTable extends Migration
+class CreateSectionHwsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,8 @@ class CreateCoursesTable extends Migration
      */
     public function up()
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('section_hws', function (Blueprint $table) {
             $table->id();
-            $table->text('class');
-            $table->text('subject');
-            $table->text('paper');
-            $table->text('medium');
-            $table->text('group');
-            $table->unique(['class','subject','paper','medium','group'],'course_unique');
             $table->timestamps();
         });
     }
@@ -32,6 +26,6 @@ class CreateCoursesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('section_hws');
     }
 }
