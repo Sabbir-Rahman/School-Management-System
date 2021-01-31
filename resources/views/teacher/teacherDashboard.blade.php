@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="./dashboard.html">
+                    <a class="nav-link" href="{{route('teacher.goToHomeWorkPage')}}">
 
                         <p>Home Work</p>
                     </a>
