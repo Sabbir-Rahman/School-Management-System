@@ -2,6 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\buildings;
+use App\Models\classTable;
+use App\Models\group;
+use App\Models\mediumClassGroupBranch;
+use App\Models\mediumTable;
+use App\Models\room;
+use App\Models\sectionTable;
 use App\Models\StudentInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -154,8 +161,50 @@ class StudentAuth extends Controller
 
 
 
-        //section no (80) per section
-        $this->section = (int)($this->rownum/80) +1;
+
+        $objectSection = sectionTable::where('medium',$request->input('student_medium'))->where('groupName', $request->input('student_group'))->where('branch', $this->branch)->where('class', $request->input('student_class'))->first();
+
+        $student = StudentInfo::where('student_medium',$request->input('student_medium'))->where('student_group', $request->input('student_group'))->where('student_school_branch', $this->branch)->where('student_class', $request->input('student_class'))->get();
+
+        $sectionId = $objectSection['id'];
+
+        $studentCount = count($student);
+
+
+
+        if($studentCount>80)
+            $sectionId++;
+        if($studentCount>160)
+            $sectionId++;
+        if($sectionId<10000000)
+            $sectionId = '0'.$sectionId;
+
+
+        $sectionCount = count(sectionTable::all());
+
+
+        if ($sectionCount< 10) {
+            $idSectionCount = '000'.strval($sectionCount+1);
+        }
+        else if (($sectionCount > 9) and ($sectionCount < 100)) {
+            $idSectionCount = '00'.strval($sectionCount+1);
+        }
+        else if (($sectionCount > 99) and ($sectionCount < 1000)) {
+            $idSectionCount = '0'.strval($sectionCount+1);
+        }
+        else
+            $idSectionCount = strval($sectionCount+1);
+
+        $uniqueIdSession = $sectionId;
+
+
+
+        if(strlen($uniqueIdSession)==9)
+            $uniqueIdSession = '0'.$uniqueIdSession;
+        elseif (strlen($uniqueIdSession)>10)
+            return "Data overlimit";
+
+        $this->section = $uniqueIdSession;
 
 
 

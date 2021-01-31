@@ -7,6 +7,7 @@ use App\Models\StudentInfo;
 use App\Models\father_info;
 use App\Models\mother_info;
 use App\Models\teacher_info;
+use App\Http\Controllers\teacherDashboard;
 
 class login extends Controller
 {
@@ -14,6 +15,7 @@ class login extends Controller
     private $afterLoginView = '';
     function loginCheck(Request $request){
 
+        $teacherController = new teacherDashboard();
         //father id
         if(strlen($request->Login_id)==9 and $request->Login_id[8]==1) {
             $id = father_info::where('id', '=', $request->Login_id)->first();
@@ -31,7 +33,7 @@ class login extends Controller
         }
         else if(strlen($request->Login_id)==12) {
             $id = teacher_info::where('id', '=', $request->Login_id)->first();
-            $this->afterLoginView = 'teacherDashboard';
+            $this->afterLoginView = 'teacher';
         }
         else {
             return "No account";
@@ -39,7 +41,12 @@ class login extends Controller
 
         if($id){
             if($request->Login_password==$id->password){
-                return view($this->afterLoginView,['name'=>$id->name]);
+                $request->session()->put('userId',$request->Login_id);
+                if($this->afterLoginView == 'teacher'){
+                    return redirect('teacher/teacherDashboard');
+                }
+                else
+                    return view($this->afterLoginView);
             }
             else
                 return "Invalid password";
