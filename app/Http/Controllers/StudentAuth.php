@@ -164,7 +164,22 @@ class StudentAuth extends Controller
 
         $objectSection = sectionTable::where('medium',$request->input('student_medium'))->where('groupName', $request->input('student_group'))->where('branch', $this->branch)->where('class', $request->input('student_class'))->first();
 
-        dd($objectSection);
+        $student = StudentInfo::where('student_medium',$request->input('student_medium'))->where('student_group', $request->input('student_group'))->where('student_school_branch', $this->branch)->where('student_class', $request->input('student_class'))->get();
+
+        $sectionId = $objectSection['id'];
+
+        $studentCount = count($student);
+
+
+
+        if($studentCount>80)
+            $sectionId++;
+        if($studentCount>160)
+            $sectionId++;
+        if($sectionId<10000000)
+            $sectionId = '0'.$sectionId;
+
+
         $sectionCount = count(sectionTable::all());
 
 
@@ -180,10 +195,9 @@ class StudentAuth extends Controller
         else
             $idSectionCount = strval($sectionCount+1);
 
-        $uniqueIdSession = $objectSection['id'];
+        $uniqueIdSession = $sectionId;
 
 
-        dd($uniqueIdSession);
 
         if(strlen($uniqueIdSession)==9)
             $uniqueIdSession = '0'.$uniqueIdSession;
