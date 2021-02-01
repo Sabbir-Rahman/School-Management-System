@@ -113,13 +113,37 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Class Name</th>
+        <th scope="col">Title</th>
+        <th scope="col">Details</th>
+        <th scope="col">Given Date</th>
+        <th scope="col">End Date</th>
+        <th scope="col">File</th>
+        <th scope="col">Comment</th>
+        <th scope="col">Created</th>
+        <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        <tr>
+        @foreach($homeworks as $homework)
+            <tr>
 
-        </tr>
+                <td scope="row">{{$homework['id']}}</td>
+                <td scope="row">{{$homework['homeWorkTitle']}}</td>
+                <td scope="row">{{$homework['homeWorkDetails']}}</td>
+                <td scope="row">{{$homework['startDate']}}</td>
+                <td scope="row">{{$homework['lastDateSubmission']}}</td>
+                <td scope="row">
+                    <a href="" class="btn btn-info">VIEW</a>
+                </td>
+                <td scope="row">{{$homework['comment']}}</td>
+                <td scope="row">{{$homework['created_at']}}</td>
+                <td scope="row">{{$homework['updated_at']}}</td>
+                <td scope="row">
+                    <a href="" class="btn btn-primary">EDIT</a>
+                    <a href="" class="btn btn-danger">DELETE</a>
+                </td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 </div>

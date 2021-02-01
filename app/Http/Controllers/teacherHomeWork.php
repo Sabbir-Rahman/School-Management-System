@@ -11,9 +11,10 @@ class teacherHomeWork extends Controller
     function index($sectionCourseTeacherId){
 
         //receive sectionTeacherCourse id
+        $homework = sectionHw::where('courseSectionTeacherId',$sectionCourseTeacherId)->get();
 
 
-        return view('teacher/details/teacherHomeWorkDetails',['idSectionCourseTeacher'=>$sectionCourseTeacherId]);
+        return view('teacher/details/teacherHomeWorkDetails',['idSectionCourseTeacher'=>$sectionCourseTeacherId,'homeworks'=>$homework]);
     }
 
     function addHomeWork(Request $request){
