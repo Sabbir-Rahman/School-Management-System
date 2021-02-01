@@ -15,6 +15,13 @@ class CreateSectionHwsTable extends Migration
     {
         Schema::create('section_hws', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('courseSectionTeacherId');
+            $table->text('homeWorkTitle');
+            $table->text('homeWorkDetails');
+            $table->dateTime('startDate');
+            $table->dateTime('lastDateSubmission');
+            $table->text('comment');
+            $table->foreign('courseSectionTeacherId')->references('id')->on('course_section_teachers');
             $table->timestamps();
         });
     }

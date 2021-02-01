@@ -146,22 +146,27 @@
         </nav>
         <!-- End Navbar -->
         <div class="content">
-            <h3><font color="#d3d3d3 ">Welcome {{$teacher->name}}</font></h3>
+
             <div class="container-fluid">
 
 
                 <div class="row">
                     @foreach($teacherCoursesSections as $teacherCourseSection)
-                        <div class="card card-nav-tabs text-center">
-                            <div class="card-header card-header-info">
-                                {{$teacherCourseSection->courseName}} {{$teacherCourseSection->coursePaper}}
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Class:{{$teacherCourseSection->class}}&nbsp&nbsp||&nbsp&nbsp Section:{{$teacherCourseSection->sectionName}}</h4>
-                                <p class="card-text">Medium:{{$teacherCourseSection->medium}}&nbsp&nbsp||&nbsp&nbsp Group:{{$teacherCourseSection->group}}</p>
-                            </div>
 
+                        <div class="card card-nav-tabs text-center">
+                            <a href="{{route('teacher.details.ToHomeWorkPage')}}">
+                                <div class="card-header card-header-info">
+                                    {{$teacherCourseSection->courseName}} {{$teacherCourseSection->coursePaper}}
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Class:{{$teacherCourseSection->class}}&nbsp&nbsp||&nbsp&nbsp
+                                        Section:{{$teacherCourseSection->sectionName}}</h4>
+                                    <p class="card-text">Medium:{{$teacherCourseSection->medium}}&nbsp&nbsp||&nbsp&nbsp
+                                        Group:{{$teacherCourseSection->group}}</p>
+                                </div>
+                            </a>
                         </div>
+
                     @endforeach
 
                 </div>
