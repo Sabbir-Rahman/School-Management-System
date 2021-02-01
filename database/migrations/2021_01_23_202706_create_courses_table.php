@@ -20,6 +20,7 @@ class CreateCoursesTable extends Migration
             $table->text('paper');
             $table->text('medium');
             $table->text('group');
+            $table->unique(['class','subject','paper','medium','group'],'course_unique');
             $table->timestamps();
         });
     }

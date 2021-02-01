@@ -111,6 +111,7 @@
         </thead>
         <tbody>
         @foreach($sectionTeachers as $sectionTeacher)
+            <tr>
             <td scope="row">{{$sectionTeacher['id']}}</td>
             <td scope="row">{{$sectionTeacher['branch']}}</td>
             <td scope="row">{{$sectionTeacher['class']}}</td>
@@ -129,6 +130,7 @@
                 <a href="" class="btn btn-primary">EDIT</a>
                 <a href="" class="btn btn-danger">DELETE</a>
             </td>
+            </tr>
         @endforeach
         </tbody>
     </table>

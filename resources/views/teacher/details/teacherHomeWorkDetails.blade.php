@@ -19,36 +19,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addBuilding" method="POST">
+            <form action="addClass" method="POST">
                 @csrf
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>School Branch</label>
-                        <input type="number" name="branch" class="form-control" placeholder="Enter school branch">
+                        <label>Class name</label>
+                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
 
                     </div>
-                    <div class="mb-3">
-                        <label>Name</label>
-                        <input type="text" name="buildingName" class="form-control" placeholder="Enter building name">
-
-                    </div>
-                    <div class="mb-3">
-                        <label>Total Floor</label>
-                        <input type="number" name="totalFloor" class="form-control" placeholder="Total Floor Number">
-
-                    </div>
-                    <div class="mb-3">
-                        <label>Total Room</label>
-                        <input type="number" name="totalRoom" class="form-control" placeholder="Total Room Number">
-
-                    </div>
-                    <div class="mb-3">
-                        <label>Comment</label>
-                        <input type="text" name="comment" class="form-control" placeholder="Anything want to add">
-
-                    </div>
-
 
                 </div>
                 <div class="modal-footer">
@@ -66,7 +45,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Building Table</font></h3>
+    <h3><font color="white">Home Work Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -86,13 +65,14 @@
 
 <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add buildings
+        Add data with modal
     </button>
+    <h2><font color="#d3d3d3"> Welcome {{$idSectionCourseTeacher}}</font> </h2>
 
     <br><br>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Building Table</a>
+            <a class="navbar-brand">Data Table</a>
             <form action="" method="POST" class="d-flex">
                 @csrf
                 <input class="form-control me-2" type="search" name="search_data" placeholder="Search"
@@ -104,39 +84,20 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">School Branch</th>
-        <th scope="col">Name</th>
-        <th scope="col">Total Floor</th>
-        <th scope="col">Total Room</th>
-        <th scope="col">Comment</th>
-        <th scope="col">Created</th>
-        <th scope="col">Updated</th>
+        <th scope="col">Class Name</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($buildings as $building)
-            <tr>
-                <td scope="row">{{$building['id']}}</td>
-                <td scope="row">{{$building['branch']}}</td>
-                <td scope="row">{{$building['buildingName']}}</td>
-                <td scope="row">{{$building['totalFloor']}}</td>
-                <td scope="row">{{$building['totalRoom']}}</td>
-                <td scope="row">{{$building['comment']}}</td>
-                <td scope="row">{{$building['created_at']}}</td>
-                <td scope="row">{{$building['updated_at']}}</td>
-                <td scope="row">
-                    <a href="" class="btn btn-primary">EDIT</a>
-                    <a href="" class="btn btn-danger">DELETE</a>
-                </td>
-            </tr>
-        @endforeach
+        <tr>
+
+        </tr>
         </tbody>
     </table>
 </div>
 
 
 <script type="text/javascript" src="/js/particles.js"></script>
-<script type="text/javascript" src="/js/app.js"></script>
+<script type="text/javascript" src="/js/appTeacher.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
         crossorigin="anonymous"></script>
