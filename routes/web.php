@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\teacherClassNotes;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentAuth;
 use App\Http\Controllers\fatherSignUp;
@@ -166,3 +167,7 @@ Route::get('admin/addSectionTeacher/{sectionCourse_id}/teacher/{teacher_id}',[se
 
 Route::get('teacher/teacherHomeWork',[teacherDashboard::class,'goToHomeWorkPage'])->name('teacher.goToHomeWorkPage');
 Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'index'])->name('teacher.details.ToHomeWorkPage');
+
+Route::get('teacher/teacherClassNotes',[teacherDashboard::class,'goToClassNotesPage'])->name('teacher.goToClassNotesPage');
+Route::get('teacher/details/classnotes/{sectionCourseTeacherId}',[teacherClassNotes::class,'index'])->name('teacher.details.ToClassNotesPage');
+

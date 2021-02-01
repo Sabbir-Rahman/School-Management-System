@@ -26,4 +26,12 @@ class teacherDashboard extends Controller
 
         return view('teacher/teacherHomeWork',['teacher'=>$data,'teacherCoursesSections'=>$dataCourseSection]);
     }
+    function goToClassNotesPage(){
+
+        $data = teacher_info::find(session('userId'));
+        $dataCourseSection = courseSectionTeacher::where('teacherId',session('userId'))->get();
+
+
+        return view('teacher/teacherClassNotes',['teacher'=>$data,'teacherCoursesSections'=>$dataCourseSection]);
+    }
 }

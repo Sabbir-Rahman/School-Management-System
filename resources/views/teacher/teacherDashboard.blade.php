@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="./dashboard.html">
+                    <a class="nav-link" href="{{route('teacher.goToClassNotesPage')}}">
 
                         <p>Class Notes</p>
                     </a>
