@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 
 class teacherHomeWork extends Controller
 {
-    function index(){
+    function index($sectionCourseTeacherId){
 
-        return view('teacher/details/teacherHomeWorkDetails');
+        //receive sectionTeacherCourse id
+
+
+        return view('teacher/details/teacherHomeWorkDetails',['idSectionCourseTeacher'=>$sectionCourseTeacherId]);
     }
 }

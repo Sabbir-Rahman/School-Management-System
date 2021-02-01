@@ -165,4 +165,4 @@ Route::get('admin/addSectionCourse/{section_id}/course/{course_id}',[sectionCour
 Route::get('admin/addSectionTeacher/{sectionCourse_id}/teacher/{teacher_id}',[sectionCourseTeacher::class,'addTeacherToCourse'])->name('admin.addTeacherToCourse');
 
 Route::get('teacher/teacherHomeWork',[teacherDashboard::class,'goToHomeWorkPage'])->name('teacher.goToHomeWorkPage');
-Route::get('teacher/details/homework',[teacherHomeWork::class,'index'])->name('teacher.details.ToHomeWorkPage');
+Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'index'])->name('teacher.details.ToHomeWorkPage');

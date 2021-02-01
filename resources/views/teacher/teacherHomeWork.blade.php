@@ -154,7 +154,7 @@
                     @foreach($teacherCoursesSections as $teacherCourseSection)
 
                         <div class="card card-nav-tabs text-center">
-                            <a href="{{route('teacher.details.ToHomeWorkPage')}}">
+                            <a href="{{route('teacher.details.ToHomeWorkPage',['sectionCourseTeacherId'=>$teacherCourseSection['id']])}}">
                                 <div class="card-header card-header-info">
                                     {{$teacherCourseSection->courseName}} {{$teacherCourseSection->coursePaper}}
                                 </div>

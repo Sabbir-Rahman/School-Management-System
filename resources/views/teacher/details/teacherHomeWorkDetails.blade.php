@@ -67,6 +67,7 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Add data with modal
     </button>
+    <h2><font color="#d3d3d3"> Welcome {{$idSectionCourseTeacher}}</font> </h2>
 
     <br><br>
     <nav class="navbar navbar-dark bg-dark">
