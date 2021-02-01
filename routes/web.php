@@ -166,3 +166,4 @@ Route::get('admin/addSectionTeacher/{sectionCourse_id}/teacher/{teacher_id}',[se
 
 Route::get('teacher/teacherHomeWork',[teacherDashboard::class,'goToHomeWorkPage'])->name('teacher.goToHomeWorkPage');
 Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'index'])->name('teacher.details.ToHomeWorkPage');
+Route::post('teacher/details/homework/addHomework',[teacherHomeWork::class,'addHomeWork']);

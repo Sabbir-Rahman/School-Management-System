@@ -19,10 +19,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addClass" method="POST">
+            <form action="addHomework" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">
 
+                    <div class="mb-3">
+                        <input type="hidden" value="{{$idSectionCourseTeacher}}" name="courseTeacherSectionTableId"
+                               class="form-control">
+
+                    </div>
                     <div class="mb-3">
                         <label>Home Work Title</label>
                         <input type="text" name="homeWorkTitle" class="form-control" placeholder="Home work title">
@@ -49,14 +54,14 @@
 
                     </div>
                     <div class="mb-3">
-                        <label for="formFileMultiple"  class="form-label">Put file here if you want to add</label>
-                        <input class="form-control" name="fileMultiple" type="file" id="formFileMultiple" multiple>
+                        <label for="formFileMultiple" class="form-label">Attachment</label>
+                        <input class="form-control" name="files[]" type="file" id="formFileMultiple" multiple>
                     </div>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit"  class="btn btn-primary">Save data</button>
+                    <button type="submit" class="btn btn-primary">Save data</button>
                 </div>
             </form>
         </div>
@@ -91,7 +96,7 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Add data with modal
     </button>
-    <h2><font color="#d3d3d3"> Welcome {{$idSectionCourseTeacher}}</font> </h2>
+    <h2><font color="#d3d3d3"> Welcome {{$idSectionCourseTeacher}}</font></h2>
 
     <br><br>
     <nav class="navbar navbar-dark bg-dark">
