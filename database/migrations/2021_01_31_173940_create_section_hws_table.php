@@ -19,8 +19,9 @@ class CreateSectionHwsTable extends Migration
             $table->text('homeWorkTitle');
             $table->text('homeWorkDetails');
             $table->dateTime('startDate');
-            $table->dateTime('lastDateSubmission');
-            $table->text('comment');
+            $table->dateTime('lastDateSubmission')->nullable();
+            $table->string('file')->nullable();
+            $table->text('comment')->nullable();
             $table->foreign('courseSectionTeacherId')->references('id')->on('course_section_teachers');
             $table->timestamps();
         });

@@ -24,9 +24,33 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>Class name</label>
-                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
+                        <label>Home Work Title</label>
+                        <input type="text" name="homeWorkTitle" class="form-control" placeholder="Home work title">
 
+                    </div>
+                    <div class="mb-3">
+                        <label>Home Work Details</label>
+                        <input type="text" name="homeWorkDetails" class="form-control" placeholder="Home work details">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>Start Date</label>
+                        <input type="date" name="homeWorkStartDate" class="form-control" placeholder="Start Date">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>End Date</label>
+                        <input type="date" name="homeWorkEndDate" class="form-control" placeholder="End Date">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>Comment</label>
+                        <input type="text" name="homeWorkComment" class="form-control" placeholder="Comment">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFileMultiple"  class="form-label">Put file here if you want to add</label>
+                        <input class="form-control" name="fileMultiple" type="file" id="formFileMultiple" multiple>
                     </div>
 
                 </div>
