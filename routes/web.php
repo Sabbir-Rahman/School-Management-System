@@ -19,6 +19,7 @@ use App\Http\Controllers\mediumClassGroupBranchController;
 use App\Http\Controllers\adminSubject;
 use App\Http\Controllers\sectionCourseTeacher;
 use App\Http\Controllers\teacherDashboard;
+use App\Http\Controllers\teacherHomeWork;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -164,3 +165,4 @@ Route::get('admin/addSectionCourse/{section_id}/course/{course_id}',[sectionCour
 Route::get('admin/addSectionTeacher/{sectionCourse_id}/teacher/{teacher_id}',[sectionCourseTeacher::class,'addTeacherToCourse'])->name('admin.addTeacherToCourse');
 
 Route::get('teacher/teacherHomeWork',[teacherDashboard::class,'goToHomeWorkPage'])->name('teacher.goToHomeWorkPage');
+Route::get('teacher/details/homework',[teacherHomeWork::class,'index'])->name('teacher.details.ToHomeWorkPage');
