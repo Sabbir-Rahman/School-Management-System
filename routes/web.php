@@ -21,6 +21,7 @@ use App\Http\Controllers\sectionCourseTeacher;
 use App\Http\Controllers\teacherDashboard;
 use App\Http\Controllers\teacherHomeWork;
 use App\Http\Controllers\teacherAnnouncement;
+use App\Http\Controllers\teacherMeetingLinks;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -170,3 +171,6 @@ Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork:
 
 Route::get('teacher/teacherAnnouncement',[teacherDashboard::class,'goToAnnouncementPage'])->name('teacher.goToAnnouncementPage');
 Route::get('teacher/details/announcement/{sectionCourseTeacherId}',[teacherAnnouncement::class,'index'])->name('teacher.details.ToAnnouncementPage');
+
+Route::get('teacher/teacherMeetingLinks',[teacherDashboard::class,'goToMeetingLinksPage'])->name('teacher.goToMeetingLinksPage');
+Route::get('teacher/details/meetinglinks/{sectionCourseTeacherId}',[teacherMeetingLinks::class,'index'])->name('teacher.details.ToMeetingLinksPage');

@@ -48,13 +48,13 @@
             </a></div>
         <div class="sidebar-wrapper">
             <ul class="nav">
-                <li class="nav-item active  ">
+                <li class="nav-item  ">
                     <a class="nav-link" href="./dashboard.html">
 
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item ">
+                <li class="nav-item active">
                     <a class="nav-link" href="{{route('teacher.goToHomeWorkPage')}}">
 
                         <p>Home Work</p>
@@ -67,7 +67,7 @@
                     </a>
                 </li>
                 <li class="nav-item  ">
-                    <a class="nav-link" href="{{route('teacher.goToAnnouncementPage')}}">
+                    <a class="nav-link" href="./dashboard.html">
 
                         <p>Announcement</p>
                     </a>
@@ -146,90 +146,27 @@
         </nav>
         <!-- End Navbar -->
         <div class="content">
-            <h3><font color="#d3d3d3 ">Welcome {{$teacher->name}}</font></h3>
+
             <div class="container-fluid">
 
-                <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-warning card-header-icon">
-                                <div class="card-icon">
-                                    <i class="material-icons">content_copy</i>
-                                </div>
-                                <p class="card-category">Used Space</p>
-                                <h3 class="card-title">49/50
-                                    <small>GB</small>
-                                </h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <i class="material-icons text-warning">warning</i>
-                                    <a href="#pablo" class="warning-link">Get More Space...</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-success card-header-icon">
-                                <div class="card-icon">
-                                    <i class="material-icons">store</i>
-                                </div>
-                                <p class="card-category">Revenue</p>
-                                <h3 class="card-title">$34,245</h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <i class="material-icons">date_range</i> Last 24 Hours
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-danger card-header-icon">
-                                <div class="card-icon">
-                                    <i class="material-icons">info_outline</i>
-                                </div>
-                                <p class="card-category">Fixed Issues</p>
-                                <h3 class="card-title">75</h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <i class="material-icons">local_offer</i> Tracked from Github
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-info card-header-icon">
-                                <div class="card-icon">
-                                    <i class="fa fa-twitter"></i>
-                                </div>
-                                <p class="card-category">Followers</p>
-                                <h3 class="card-title">+245</h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <i class="material-icons">update</i> Just Updated
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="row">
                     @foreach($teacherCoursesSections as $teacherCourseSection)
-                    <div class="card card-nav-tabs text-center">
-                        <div class="card-header card-header-info">
-                            {{$teacherCourseSection->courseName}} {{$teacherCourseSection->coursePaper}}
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Class:{{$teacherCourseSection->class}}&nbsp&nbsp||&nbsp&nbsp Section:{{$teacherCourseSection->sectionName}}</h4>
-                            <p class="card-text">Medium:{{$teacherCourseSection->medium}}&nbsp&nbsp||&nbsp&nbsp Group:{{$teacherCourseSection->group}}</p>
+
+                        <div class="card card-nav-tabs text-center">
+                            <a href="{{route('teacher.details.ToMeetingLinksPage',['sectionCourseTeacherId'=>$teacherCourseSection['id']])}}">
+                                <div class="card-header card-header-info">
+                                    {{$teacherCourseSection->courseName}} {{$teacherCourseSection->coursePaper}}
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Class:{{$teacherCourseSection->class}}&nbsp&nbsp||&nbsp&nbsp
+                                        Section:{{$teacherCourseSection->sectionName}}</h4>
+                                    <p class="card-text">Medium:{{$teacherCourseSection->medium}}&nbsp&nbsp||&nbsp&nbsp
+                                        Group:{{$teacherCourseSection->group}}</p>
+                                </div>
+                            </a>
                         </div>
 
-                    </div>
                     @endforeach
 
                 </div>
@@ -274,80 +211,7 @@
         </script>
     </div>
 </div>
-<div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown">
-            <i class="fa fa-cog fa-2x"> </i>
-        </a>
-        <ul class="dropdown-menu">
-            <li class="header-title"> Sidebar Filters</li>
-            <li class="adjustments-line">
-                <a href="javascript:void(0)" class="switch-trigger active-color">
-                    <div class="badge-colors ml-auto mr-auto">
-                        <span class="badge filter badge-purple active" data-color="purple"></span>
-                        <span class="badge filter badge-azure" data-color="azure"></span>
-                        <span class="badge filter badge-green" data-color="green"></span>
-                        <span class="badge filter badge-warning" data-color="orange"></span>
-                        <span class="badge filter badge-danger" data-color="danger"></span>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li class="header-title">Images</li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/sidebar-1.jpg" alt="">
-                </a>
-            </li>
-            <li class="active">
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/sidebar-2.jpg" alt="">
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/sidebar-3.jpg" alt="">
-                </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/sidebar-4.jpg" alt="">
-                </a>
-            </li>
-            <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard-dark" target="_blank"
-                   class="btn btn-primary btn-block">Free Download</a>
-            </li>
-            <!-- <li class="header-title">Want more components?</li>
-                <li class="button-container">
-                    <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
-                      Get the pro version
-                    </a>
-                </li> -->
-            <li class="button-container">
-                <a href="https://demos.creative-tim.com/material-dashboard-dark/docs/2.0/getting-started/introduction.html"
-                   target="_blank" class="btn btn-default btn-block">
-                    View Documentation
-                </a>
-            </li>
-            <li class="button-container github-star">
-                <a class="github-button"
-                   href="https://github.com/creativetimofficial/material-dashboard/tree/dark-edition"
-                   data-icon="octicon-star" data-size="large" data-show-count="true"
-                   aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-            </li>
-            <li class="header-title">Thank you for 95 shares!</li>
-            <li class="button-container text-center">
-                <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45
-                </button>
-                <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50
-                </button>
-                <br>
-                <br>
-            </li>
-        </ul>
-    </div>
-</div>
+
 <!--   Core JS Files   -->
 <script src="/assetsTeacher/js/core/jquery.min.js"></script>
 <script src="/assetsTeacher/js/core/popper.min.js"></script>
