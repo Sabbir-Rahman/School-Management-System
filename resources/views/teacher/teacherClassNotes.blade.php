@@ -48,23 +48,21 @@
             </a></div>
         <div class="sidebar-wrapper">
             <ul class="nav">
-                <li class="nav-item  ">
+                <li class="nav-item">
                     <a class="nav-link" href="./dashboard.html">
 
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="./dashboard.html">
 
                         <p>Home Work</p>
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="{{route('teacher.goToClassNotesPage')}}">
+                <li class="nav-item active">
 
                         <p>Class Notes</p>
-                    </a>
                 </li>
                 <li class="nav-item  ">
                     <a class="nav-link" href="./dashboard.html">

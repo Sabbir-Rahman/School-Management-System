@@ -169,5 +169,4 @@ Route::get('teacher/teacherHomeWork',[teacherDashboard::class,'goToHomeWorkPage'
 Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'index'])->name('teacher.details.ToHomeWorkPage');
 
 Route::get('teacher/teacherClassNotes',[teacherDashboard::class,'goToClassNotesPage'])->name('teacher.goToClassNotesPage');
-Route::get('teacher/details/classnotes/{sectionCourseTeacherId}',[teacherClassNotes::class,'index'])->name('teacher.details.ToClassNotesPage');
 
