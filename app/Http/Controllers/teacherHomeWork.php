@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\courseSectionTeacher;
 use App\Models\sectionHw;
 use Illuminate\Http\Request;
 
@@ -22,6 +23,8 @@ class teacherHomeWork extends Controller
 
         $homeWork = new sectionHw();
         $files = $request->file('files');
+        $section = courseSectionTeacher::find($request->courseTeacherSectionTableId);
+
 
         foreach ($files as $file){
             //dd($file->getClientOriginalName());
@@ -36,6 +39,7 @@ class teacherHomeWork extends Controller
         //start date is here it will help in predefined hw
 
         $homeWork->courseSectionTeacherId = $request->courseTeacherSectionTableId;
+        $homeWork->sectionId = $section->sectionId;
         $homeWork->homeWorkTitle = $request->homeWorkTitle;
         $homeWork->homeWorkDetails = $request->homeWorkDetails;
         $homeWork->startDate = $request->homeWorkStartDate;
