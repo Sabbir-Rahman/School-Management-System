@@ -10,7 +10,8 @@
     <link href="/assetsStudentDashboard/css/styles.css" rel="stylesheet">
 
     <!--Custom Font-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -20,11 +21,12 @@
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="#"><font color="aqua">WELCOME </font></a>
+            <a class="navbar-brand" href="#"><font color="aqua">WELCOME </font>{{$student['name']}}</a>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                         <em class="fa fa-envelope"></em><span class="label label-danger">15</span>
@@ -36,7 +38,7 @@
                                 </a>
                                 <div class="message-body"><small class="pull-right">3 mins ago</small>
                                     <a href="#"><strong>John Doe</strong> commented on <strong>your photo</strong>.</a>
-                                    <br /><small class="text-muted">1:24 pm - 25/03/2015</small></div>
+                                    <br/><small class="text-muted">1:24 pm - 25/03/2015</small></div>
                             </div>
                         </li>
                         <li class="divider"></li>
@@ -46,7 +48,7 @@
                                 </a>
                                 <div class="message-body"><small class="pull-right">1 hour ago</small>
                                     <a href="#">New message from <strong>Jane Doe</strong>.</a>
-                                    <br /><small class="text-muted">12:27 pm - 25/03/2015</small></div>
+                                    <br/><small class="text-muted">12:27 pm - 25/03/2015</small></div>
                             </div>
                         </li>
                         <li class="divider"></li>
@@ -87,7 +89,7 @@
             <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
         </div>
         <div class="profile-usertitle">
-            <div class="profile-usertitle-name">Username</div>
+            <div class="profile-usertitle-name">{{$student['id']}}</div>
             <div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
         </div>
         <div class="clear"></div>
@@ -118,8 +120,37 @@
     </div><!--/.row-->
 
     <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Dashboard</h1>
+        <div class="col-lg-3">
+            <div class="panel panel-teal">
+                <div class="panel-heading dark-overlay">ID</div>
+                <div class="panel-body">
+                    <h1><font color="white">{{$student['id']}}</font> </h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-blue">
+                <div class="panel-heading dark-overlay">ClASS</div>
+                <div class="panel-body">
+                    <h1><font color="white">{{$student['student_class']}}</font> </h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-orange">
+                <div class="panel-heading dark-overlay">SECTION</div>
+                <div class="panel-body">
+                    <h1><font color="white">{{$section['sectionName']}}</font> </h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-red">
+                <div class="panel-heading dark-overlay">SHIFT</div>
+                <div class="panel-body">
+                    <h1><font color="white">{{$student['student_shift']}}</font> </h1>
+                </div>
+            </div>
         </div>
     </div><!--/.row-->
 
@@ -158,10 +189,23 @@
                 </div>
             </div>
         </div><!--/.row-->
+
     </div>
+    @foreach($courses as $course)
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">{{$course['courseName']}} || {{$course['coursePaper']}}</div>
+                    <div class="panel-body">
+                        <p>Taken by: {{$course['teacherName']}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
 
 
-</div>	<!--/.main-->
+</div>    <!--/.main-->
 
 <script src="/assetsStudentDashboard/js/jquery-1.11.1.min.js"></script>
 <script src="/assetsStudentDashboard/js/bootstrap.min.js"></script>
