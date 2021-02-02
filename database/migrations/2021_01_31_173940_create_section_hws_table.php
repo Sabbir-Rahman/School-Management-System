@@ -16,6 +16,7 @@ class CreateSectionHwsTable extends Migration
         Schema::create('section_hws', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('courseSectionTeacherId');
+            $table->string('sectionId');
             $table->text('homeWorkTitle');
             $table->text('homeWorkDetails');
             $table->date('startDate');

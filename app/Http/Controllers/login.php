@@ -29,7 +29,7 @@ class login extends Controller
         //student id
         else if(strlen($request->Login_id)==8) {
             $id = StudentInfo::where('id', '=', $request->Login_id)->first();
-            $this->afterLoginView = 'studentLandingPage';
+            $this->afterLoginView = 'student';
         }
         else if(strlen($request->Login_id)==12) {
             $id = teacher_info::where('id', '=', $request->Login_id)->first();
@@ -44,6 +44,9 @@ class login extends Controller
                 $request->session()->put('userId',$request->Login_id);
                 if($this->afterLoginView == 'teacher'){
                     return redirect('teacher/teacherDashboard');
+                }
+                else if($this->afterLoginView == 'student'){
+                    return redirect('student/studentDashboard');
                 }
                 else
                     return view($this->afterLoginView);
