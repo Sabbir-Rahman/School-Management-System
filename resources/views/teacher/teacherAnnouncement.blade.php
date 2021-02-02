@@ -54,7 +54,7 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="{{route('teacher.goToHomeWorkPage')}}">
 
                         <p>Home Work</p>
@@ -66,7 +66,7 @@
                         <p>Class Notes</p>
                     </a>
                 </li>
-                <li class="nav-item  ">
+                <li class="nav-item active ">
                     <a class="nav-link" href="{{route('teacher.goToAnnouncementPage')}}">
 
                         <p>Announcement</p>
@@ -167,26 +167,6 @@
 
 
 
-                <div class="row">
-                    @foreach($teacherCoursesSections as $teacherCourseSection)
-
-                        <div class="card card-nav-tabs text-center">
-                            <a href="{{route('teacher.details.ToHomeWorkPage',['sectionCourseTeacherId'=>$teacherCourseSection['id']])}}">
-                                <div class="card-header card-header-info">
-                                    {{$teacherCourseSection->courseName}} {{$teacherCourseSection->coursePaper}}
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="card-title">Class:{{$teacherCourseSection->class}}&nbsp&nbsp||&nbsp&nbsp
-                                        Section:{{$teacherCourseSection->sectionName}}</h4>
-                                    <p class="card-text">Medium:{{$teacherCourseSection->medium}}&nbsp&nbsp||&nbsp&nbsp
-                                        Group:{{$teacherCourseSection->group}}</p>
-                                </div>
-                            </a>
-                        </div>
-
-                    @endforeach
-
-                </div>
             </div>
         </div>
         <footer class="footer">
