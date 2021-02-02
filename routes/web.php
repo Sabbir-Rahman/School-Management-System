@@ -25,6 +25,8 @@ use App\Http\Controllers\studentHomeWorkDashboard;
 use App\Http\Controllers\teacherClassNotes;
 use App\Http\Controllers\teacherAnnouncement;
 use App\Http\Controllers\teacherMeetingLink;
+use App\Http\Controllers\studentAnnouncement;
+use App\Http\Controllers\studentClassNotes;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -180,3 +182,5 @@ Route::post('teacher/details/homework/addHomework',[teacherHomeWork::class,'addH
 
 Route::get('student/studentDashboard',[studentDashboard::class,'index'])->name('student.studentDashboard');
 Route::get('student/studentHomeWorkDashboard',[studentHomeWorkDashboard::class,'index'])->name('student.studentHomeWorkDashboard');
+Route::get('student/studentAnnouncementDashboard',[studentAnnouncement::class,'index'])->name('student.studentAnnouncementDashboard');
+Route::get('student/studentClassNotesDashboard',[studentClassNotes::class,'index'])->name('student.studentClassNotesDashboard');
