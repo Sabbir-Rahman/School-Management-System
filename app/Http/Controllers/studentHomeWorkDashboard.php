@@ -18,7 +18,9 @@ class studentHomeWorkDashboard extends Controller
 
         $dataCourse =  courseSectionTeacher::where('sectionId',$data->student_section)->get();
         $section = sectionTable::find($data->student_section);
-        $sectionHw = sectionHw::where('sectionId',$data->student_section);
+        $sectionHw = sectionHw::where('sectionId',$data->student_section)->get();
+
+
 
         return view('student/studentHomeWorkDashboard',['courses'=>$dataCourse,'student'=>$data,'section'=>$section,'sectionHws'=>$sectionHw]);
     }

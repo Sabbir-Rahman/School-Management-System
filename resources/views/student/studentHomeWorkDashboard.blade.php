@@ -123,10 +123,15 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-info">
-                    <div class="panel-heading">{{$section['courseName']}} || {{$course['coursePaper']}}</div>
-                    <div class="panel-body">
-                        <p>Taken by: {{$course['teacherName']}}</p>
-                    </div>
+                    <div class="panel-heading">{{$sectionHw['course']}} || {{$sectionHw['paper']}}</div>
+                    <h5>&nbsp;&nbsp;&nbsp;&nbsp;Title: {{$sectionHw['homeWorkTitle']}}</h5>
+                    <h5>&nbsp;&nbsp;&nbsp;&nbsp; Given on: {{$sectionHw['startDate']}}</h5>
+                    <h5>&nbsp;&nbsp;&nbsp;&nbsp; Submission date: {{$sectionHw['lastDateSubmission']}}</h5>
+                    <h5>&nbsp;&nbsp;&nbsp;&nbsp; Details</h5>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp; {{$sectionHw['homeWorkDetails']}}</p>
+                    <h5>&nbsp;&nbsp;&nbsp;&nbsp; Comment:{{$sectionHw['comment']}} </h5>
+                    <br><br>
+
                 </div>
             </div>
         </div>

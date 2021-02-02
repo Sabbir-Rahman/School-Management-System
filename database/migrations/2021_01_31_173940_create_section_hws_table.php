@@ -19,6 +19,7 @@ class CreateSectionHwsTable extends Migration
             $table->string('sectionId');
             $table->string('course');
             $table->string('paper');
+            $table->string('teacherName');
             $table->text('homeWorkTitle');
             $table->text('homeWorkDetails');
             $table->date('startDate');

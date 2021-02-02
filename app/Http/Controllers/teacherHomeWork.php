@@ -27,6 +27,7 @@ class teacherHomeWork extends Controller
 
         $course = $courseSectionTeacherInfo->courseName;
         $paper = $courseSectionTeacherInfo->coursePaper;
+        $teacherName = $courseSectionTeacherInfo->teacherName;
 
         foreach ($files as $file){
             //dd($file->getClientOriginalName());
@@ -44,6 +45,7 @@ class teacherHomeWork extends Controller
         $homeWork->sectionId = $courseSectionTeacherInfo->sectionId;
         $homeWork->course = $course;
         $homeWork->paper = $paper;
+        $homeWork->teacherName = $teacherName;
         $homeWork->homeWorkTitle = $request->homeWorkTitle;
         $homeWork->homeWorkDetails = $request->homeWorkDetails;
         $homeWork->startDate = $request->homeWorkStartDate;
