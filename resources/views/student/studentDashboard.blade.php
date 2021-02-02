@@ -101,11 +101,11 @@
         </div>
     </form>
     <ul class="nav menu">
-        <li class="active"><a href="index.html">&nbsp Dashboard</a></li>
+        <li class="active"><a href="{{route('student.studentDashboard')}}">&nbsp Dashboard</a></li>
         <li><a href="{{route('student.studentHomeWorkDashboard')}}">&nbsp Home Work</a></li>
-        <li><a href="charts.html">&nbsp Announcement</a></li>
-        <li><a href="elements.html">&nbsp Class notes</a></li>
-        <li><a href="login.html">&nbsp Logout</a></li>
+        <li><a href="{{route('student.studentAnnouncementDashboard')}}">&nbsp Announcement</a></li>
+        <li><a href="{{route('student.studentClassNotesDashboard')}}">&nbsp Class notes</a></li>
+        <li><a href="">&nbsp Logout</a></li>
     </ul>
 </div><!--/.sidebar-->
 

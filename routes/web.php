@@ -22,6 +22,11 @@ use App\Http\Controllers\teacherDashboard;
 use App\Http\Controllers\teacherHomeWork;
 use App\Http\Controllers\studentDashboard;
 use App\Http\Controllers\studentHomeWorkDashboard;
+use App\Http\Controllers\teacherClassNotes;
+use App\Http\Controllers\teacherAnnouncement;
+use App\Http\Controllers\teacherMeetingLink;
+use App\Http\Controllers\studentAnnouncement;
+use App\Http\Controllers\studentClassNotes;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -108,7 +113,7 @@ Route::get('showRecords',function (){
     return view('showRecords');
 })->name('showRecord') ;
 
-Route::get('teacher/teacherDashboard',[teacherDashboard::class,'index']);
+
 
 
 Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp');
@@ -166,9 +171,16 @@ Route::get('admin/addSectionGoCourse/{id}',[sectionCourseTeacher::class,'goCours
 Route::get('admin/addSectionCourse/{section_id}/course/{course_id}',[sectionCourseTeacher::class,'addCourse'])->name('admin.addCourse');
 Route::get('admin/addSectionTeacher/{sectionCourse_id}/teacher/{teacher_id}',[sectionCourseTeacher::class,'addTeacherToCourse'])->name('admin.addTeacherToCourse');
 
+Route::get('teacher/teacherDashboard',[teacherDashboard::class,'index'])->name('teacher.goToTeacherDashboard');
 Route::get('teacher/teacherHomeWork',[teacherDashboard::class,'goToHomeWorkPage'])->name('teacher.goToHomeWorkPage');
+Route::get('teacher/teacherClassNotes',[teacherClassNotes::class,'index'])->name('teacher.goToClassNotesPage');
+Route::get('teacher/teacherAnnouncement',[teacherAnnouncement::class,'index'])->name('teacher.goToAnnouncementPage');
+Route::get('teacher/teacherMeetingLink',[teacherMeetingLink::class,'index'])->name('teacher.goToMeetingLinkPage');
+
 Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'index'])->name('teacher.details.ToHomeWorkPage');
 Route::post('teacher/details/homework/addHomework',[teacherHomeWork::class,'addHomeWork']);
 
 Route::get('student/studentDashboard',[studentDashboard::class,'index'])->name('student.studentDashboard');
 Route::get('student/studentHomeWorkDashboard',[studentHomeWorkDashboard::class,'index'])->name('student.studentHomeWorkDashboard');
+Route::get('student/studentAnnouncementDashboard',[studentAnnouncement::class,'index'])->name('student.studentAnnouncementDashboard');
+Route::get('student/studentClassNotesDashboard',[studentClassNotes::class,'index'])->name('student.studentClassNotesDashboard');

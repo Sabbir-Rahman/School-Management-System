@@ -102,9 +102,9 @@
     </form>
     <ul class="nav menu">
         <ul class="nav menu">
-            <li><a href="{{route('student.studentDashboard')}}">&nbsp Dashboard</a></li>
-            <li class="active"><a href="{{route('student.studentHomeWorkDashboard')}}">&nbsp Home Work</a></li>
-            <li><a href="{{route('student.studentAnnouncementDashboard')}}">&nbsp Announcement</a></li>
+            <li><a href="{{'student.studentDashboard'}}">&nbsp Dashboard</a></li>
+            <li><a href="{{route('student.studentHomeWorkDashboard')}}">&nbsp Home Work</a></li>
+            <li class="active"><a href="{{route('student.studentAnnouncementDashboard')}}">&nbsp Announcement</a></li>
             <li><a href="{{route('student.studentClassNotesDashboard')}}">&nbsp Class notes</a></li>
             <li><a href="">&nbsp Logout</a></li>
         </ul>
@@ -118,26 +118,6 @@
         </ol>
     </div><!--/.row-->
 
-    @foreach($sectionHws as $sectionHw)
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-info">
-                    <div class="panel-heading">{{$sectionHw['course']}} || {{$sectionHw['paper']}}
-                        &nbsp&nbsp&nbsp&nbsp&nbspTeacher:{{$sectionHw['teacherName']}}</div>
-                    <div class="container">
-                        <h5>Title: {{$sectionHw['homeWorkTitle']}}</h5>
-                        <h5>Given on: {{$sectionHw['startDate']}}</h5>
-                        <h5>Submission date: {{$sectionHw['lastDateSubmission']}}</h5>
-                        <h5>Details:</h5>
-                        <p>{{$sectionHw['homeWorkDetails']}}</p>
-                        <h5>Comment: {{$sectionHw['comment']}} </h5>
-                        <br><br>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    @endforeach
 
 
 </div>    <!--/.main-->
