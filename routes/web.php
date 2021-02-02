@@ -20,6 +20,7 @@ use App\Http\Controllers\adminSubject;
 use App\Http\Controllers\sectionCourseTeacher;
 use App\Http\Controllers\teacherDashboard;
 use App\Http\Controllers\teacherHomeWork;
+use App\Http\Controllers\studentDashboard;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -167,3 +168,5 @@ Route::get('admin/addSectionTeacher/{sectionCourse_id}/teacher/{teacher_id}',[se
 Route::get('teacher/teacherHomeWork',[teacherDashboard::class,'goToHomeWorkPage'])->name('teacher.goToHomeWorkPage');
 Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'index'])->name('teacher.details.ToHomeWorkPage');
 Route::post('teacher/details/homework/addHomework',[teacherHomeWork::class,'addHomeWork']);
+
+Route::get('student/studentDashboard',[studentDashboard::class,'index'])->name('student.studentDashboard');
