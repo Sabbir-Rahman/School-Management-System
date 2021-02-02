@@ -23,8 +23,11 @@ class teacherHomeWork extends Controller
 
         $homeWork = new sectionHw();
         $files = $request->file('files');
-        $section = courseSectionTeacher::find($request->courseTeacherSectionTableId);
+        $courseSectionTeacherInfo = courseSectionTeacher::find($request->courseTeacherSectionTableId);
 
+        $course = $courseSectionTeacherInfo->courseName;
+        $paper = $courseSectionTeacherInfo->coursePaper;
+        $teacherName = $courseSectionTeacherInfo->teacherName;
 
         foreach ($files as $file){
             //dd($file->getClientOriginalName());
@@ -39,7 +42,10 @@ class teacherHomeWork extends Controller
         //start date is here it will help in predefined hw
 
         $homeWork->courseSectionTeacherId = $request->courseTeacherSectionTableId;
-        $homeWork->sectionId = $section->sectionId;
+        $homeWork->sectionId = $courseSectionTeacherInfo->sectionId;
+        $homeWork->course = $course;
+        $homeWork->paper = $paper;
+        $homeWork->teacherName = $teacherName;
         $homeWork->homeWorkTitle = $request->homeWorkTitle;
         $homeWork->homeWorkDetails = $request->homeWorkDetails;
         $homeWork->startDate = $request->homeWorkStartDate;

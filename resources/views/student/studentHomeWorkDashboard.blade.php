@@ -101,8 +101,8 @@
         </div>
     </form>
     <ul class="nav menu">
-        <li class="active"><a href="index.html">&nbsp Dashboard</a></li>
-        <li><a href="{{route('student.studentHomeWorkDashboard')}}">&nbsp Home Work</a></li>
+        <li><a href="index.html">&nbsp Dashboard</a></li>
+        <li class="active"><a href="{{route('student.studentHomeWorkDashboard')}}">&nbsp Home Work</a></li>
         <li><a href="charts.html">&nbsp Announcement</a></li>
         <li><a href="elements.html">&nbsp Class notes</a></li>
         <li><a href="login.html">&nbsp Logout</a></li>
@@ -112,93 +112,26 @@
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="row">
         <ol class="breadcrumb">
-            <li><a href="#">
-                    <em class="fa fa-home"></em>
-                </a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">Home Work Dashboard</li>
         </ol>
     </div><!--/.row-->
 
-    <div class="row">
-        <div class="col-lg-3">
-            <div class="panel panel-teal">
-                <div class="panel-heading dark-overlay">ID</div>
-                <div class="panel-body">
-                    <h1><font color="white">{{$student['id']}}</font> </h1>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="panel panel-blue">
-                <div class="panel-heading dark-overlay">ClASS</div>
-                <div class="panel-body">
-                    <h1><font color="white">{{$student['student_class']}}</font> </h1>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="panel panel-orange">
-                <div class="panel-heading dark-overlay">SECTION</div>
-                <div class="panel-body">
-                    <h1><font color="white">{{$section['sectionName']}}</font> </h1>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="panel panel-red">
-                <div class="panel-heading dark-overlay">SHIFT</div>
-                <div class="panel-body">
-                    <h1><font color="white">{{$student['student_shift']}}</font> </h1>
-                </div>
-            </div>
-        </div>
-    </div><!--/.row-->
-
-    <div class="panel panel-container">
-        <div class="row">
-            <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-                <div class="panel panel-teal panel-widget border-right">
-                    <div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
-                        <div class="large">12</div>
-                        <div class="text-muted">Courses</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-                <div class="panel panel-blue panel-widget border-right">
-                    <div class="row no-padding"><em class="fa fa-xl fa-comments color-orange"></em>
-                        <div class="large">2</div>
-                        <div class="text-muted">Home Works</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-                <div class="panel panel-orange panel-widget border-right">
-                    <div class="row no-padding"><em class="fa fa-xl fa-users color-teal"></em>
-                        <div class="large">4</div>
-                        <div class="text-muted">Announcement</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-                <div class="panel panel-red panel-widget ">
-                    <div class="row no-padding"><em class="fa fa-xl fa-search color-red"></em>
-                        <div class="large">5</div>
-                        <div class="text-muted">Personal Notice</div>
-                    </div>
-                </div>
-            </div>
-        </div><!--/.row-->
-
-    </div>
-    @foreach($courses as $course)
+    @foreach($sectionHws as $sectionHw)
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-info">
-                    <div class="panel-heading">{{$course['courseName']}} || {{$course['coursePaper']}}</div>
-                    <div class="panel-body">
-                        <p>Taken by: {{$course['teacherName']}}</p>
+                    <div class="panel-heading">{{$sectionHw['course']}} || {{$sectionHw['paper']}}
+                        &nbsp&nbsp&nbsp&nbsp&nbspTeacher:{{$sectionHw['teacherName']}}</div>
+                    <div class="container">
+                        <h5>Title: {{$sectionHw['homeWorkTitle']}}</h5>
+                        <h5>Given on: {{$sectionHw['startDate']}}</h5>
+                        <h5>Submission date: {{$sectionHw['lastDateSubmission']}}</h5>
+                        <h5>Details:</h5>
+                        <p>{{$sectionHw['homeWorkDetails']}}</p>
+                        <h5>Comment: {{$sectionHw['comment']}} </h5>
+                        <br><br>
                     </div>
+
                 </div>
             </div>
         </div>

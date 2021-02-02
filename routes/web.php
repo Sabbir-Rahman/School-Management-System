@@ -21,6 +21,7 @@ use App\Http\Controllers\sectionCourseTeacher;
 use App\Http\Controllers\teacherDashboard;
 use App\Http\Controllers\teacherHomeWork;
 use App\Http\Controllers\studentDashboard;
+use App\Http\Controllers\studentHomeWorkDashboard;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -170,3 +171,4 @@ Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork:
 Route::post('teacher/details/homework/addHomework',[teacherHomeWork::class,'addHomeWork']);
 
 Route::get('student/studentDashboard',[studentDashboard::class,'index'])->name('student.studentDashboard');
+Route::get('student/studentHomeWorkDashboard',[studentHomeWorkDashboard::class,'index'])->name('student.studentHomeWorkDashboard');
