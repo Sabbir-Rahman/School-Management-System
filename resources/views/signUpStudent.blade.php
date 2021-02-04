@@ -75,20 +75,9 @@
                     <label for="select-01a2" class="u-label u-text-palette-4-base u-label-6">Class</label>
                     <div class="u-form-select-wrapper">
                         <select id="select-01a2" name="student_class" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-6">
-                            <option value="Play">Play</option>
-                            <option value="Nursury">Nursury</option>
-                            <option value="KG-1">KG-1</option>
-                            <option value="KG-2">KG-2</option>
-                            <option value="One">One</option>
-                            <option value="Two">Two</option>
-                            <option value="Three">Three</option>
-                            <option value="Four">Four</option>
-                            <option value="Five">Five</option>
-                            <option value="Six">Six</option>
-                            <option value="Seven">Seven</option>
-                            <option value="Eight">Eight</option>
-                            <option value="Nine">Nine</option>
-                            <option value="Ten">Ten</option>
+                            @foreach($data as $i)
+                            <option value="{{$i['className']}}">{{$i['className']}}</option>
+                            @endforeach
                         </select>
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
                     </div>
@@ -97,10 +86,9 @@
                     <label for="select-36f0" class="u-label u-text-palette-4-base u-label-7">Medium</label>
                     <div class="u-form-select-wrapper">
                         <select id="select-36f0" name="student_medium" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-7">
-                            <option value="Bangla Medium">Bangla Medium</option>
-                            <option value="English Medium">English Medium</option>
-                            <option value="Bangla Version">Bangla Version</option>
-                            <option value="English Version">English Version</option>
+                            @foreach($data as $i)
+                            <option value="{{$i['mediumName']}}">{{$i['mediumName']}}</option>
+                            @endforeach
                         </select>
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
                     </div>
@@ -109,12 +97,9 @@
                     <label for="select-f60f" class="u-label u-text-palette-4-base u-label-8">Group</label>
                     <div class="u-form-select-wrapper">
                         <select id="select-f60f" name="student_group" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-input-8">
-                            <option value="General">General</option>
-                            <option value="Vocational">Vocational</option>
-                            <option value="Religious">Religious</option>
-                            <option value="Science">Science</option>
-                            <option value="Humanity">Humanity</option>
-                            <option value="Business">Business</option>
+                            @foreach($data as $i)
+                                <option value="{{$i['groupName']}}">{{$i['groupName']}}</option>
+                            @endforeach
                         </select>
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
                     </div>

@@ -35,7 +35,10 @@ class StudentAuth extends Controller
 
     function signUp()
     {
-        return view('signUpStudent');
+        //data is retrieved from medium group branches table
+        $data = mediumClassGroupBranch::all();
+
+        return view('signUpStudent',['data'=>$data]);
     }
 
     function create(Request $request){
