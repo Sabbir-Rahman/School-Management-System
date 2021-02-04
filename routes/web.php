@@ -179,9 +179,12 @@ Route::get('teacher/teacherMeetingLink',[teacherMeetingLink::class,'index'])->na
 
 Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'goDetailHomework'])->name('teacher.details.ToHomeWorkPage');
 Route::get('teacher/details/classnotes/{sectionCourseTeacherId}',[teacherClassNotes::class,'goDetailClassnotes'])->name('teacher.details.ToClassNotesPage');
+Route::get('teacher/details/announcements/{sectionCourseTeacherId}',[teacherAnnouncement::class,'goDetailAnnouncement'])->name('teacher.details.ToAnnouncementPage');
 
 Route::post('teacher/details/homework/addHomework',[teacherHomeWork::class,'addHomeWork']);
 Route::post('teacher/details/classnotes/addClassnotes',[teacherClassNotes::class,'addClassNotes']);
+Route::post('teacher/details/announcements/addAnnouncements',[teacherAnnouncement::class,'addAnnouncements']);
+
 
 Route::get('student/studentDashboard',[studentDashboard::class,'index'])->name('student.studentDashboard');
 Route::get('student/studentHomeWorkDashboard',[studentHomeWorkDashboard::class,'index'])->name('student.studentHomeWorkDashboard');

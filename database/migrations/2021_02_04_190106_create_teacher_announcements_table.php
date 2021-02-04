@@ -13,7 +13,7 @@ class CreateTeacherAnnouncementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('teacher_announcements', function (Blueprint $table) {
+        Schema::create('announcements', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('courseSectionTeacherId');
             $table->string('sectionId');
