@@ -49,7 +49,7 @@
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li class="nav-item active  ">
-                    <a class="nav-link" href="{{route('teacher.goToTeacherDashboard')}}">
+                    <a class="nav-link" href="./dashboard.html">
 
                         <p>Dashboard</p>
                     </a>
@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{route('teacher.goToClassNotesPage')}}">
+                    <a class="nav-link" href="./dashboard.html">
 
                         <p>Class Notes</p>
                     </a>
@@ -73,7 +73,7 @@
                     </a>
                 </li>
                 <li class="nav-item  ">
-                    <a class="nav-link" href="{{route('teacher.goToMeetingLinkPage')}}">
+                    <a class="nav-link" href="{{route('teacher.goToMeetingLinksPage')}}">
 
                         <p>Meeting Link</p>
                     </a>
