@@ -117,6 +117,26 @@
             <li class="active">Home Work Dashboard</li>
         </ol>
     </div><!--/.row-->
+    @foreach($announcements as $announcement)
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">{{$announcement['course']}} || {{$announcement['paper']}}
+                        &nbsp&nbsp&nbsp&nbsp&nbspTeacher:{{$announcement['teacherName']}}</div>
+                    <div class="container">
+                        <h5>Title: {{$announcement['announcementTitle']}}</h5>
+                        <h5>Given on: {{$announcement['announcementDate']}}</h5>
+                        <h5>Details:</h5>
+                        <p>{{$announcement['announcementDetails']}}</p>
+                        <h5>Comment: {{$announcement['comment']}} </h5>
+                        <br><br>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    @endforeach
+
 
 
 
