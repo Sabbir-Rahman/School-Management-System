@@ -187,3 +187,4 @@ Route::get('student/studentDashboard',[studentDashboard::class,'index'])->name('
 Route::get('student/studentHomeWorkDashboard',[studentHomeWorkDashboard::class,'index'])->name('student.studentHomeWorkDashboard');
 Route::get('student/studentAnnouncementDashboard',[studentAnnouncement::class,'index'])->name('student.studentAnnouncementDashboard');
 Route::get('student/studentClassNotesDashboard',[studentClassNotes::class,'index'])->name('student.studentClassNotesDashboard');
+
