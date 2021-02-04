@@ -177,8 +177,11 @@ Route::get('teacher/teacherClassNotes',[teacherClassNotes::class,'index'])->name
 Route::get('teacher/teacherAnnouncement',[teacherAnnouncement::class,'index'])->name('teacher.goToAnnouncementPage');
 Route::get('teacher/teacherMeetingLink',[teacherMeetingLink::class,'index'])->name('teacher.goToMeetingLinkPage');
 
-Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'index'])->name('teacher.details.ToHomeWorkPage');
+Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'goDetailHomework'])->name('teacher.details.ToHomeWorkPage');
+Route::get('teacher/details/classnotes/{sectionCourseTeacherId}',[teacherClassNotes::class,'goDetailClassnotes'])->name('teacher.details.ToClassNotesPage');
+
 Route::post('teacher/details/homework/addHomework',[teacherHomeWork::class,'addHomeWork']);
+Route::post('teacher/details/classnotes/addClassnotes',[teacherClassNotes::class,'addClassNotes']);
 
 Route::get('student/studentDashboard',[studentDashboard::class,'index'])->name('student.studentDashboard');
 Route::get('student/studentHomeWorkDashboard',[studentHomeWorkDashboard::class,'index'])->name('student.studentHomeWorkDashboard');

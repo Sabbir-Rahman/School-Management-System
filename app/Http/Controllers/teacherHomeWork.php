@@ -8,8 +8,10 @@ use Illuminate\Http\Request;
 
 class teacherHomeWork extends Controller
 {
+
+    //this is basically homework details page
     private $allName;
-    function index($sectionCourseTeacherId){
+    function goDetailHomework($sectionCourseTeacherId){
 
         //receive sectionTeacherCourse id
         $homework = sectionHw::where('courseSectionTeacherId',$sectionCourseTeacherId)->get();

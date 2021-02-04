@@ -13,7 +13,7 @@ class CreateTeacherClassNotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('teacher_class_notes', function (Blueprint $table) {
+        Schema::create('class_notes', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('courseSectionTeacherId');
             $table->string('sectionId');
