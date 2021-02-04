@@ -166,9 +166,9 @@
                 @endif
 
 
+                @foreach($teacherCoursesSections as $teacherCourseSection)
+                    <div class="row">
 
-                <div class="row">
-                    @foreach($teacherCoursesSections as $teacherCourseSection)
 
                         <div class="card card-nav-tabs text-center">
                             <a href="{{route('teacher.details.ToHomeWorkPage',['sectionCourseTeacherId'=>$teacherCourseSection['id']])}}">
@@ -184,9 +184,9 @@
                             </a>
                         </div>
 
-                    @endforeach
 
-                </div>
+                    </div>
+                @endforeach
             </div>
         </div>
         <footer class="footer">

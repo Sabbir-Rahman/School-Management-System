@@ -117,7 +117,25 @@
             <li class="active">Home Work Dashboard</li>
         </ol>
     </div><!--/.row-->
+    @foreach($classNotes as $classNote)
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">{{$classNote['course']}} || {{$classNote['paper']}}
+                        &nbsp&nbsp&nbsp&nbsp&nbspTeacher:{{$classNote['teacherName']}}</div>
+                    <div class="container">
+                        <h5>Title: {{$classNote['classNotesTitle']}}</h5>
+                        <h5>Given on: {{$classNote['date']}}</h5>
+                        <h5>Details:</h5>
+                        <p>{{$classNote['classNotesDetails']}}</p>
+                        <h5>Comment: {{$classNote['comment']}} </h5>
+                        <br><br>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+    @endforeach
 
 
 </div>    <!--/.main-->

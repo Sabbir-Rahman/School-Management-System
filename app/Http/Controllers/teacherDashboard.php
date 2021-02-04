@@ -26,4 +26,7 @@ class teacherDashboard extends Controller
 
         return view('teacher/teacherHomeWork',['teacher'=>$data,'teacherCoursesSections'=>$dataCourseSection]);
     }
+
+
+
 }

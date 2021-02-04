@@ -165,6 +165,28 @@
                     </div>
                 @endif
 
+                    @foreach($teacherCoursesSections as $teacherCourseSection)
+                        <div class="row">
+
+
+                            <div class="card card-nav-tabs text-center">
+                                <a href="{{route('teacher.details.ToClassNotesPage',['sectionCourseTeacherId'=>$teacherCourseSection['id']])}}">
+                                    <div class="card-header card-header-info">
+                                        {{$teacherCourseSection->courseName}} {{$teacherCourseSection->coursePaper}}
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Class:{{$teacherCourseSection->class}}&nbsp&nbsp||&nbsp&nbsp
+                                            Section:{{$teacherCourseSection->sectionName}}</h4>
+                                        <p class="card-text">Medium:{{$teacherCourseSection->medium}}&nbsp&nbsp||&nbsp&nbsp
+                                            Group:{{$teacherCourseSection->group}}</p>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        </div>
+                    @endforeach
+
 
 
             </div>
