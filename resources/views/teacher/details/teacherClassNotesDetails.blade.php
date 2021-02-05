@@ -124,7 +124,7 @@
                 <td scope="row">{{$classNote['id']}}</td>
                 <td scope="row">{{$classNote['classNotesTitle']}}</td>
                 <td scope="row">{{$classNote['classNotesDetails']}}</td>
-                <td scope="row">{{$classNote['date']}}</td>
+                <td scope="row">{{$classNote['classNotesDate']}}</td>
                 <td scope="row">
                     <a href="" class="btn btn-info">VIEW</a>
                 </td>

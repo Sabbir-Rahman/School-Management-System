@@ -69,7 +69,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Class Note Table</font></h3>
+    <h3><font color="white">Announcement Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -121,16 +121,16 @@
         @foreach($allAnnouncements as $announcement)
             <tr>
 
-                <td scope="row">{{$classNote['id']}}</td>
-                <td scope="row">{{$classNote['classNotesTitle']}}</td>
-                <td scope="row">{{$classNote['classNotesDetails']}}</td>
-                <td scope="row">{{$classNote['date']}}</td>
+                <td scope="row">{{$announcement['id']}}</td>
+                <td scope="row">{{$announcement['announcementTitle']}}</td>
+                <td scope="row">{{$announcement['announcementDetails']}}</td>
+                <td scope="row">{{$announcement['announcementdate']}}</td>
                 <td scope="row">
                     <a href="" class="btn btn-info">VIEW</a>
                 </td>
-                <td scope="row">{{$classNote['comment']}}</td>
-                <td scope="row">{{$classNote['created_at']}}</td>
-                <td scope="row">{{$classNote['updated_at']}}</td>
+                <td scope="row">{{$announcement['comment']}}</td>
+                <td scope="row">{{$announcement['created_at']}}</td>
+                <td scope="row">{{$announcement['updated_at']}}</td>
                 <td scope="row">
                     <a href="" class="btn btn-primary">EDIT</a>
                     <a href="" class="btn btn-danger">DELETE</a>
