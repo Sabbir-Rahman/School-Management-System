@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\userLoginTime;
 use Illuminate\Http\Request;
 use App\Models\StudentInfo;
 use App\Models\father_info;
@@ -42,6 +43,17 @@ class login extends Controller
         if($id){
             if($request->Login_password==$id->password){
                 $request->session()->put('userId',$request->Login_id);
+
+                $user = new userLoginTime();
+
+                $user->userId = $request->Login_id;
+                $user->name = $id->name;
+
+                $query = $user->save();
+
+                if(!$query)
+                    return "Something wrong happened";
+
                 if($this->afterLoginView == 'teacher'){
                     return redirect('teacher/teacherDashboard');
                 }
