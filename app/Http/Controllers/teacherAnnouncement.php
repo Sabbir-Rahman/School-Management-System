@@ -67,7 +67,7 @@ class teacherAnnouncement extends Controller
         $query = $announcement->save();
 
         if($query)
-            return redirect('teacher/teacherClassNotes')->with('success','Data Saved');
+            return redirect('teacher/teacherAnnouncement')->with('success','Data Saved');
         else
             return "Data not insert";
     }

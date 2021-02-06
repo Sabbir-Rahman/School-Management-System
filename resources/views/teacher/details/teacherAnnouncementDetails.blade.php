@@ -124,7 +124,7 @@
                 <td scope="row">{{$announcement['id']}}</td>
                 <td scope="row">{{$announcement['announcementTitle']}}</td>
                 <td scope="row">{{$announcement['announcementDetails']}}</td>
-                <td scope="row">{{$announcement['announcementdate']}}</td>
+                <td scope="row">{{$announcement['announcementDate']}}</td>
                 <td scope="row">
                     <a href="" class="btn btn-info">VIEW</a>
                 </td>
