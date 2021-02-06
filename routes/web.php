@@ -31,6 +31,9 @@ use App\Http\Controllers\view_studentGeneral;
 use App\Http\Controllers\studentMeetLink;
 use App\Http\Controllers\applicationStudent;
 use App\Http\Controllers\academicRecords;
+use App\Http\Controllers\adminFinancial;
+use App\Http\Controllers\adminStudentFinancial;
+
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -124,7 +127,12 @@ Route::get('studentSignUp',[StudentAuth::class,'signUp'])->name('studentSignUp')
 Route::post('create',[StudentAuth::class,'create'])->name('studentcreate');
 
 Route::get('admin/class',[adminClass::class,'index'])->name('admin.class');
+Route::get('admin/adminFinancial',[adminFinancial::class,'index'])->name('adminFinancial');
+Route::get('admin/studentPaymentRule',[adminFinancial::class,'goAdminStudentMoneyRule'])->name('admin.studentPaymentRule');
+Route::get('admin/teacherPaymentRule',[adminFinancial::class,'goAdminTeacherMoneyRule'])->name('admin.teacherPaymentRule');
+
 Route::post('admin/addClass',[adminClass::class,'addData'])->name('addClass');
+Route::post('admin/addStudentMoneyRule',[adminFinancial::class,'addStudentMoneyRule'])->name('addStudentMoneyRule');
 
 Route::post('admin/addBuilding',[adminBuildingInfo::class,'addData']);
 
@@ -152,6 +160,8 @@ Route::post('admin/deleteStudent',[adminStudentInfo::class,'delete']);
 Route::post('admin/goToReviewApplication/reviewStudentApplication',[applicationStudent::class,'adminReview']);
 
 Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
+Route::get('admin/StudentFinancialCondition',[adminStudentFinancial::class,'goToStudentFinancialCondition'])->name('admin.studentFinancialState');
+Route::get('admin/StudentPayment',[adminStudentFinancial::class,'goToStudentPayment'])->name('admin.studentPayment');
 Route::get('admin/previousAcademicInfo',[academicRecords::class,'index'])->name('admin.previousAcademicRecord');
 
 
@@ -177,6 +187,7 @@ Route::post('admin/addCourse',[adminCourse::class,'addData']);
 Route::get('admin/mediumGroupBranchView',[mediumClassGroupBranchController::class,'index'])->name('admin.mediumClassGroupBranch');
 Route::get('admin/addSubjects',[adminSubject::class,'index'])->name('adminSubjects');
 
+Route::get('admin/addSectionView',[sectionCourseTeacher::class, 'goToAddSection'])->name('admin.sectionView');
 Route::get('admin/addSectionView',[sectionCourseTeacher::class, 'goToAddSection'])->name('admin.sectionView');
 
 Route::get('admin/sectionTeacherCourse',[sectionCourseTeacher::class,'index'])->name('admin.sectionCourseTeacher');

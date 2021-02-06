@@ -25,6 +25,7 @@ class motherSignUp extends Controller
         //register new user
         $mother = new mother_info();
         $mother->id = $this->motherId;
+        $mother->studentId = $this->studentId;
         $mother->name = $request->Mother_name;
         $mother->birthdate = $request->Mother_birthdate;
         $mother->occupation = $request->Mother_occupation;
