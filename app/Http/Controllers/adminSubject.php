@@ -25,6 +25,6 @@ class adminSubject extends Controller
         else
             return "Data not insert";
 
-        return $request->input();
+
     }
 }

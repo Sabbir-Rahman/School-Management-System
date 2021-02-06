@@ -29,6 +29,7 @@ use App\Http\Controllers\studentAnnouncement;
 use App\Http\Controllers\studentClassNotes;
 use App\Http\Controllers\view_studentGeneral;
 use App\Http\Controllers\studentMeetLink;
+use App\Http\Controllers\applicationStudent;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -143,10 +144,14 @@ Route::post('loginCheck',[login::class,'loginCheck'])->name('loginCheck');
 Route::post('teacherSigningUp',[teacherAuth::class,'addData'])->name('teacherSigningUp');
 Route::post('admin/searchStudent',[adminStudentInfo::class,'searchStudent']);
 Route::get('admin/goToEditStudent/{id}',[adminStudentInfo::class,'goEditStudent'])->name('admin.goEditStudent');
+Route::get('admin/goToReviewApplication/{id}',[applicationStudent::class,'goreviewStudentApplication'])->name('admin.goReviewApplication');
+
 Route::post('admin/goToEditStudent/editStudentInfo',[adminStudentInfo::class,'editStudent']);
 Route::post('admin/deleteStudent',[adminStudentInfo::class,'delete']);
+Route::post('admin/goToReviewApplication/reviewStudentApplication',[applicationStudent::class,'adminReview']);
 
 Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
+Route::get('admin/StudentApplication',[applicationStudent::class,'goAdminStudentApplication'])->name('admin.studentApplication');
 Route::get('admin/TeacherInfo',[adminTeacherInfo::class,'index'])->name('admin.teacherInfo');
 Route::get('admin/BuildingInfo',[adminBuildingInfo::class,'index'])->name('admin.buildingInfo');
 Route::get('admin/RoomInfo',[adminRoomInfo::class,'index'])->name('admin.roomInfo');
@@ -200,6 +205,10 @@ Route::get('student/studentHomeWorkDashboard',[studentHomeWorkDashboard::class,'
 Route::get('student/studentAnnouncementDashboard',[studentAnnouncement::class,'index'])->name('student.studentAnnouncementDashboard');
 Route::get('student/studentClassNotesDashboard',[studentClassNotes::class,'index'])->name('student.studentClassNotesDashboard');
 Route::get('student/studentMeetingLinksDashboard',[studentMeetLink::class,'index'])->name('student.studentMeetingLinksDashboard');
+Route::get('student/studentApplicationDashboard',[applicationStudent::class,'index'])->name('student.studentApplicationDashboard');
+Route::get('student/studentApplicationEnter',[applicationStudent::class,'goEnterApplication'])->name('student.enterApplication');
+
+Route::post('student/addApplication',[applicationStudent::class,'addApplication'])->name('student.addApplication');
 
 Route::get('student/generalViewTest',[view_studentGeneral::class,'test'])->name('student.studentGeneralView');
 Route::get('student/generalViewTeacher',[view_studentGeneral::class,'goToTeacherStudentGeneralView'])->name('student.generalInfo');

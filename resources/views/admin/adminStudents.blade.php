@@ -177,6 +177,19 @@
                         </div>
                     </a>
                 </div>
+                <div class="col-lg-4">
+                    <a href="{{route('admin.studentApplication')}}">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/img/adminStudentApplication.jpg" alt="Card image cap"
+                                 height="175px">
+                            <div class="card-body">
+                                <h4 class="card-title">Student Application</h4>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
 
             </div>
