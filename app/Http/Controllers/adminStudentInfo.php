@@ -72,4 +72,19 @@ class adminStudentInfo extends Controller
             return  "Something went wrong";
 
     }
+
+    function delete(Request $request){
+
+
+        $data = StudentInfo::find($request->delete_input_id);
+
+        $query = $data->delete();
+
+        if ($query) {
+            return redirect('/admin/StudentInfo')->with('success','Data Saved');
+
+        } else
+            return "Fail";
+
+    }
 }

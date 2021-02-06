@@ -144,6 +144,7 @@ Route::post('teacherSigningUp',[teacherAuth::class,'addData'])->name('teacherSig
 Route::post('admin/searchStudent',[adminStudentInfo::class,'searchStudent']);
 Route::get('admin/goToEditStudent/{id}',[adminStudentInfo::class,'goEditStudent'])->name('admin.goEditStudent');
 Route::post('admin/goToEditStudent/editStudentInfo',[adminStudentInfo::class,'editStudent']);
+Route::post('admin/deleteStudent',[adminStudentInfo::class,'delete']);
 
 Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
 Route::get('admin/TeacherInfo',[adminTeacherInfo::class,'index'])->name('admin.teacherInfo');
