@@ -34,12 +34,16 @@ class teacherDashboard extends Controller
 
         return view('teacher/teacherAnnouncement',['teacher'=>$data,'teacherCoursesSections'=>$dataCourseSection]);
     }
+
+    function goToStudentSection(){
+        return view('teacher/teacherStudentSection');
+    }
     function goToMeetingLinksPage(){
 
         $data = teacher_info::find(session('userId'));
         $dataCourseSection = courseSectionTeacher::where('teacherId',session('userId'))->get();
 
 
-        return view('teacher/teacherMeetingLinks',['teacher'=>$data,'teacherCoursesSections'=>$dataCourseSection]);
+        return view('teacher/teacherMeetingLink',['teacher'=>$data,'teacherCoursesSections'=>$dataCourseSection]);
     }
 }

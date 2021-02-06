@@ -26,6 +26,7 @@ class fatherSignUp extends Controller
         //register new user
         $father = new father_info();
         $father->id = $this->fatherId;
+        $father->studentId = $request->Student_id;
         $father->name = $request->Father_name;
         $father->birthdate = $request->Father_birthdate;
         $father->occupation = $request->Father_occupation;

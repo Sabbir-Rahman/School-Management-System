@@ -78,6 +78,12 @@
                         <p>Meeting Link</p>
                     </a>
                 </li>
+                <li class="nav-item  ">
+                    <a class="nav-link" href="{{route('teacher.goToStudentSection')}}">
+
+                        <p>Student Section</p>
+                    </a>
+                </li>
 
             </ul>
         </div>
