@@ -71,6 +71,11 @@
                         <p>Infrastructures</p>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('adminFinancial')}}">
+                        <p>Financial</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

@@ -66,12 +66,16 @@
                         <p>Teachers</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="{{route('adminInfrastructures')}}">
                         <p>Infrastructures</p>
                     </a>
                 </li>
-
+                <li class="active">
+                    <a href="{{route('adminFinancial')}}">
+                        <p>Financial</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -166,12 +170,12 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-4">
-                    <a href="{{route('admin.buildingInfo')}}">
+                    <a href="{{route('admin.studentPaymentRule')}}">
                         <div class="card" style="width: 20rem;">
-                            <img class="card-img-top" src="/assetsAdmin/img/adminBuilding.jpg" alt="Card image cap"
+                            <img class="card-img-top" src="/img/studentMoneyRuleBack.jpg" alt="Card image cap"
                                  height="175px">
                             <div class="card-body">
-                                <h4 class="card-title">Buildings</h4>
+                                <h4 class="card-title">Student Payment Quantity</h4>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk of the card's content.</p>
                             </div>
@@ -180,12 +184,12 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <a href="{{route('admin.roomInfo')}}">
+                    <a href="{{route('admin.teacherPaymentRule')}}">
                         <div class="card" style="width: 20rem;">
-                            <img class="card-img-top" src="/assetsAdmin/img/roomAdmin.jpg" alt="Card image cap"
+                            <img class="card-img-top" src="/img/teacherMoneyRule.jpg" alt="Card image cap"
                                  height="175px">
                             <div class="card-body">
-                                <h4 class="card-title">Rooms</h4>
+                                <h4 class="card-title">Teacher Payment quantity</h4>
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk
                                     of the card's content.</p>
