@@ -175,15 +175,19 @@ Route::get('teacher/teacherDashboard',[teacherDashboard::class,'index'])->name('
 Route::get('teacher/teacherHomeWork',[teacherDashboard::class,'goToHomeWorkPage'])->name('teacher.goToHomeWorkPage');
 Route::get('teacher/teacherClassNotes',[teacherClassNotes::class,'index'])->name('teacher.goToClassNotesPage');
 Route::get('teacher/teacherAnnouncement',[teacherAnnouncement::class,'index'])->name('teacher.goToAnnouncementPage');
-Route::get('teacher/teacherMeetingLink',[teacherMeetingLink::class,'index'])->name('teacher.goToMeetingLinkPage');
+Route::get('teacher/teacherMeetingLinks',[teacherMeetingLink::class,'index'])->name('teacher.goToMeetingLinksPage');
 
 Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'goDetailHomework'])->name('teacher.details.ToHomeWorkPage');
 Route::get('teacher/details/classnotes/{sectionCourseTeacherId}',[teacherClassNotes::class,'goDetailClassnotes'])->name('teacher.details.ToClassNotesPage');
+Route::get('teacher/details/announcements/{sectionCourseTeacherId}',[teacherAnnouncement::class,'goDetailAnnouncement'])->name('teacher.details.ToAnnouncementPage');
 
 Route::post('teacher/details/homework/addHomework',[teacherHomeWork::class,'addHomeWork']);
 Route::post('teacher/details/classnotes/addClassnotes',[teacherClassNotes::class,'addClassNotes']);
+Route::post('teacher/details/announcements/addAnnouncements',[teacherAnnouncement::class,'addAnnouncements']);
+
 
 Route::get('student/studentDashboard',[studentDashboard::class,'index'])->name('student.studentDashboard');
 Route::get('student/studentHomeWorkDashboard',[studentHomeWorkDashboard::class,'index'])->name('student.studentHomeWorkDashboard');
 Route::get('student/studentAnnouncementDashboard',[studentAnnouncement::class,'index'])->name('student.studentAnnouncementDashboard');
 Route::get('student/studentClassNotesDashboard',[studentClassNotes::class,'index'])->name('student.studentClassNotesDashboard');
+

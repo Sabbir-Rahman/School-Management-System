@@ -19,7 +19,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addClassnotes" method="POST" enctype="multipart/form-data">
+            <form action="addAnnouncements" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">
 
@@ -29,23 +29,23 @@
 
                     </div>
                     <div class="mb-3">
-                        <label>Class Note Title</label>
-                        <input type="text" name="classNoteTitle" class="form-control" placeholder="Class note title">
+                        <label>Announcement Title</label>
+                        <input type="text" name="announcementTitle" class="form-control" placeholder="Announcement title">
 
                     </div>
                     <div class="mb-3">
-                        <label>Class Note Details</label>
-                        <input type="text" name="classNoteDetails" class="form-control" placeholder="Class note details">
+                        <label>Announcement Details</label>
+                        <input type="text" name="announcementDetails" class="form-control" placeholder="Announcement details">
 
                     </div>
                     <div class="mb-3">
                         <label>Date</label>
-                        <input type="date" name="classNoteDate" class="form-control" placeholder="Date">
+                        <input type="date" name="announcementDate" class="form-control" placeholder="Date">
 
                     </div>
                     <div class="mb-3">
                         <label>Comment</label>
-                        <input type="text" name="classNoteComment" class="form-control" placeholder="Comment">
+                        <input type="text" name="announcementComment" class="form-control" placeholder="Comment">
 
                     </div>
                     <div class="mb-3">
@@ -69,7 +69,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Class Note Table</font></h3>
+    <h3><font color="white">Announcement Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -118,19 +118,19 @@
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($allClassNotes as $classNote)
+        @foreach($allAnnouncements as $announcement)
             <tr>
 
-                <td scope="row">{{$classNote['id']}}</td>
-                <td scope="row">{{$classNote['classNotesTitle']}}</td>
-                <td scope="row">{{$classNote['classNotesDetails']}}</td>
-                <td scope="row">{{$classNote['classNotesDate']}}</td>
+                <td scope="row">{{$announcement['id']}}</td>
+                <td scope="row">{{$announcement['announcementTitle']}}</td>
+                <td scope="row">{{$announcement['announcementDetails']}}</td>
+                <td scope="row">{{$announcement['announcementDate']}}</td>
                 <td scope="row">
                     <a href="" class="btn btn-info">VIEW</a>
                 </td>
-                <td scope="row">{{$classNote['comment']}}</td>
-                <td scope="row">{{$classNote['created_at']}}</td>
-                <td scope="row">{{$classNote['updated_at']}}</td>
+                <td scope="row">{{$announcement['comment']}}</td>
+                <td scope="row">{{$announcement['created_at']}}</td>
+                <td scope="row">{{$announcement['updated_at']}}</td>
                 <td scope="row">
                     <a href="" class="btn btn-primary">EDIT</a>
                     <a href="" class="btn btn-danger">DELETE</a>
@@ -152,3 +152,4 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+

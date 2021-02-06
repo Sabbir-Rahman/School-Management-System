@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\announcement;
+use App\Models\ClassNotes;
 use App\Models\courseSectionTeacher;
 use App\Models\sectionTable;
 use App\Models\StudentInfo;
@@ -16,12 +18,14 @@ class studentAnnouncement extends Controller
         $data = StudentInfo::where('id',session('userId'))->first();
 
         $dataCourse =  courseSectionTeacher::where('sectionId',$data->student_section)->get();
-        $section = sectionTable::find($data->student_section);
+        $announcement = announcement::where('sectionId',$data->student_section)->get();
 
 
 
 
 
-        return view('student/studentAnnouncement',['courses'=>$dataCourse,'student'=>$data,'section'=>$section]);
+
+
+        return view('student/studentAnnouncement',['courses'=>$dataCourse,'student'=>$data,'announcements'=>$announcement]);
     }
 }

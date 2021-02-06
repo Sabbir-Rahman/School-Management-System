@@ -73,7 +73,7 @@
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{route('teacher.goToMeetingLinkPage')}}">
+                    <a class="nav-link" href="{{route('teacher.goToMeetingLinksPage')}}">
 
                         <p>Meeting Link</p>
                     </a>

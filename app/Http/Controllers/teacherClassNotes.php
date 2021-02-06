@@ -61,7 +61,7 @@ class teacherClassNotes extends Controller
         $classNotes->teacherName = $teacherName;
         $classNotes->classNotesTitle = $request->classNoteTitle;
         $classNotes->classNotesDetails = $request->classNoteDetails;
-        $classNotes->date = $request->classNoteDate;
+        $classNotes->classNotesDate = $request->classNoteDate;
         $classNotes->file = $this->allName;
         $classNotes->comment = $request->classNoteComment;
 
