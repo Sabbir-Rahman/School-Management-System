@@ -74,6 +74,6 @@ class applicationStudent extends Controller
         else
             return  "Something went wrong";
 
-        return $request->input();
+
     }
 }
