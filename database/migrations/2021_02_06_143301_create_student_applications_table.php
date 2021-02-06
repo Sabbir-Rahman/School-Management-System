@@ -19,6 +19,8 @@ class CreateStudentApplicationsTable extends Migration
             $table->text('title');
             $table->text('details');
             $table->text('want');
+            $table->text('status')->nullable()->default('Not Viwed');
+            $table->text('adminComment')->nullable();
             $table->foreign('studentId')->references('id')->on('student_infos');
             $table->timestamps();
         });

@@ -162,6 +162,8 @@
                             <h4>Details:</h4>
                             <p> {{$application['details']}}</p>
                             <h5>Date: {{$application['created_at']}} </h5>
+                            <h3><font color="blue">Status: {{$application['status']}} </font></h3>
+                            <h5>Admin Comment: {{$application['adminComment']}} </h5>
                             <br><br>
                         </div>
 
