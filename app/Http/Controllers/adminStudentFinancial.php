@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\studentPayment;
 use Illuminate\Http\Request;
 use App\Models\view_adminStudentFinancial;
 
@@ -16,6 +17,8 @@ class adminStudentFinancial extends Controller
     }
 
     function goToStudentPayment(){
-        return view('admin/adminStudentPaymentView');
+
+        $student = studentPayment::all();
+        return view('admin/adminStudentPaymentView',['students'=>$student]);
     }
 }
