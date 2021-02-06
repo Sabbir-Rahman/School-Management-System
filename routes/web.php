@@ -32,6 +32,7 @@ use App\Http\Controllers\studentMeetLink;
 use App\Http\Controllers\applicationStudent;
 use App\Http\Controllers\academicRecords;
 use App\Http\Controllers\adminFinancial;
+use App\Http\Controllers\adminStudentFinancial;
 
 //False test comments.
 /*
@@ -159,6 +160,8 @@ Route::post('admin/deleteStudent',[adminStudentInfo::class,'delete']);
 Route::post('admin/goToReviewApplication/reviewStudentApplication',[applicationStudent::class,'adminReview']);
 
 Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
+Route::get('admin/StudentFinancialCondition',[adminStudentFinancial::class,'goToStudentFinancialCondition'])->name('admin.studentFinancialState');
+Route::get('admin/StudentPayment',[adminStudentFinancial::class,'goToStudentPayment'])->name('admin.studentPayment');
 Route::get('admin/previousAcademicInfo',[academicRecords::class,'index'])->name('admin.previousAcademicRecord');
 
 
