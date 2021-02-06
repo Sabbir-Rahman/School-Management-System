@@ -145,6 +145,10 @@ Route::post('admin/searchStudent',[adminStudentInfo::class,'searchStudent']);
 Route::get('admin/goToEditStudent/{id}',[adminStudentInfo::class,'goEditStudent'])->name('admin.goEditStudent');
 Route::post('admin/goToEditStudent/editStudentInfo',[adminStudentInfo::class,'editStudent']);
 Route::post('admin/deleteStudent',[adminStudentInfo::class,'delete']);
+Route::post('admin/searchTeacher',[adminTeacherInfo::class,'searchTeacher']);
+Route::get('admin/goToEditTeacher/{id}',[adminTeacherInfo::class,'goEditTeacher'])->name('admin.goEditTeacher');
+Route::post('admin/goToEditTeacher/editTeacherInfo',[adminTeacherInfo::class,'editTeacher']);
+Route::post('admin/deleteTeacher',[adminTeacherInfo::class,'delete']);
 
 Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
 Route::get('admin/TeacherInfo',[adminTeacherInfo::class,'index'])->name('admin.teacherInfo');

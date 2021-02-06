@@ -46,6 +46,8 @@
 </div>
 <div id="container">
     <h3><font color="white">Teacher Table</font></h3>
+    <br><br>
+    <h4><font color="white">Total {{$count}} record found</font> </h4>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -148,10 +150,8 @@
                 <td scope="col">{{$teacher['created_at']}}</td>
                 <td scope="col">{{$teacher['updated_at']}}</td>
                 <td scope="col">
-                    <a href="{{route('admin.goEditTeacher', $teacher->id)}}" class="btn btn-primary">EDIT</a><br>
-                    <button type="button" class="btn btn-danger" data-catid="{{$teacher->id}}" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                        Delete
-                    </button>
+                    <a href="" class="btn btn-primary">EDIT</a><br>
+                    <a href="" class="btn btn-danger">DELETE</a>
                 </td>
             </tr>
         @endforeach
@@ -168,18 +168,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
         crossorigin="anonymous"></script>
-<script>
-    $('#deleteModal').on('show.bs.modal', function (event){
-        var button = $(event.relatedTarget)
-
-        var cat_id = button.data('catid')
-        var modal = $('#deleteModal')
-
-        console.log(cat_id)
-        modal.find('.modal-body input').val(cat_id);
-    })
-
-</script>
 
 </body>
 </html>
