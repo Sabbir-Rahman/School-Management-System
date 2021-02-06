@@ -43,13 +43,13 @@ class CreateViewAdminStudentFinancialsTable extends Migration
                     name,
                     (SELECT occupation FROM father_infos
                                 WHERE student_infos.id = father_infos.studentId
-                            ) AS fatherOcupation,
+                            ) AS fatherOccupation,
                      (SELECT income_per_month FROM father_infos
                                 WHERE student_infos.id = father_infos.studentId
                             ) AS fatherIncome,
                     (SELECT occupation FROM mother_infos
                                 WHERE student_infos.id = mother_infos.studentId
-                            ) AS fatherOccupation,
+                            ) AS motherOccupation,
                      (SELECT income_per_month FROM mother_infos
                                 WHERE student_infos.id = mother_infos.studentId
                             ) AS motherIncome
