@@ -106,6 +106,7 @@
         <li><a href="{{route('student.studentAnnouncementDashboard')}}">&nbsp Announcement</a></li>
         <li><a href="{{route('student.studentClassNotesDashboard')}}">&nbsp Class notes</a></li>
         <li><a href="{{route('student.studentMeetingLinksDashboard')}}">&nbsp Meeting Links</a></li>
+        <li><a href="{{route('student.studentApplicationDashboard')}}">&nbsp Student Application</a></li>
         <li><a href="">&nbsp Logout</a></li>
     </ul>
 </div><!--/.sidebar-->

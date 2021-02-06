@@ -29,6 +29,7 @@ use App\Http\Controllers\studentAnnouncement;
 use App\Http\Controllers\studentClassNotes;
 use App\Http\Controllers\view_studentGeneral;
 use App\Http\Controllers\studentMeetLink;
+use App\Http\Controllers\applicationStudent;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -200,6 +201,10 @@ Route::get('student/studentHomeWorkDashboard',[studentHomeWorkDashboard::class,'
 Route::get('student/studentAnnouncementDashboard',[studentAnnouncement::class,'index'])->name('student.studentAnnouncementDashboard');
 Route::get('student/studentClassNotesDashboard',[studentClassNotes::class,'index'])->name('student.studentClassNotesDashboard');
 Route::get('student/studentMeetingLinksDashboard',[studentMeetLink::class,'index'])->name('student.studentMeetingLinksDashboard');
+Route::get('student/studentApplicationDashboard',[applicationStudent::class,'index'])->name('student.studentApplicationDashboard');
+Route::get('student/studentApplicationEnter',[applicationStudent::class,'goEnterApplication'])->name('student.enterApplication');
+
+Route::post('student/addApplication',[applicationStudent::class,'addApplication'])->name('student.addApplication');
 
 Route::get('student/generalViewTest',[view_studentGeneral::class,'test'])->name('student.studentGeneralView');
 Route::get('student/generalViewTeacher',[view_studentGeneral::class,'goToTeacherStudentGeneralView'])->name('student.generalInfo');

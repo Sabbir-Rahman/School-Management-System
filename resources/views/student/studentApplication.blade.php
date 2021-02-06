@@ -18,6 +18,10 @@
     <![endif]-->
 </head>
 <body>
+{{--add data modal--}}
+
+{{--end add data modal--}}
+
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -106,8 +110,8 @@
             <li><a href="{{route('student.studentHomeWorkDashboard')}}">&nbsp Home Work</a></li>
             <li><a href="{{route('student.studentAnnouncementDashboard')}}">&nbsp Announcement</a></li>
             <li><a href="{{route('student.studentClassNotesDashboard')}}">&nbsp Class notes</a></li>
-            <li class="active"><a href="{{route('student.studentMeetingLinksDashboard')}}">&nbsp Meeting Links</a></li>
-            <li><a href="{{route('student.studentApplicationDashboard')}}">&nbsp Student Application</a></li>
+            <li><a href="{{route('student.studentMeetingLinksDashboard')}}">&nbsp Meeting Links</a></li>
+            <li class="active"><a href="{{route('student.studentApplicationDashboard')}}">&nbsp Student Application</a></li>
             <li><a href="">&nbsp Logout</a></li>
         </ul>
     </ul>
@@ -119,26 +123,56 @@
             <li class="active">Home Work Dashboard</li>
         </ol>
     </div><!--/.row-->
-    @foreach($meetings as $meeting)
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-info">
-                    <div class="panel-heading">{{$meeting['course']}} || {{$meeting['paper']}}
-                        &nbsp&nbsp&nbsp&nbsp&nbspTeacher:{{$meeting['teacherName']}}</div>
-                    <div class="container">
-                        <h5>Title: {{$meeting['meetingTitle']}}</h5>
-                        <h5>Meeting on: {{$meeting['meetingTime']}} {{$meeting['meetingDate']}} </h5>
-                        <h5>Details:</h5>
-                        <p>{{$meeting['meetingDetails']}}</p>
-                        <h5>Comment: {{$meeting['comment']}} </h5>
-                        <h3>Meeting Link:<font color="blue"> {{$meeting['meetingLink']}}</font> </h3>
-                        <br>
-                    </div>
+    <div class="row">
+        <div class="container" id="container">
+            <h3><font color="black">Application List</font></h3>
+            @if(count($errors)>0)
 
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
                 </div>
+            @endif
+
+            @if(\Session::has('success'))
+                <div class="alert alert-success">
+                    <p>{{ \Session::get('success') }}</p>
+                </div>
+        @endif
+
+        <!-- Button trigger modal -->
+            <a href="{{route('student.enterApplication')}}">
+                <button>Add data</button>
+            </a>
+
+            <br><br>
+            @foreach($applications as $application)
+            <div class="row">
+
+                @foreach($applications as $application)
+                <div class="col-md-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Application id: {{$application['id']}} </div>
+                        <div class="container">
+                            <h3>Title: {{$application['title']}}</h3>
+                            <h3>Want: {{$application['want']}}</h3>
+                            <h4>Details:</h4>
+                            <p> {{$application['details']}}</p>
+                            <h5>Date: {{$application['created_at']}} </h5>
+                            <br><br>
+                        </div>
+
+                    </div>
+                </div>
+                @endforeach
             </div>
+            @endforeach
         </div>
-    @endforeach
+    </div>
+
 
 
 </div>    <!--/.main-->
