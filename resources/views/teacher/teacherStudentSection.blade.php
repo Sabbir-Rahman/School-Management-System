@@ -48,7 +48,7 @@
             </a></div>
         <div class="sidebar-wrapper">
             <ul class="nav">
-                <li class="nav-item active  ">
+                <li class="nav-item ">
                     <a class="nav-link" href="./dashboard.html">
 
                         <p>Dashboard</p>
@@ -78,7 +78,7 @@
                         <p>Meeting Link</p>
                     </a>
                 </li>
-                <li class="nav-item  ">
+                <li class="nav-item active ">
                     <a class="nav-link" href="{{route('teacher.goToStudentSection')}}">
 
                         <p>Student Section</p>
@@ -152,93 +152,20 @@
         </nav>
         <!-- End Navbar -->
         <div class="content">
-            <h3><font color="#d3d3d3 ">Welcome {{$teacher->name}}</font></h3>
             <div class="container-fluid">
 
                 <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-warning card-header-icon">
-                                <div class="card-icon">
-                                    <i class="material-icons">content_copy</i>
-                                </div>
-                                <p class="card-category">Used Space</p>
-                                <h3 class="card-title">49/50
-                                    <small>GB</small>
-                                </h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <i class="material-icons text-warning">warning</i>
-                                    <a href="#pablo" class="warning-link">Get More Space...</a>
-                                </div>
+                    <a href="{{route('student.generalInfo')}}">
+                        <div class="card" style="width: 20rem;">
+                            <img class="card-img-top" src="/img/teacherStudentGeneralView.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">Student General Info</h4>
+                                <p class="card-description">Student General Info with contact of father</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-success card-header-icon">
-                                <div class="card-icon">
-                                    <i class="material-icons">store</i>
-                                </div>
-                                <p class="card-category">Revenue</p>
-                                <h3 class="card-title">$34,245</h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <i class="material-icons">date_range</i> Last 24 Hours
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-danger card-header-icon">
-                                <div class="card-icon">
-                                    <i class="material-icons">info_outline</i>
-                                </div>
-                                <p class="card-category">Fixed Issues</p>
-                                <h3 class="card-title">75</h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <i class="material-icons">local_offer</i> Tracked from Github
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-info card-header-icon">
-                                <div class="card-icon">
-                                    <i class="fa fa-twitter"></i>
-                                </div>
-                                <p class="card-category">Followers</p>
-                                <h3 class="card-title">+245</h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <i class="material-icons">update</i> Just Updated
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="row">
-                    @foreach($teacherCoursesSections as $teacherCourseSection)
-                    <div class="card card-nav-tabs text-center">
-                        <div class="card-header card-header-info">
-                            {{$teacherCourseSection->courseName}} {{$teacherCourseSection->coursePaper}}
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Class:{{$teacherCourseSection->class}}&nbsp&nbsp||&nbsp&nbsp Section:{{$teacherCourseSection->sectionName}}</h4>
-                            <p class="card-text">Medium:{{$teacherCourseSection->medium}}&nbsp&nbsp||&nbsp&nbsp Group:{{$teacherCourseSection->group}}</p>
-                        </div>
 
-                    </div>
-                    @endforeach
-
-                </div>
             </div>
         </div>
         <footer class="footer">

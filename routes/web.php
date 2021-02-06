@@ -177,6 +177,7 @@ Route::get('teacher/teacherHomeWork',[teacherDashboard::class,'goToHomeWorkPage'
 Route::get('teacher/teacherClassNotes',[teacherClassNotes::class,'index'])->name('teacher.goToClassNotesPage');
 Route::get('teacher/teacherAnnouncement',[teacherAnnouncement::class,'index'])->name('teacher.goToAnnouncementPage');
 Route::get('teacher/teacherMeetingLinks',[teacherMeetingLink::class,'index'])->name('teacher.goToMeetingLinksPage');
+Route::get('teacher/teacherGoStudentInfo',[teacherDashboard::class,'goToStudentSection'])->name('teacher.goToStudentSection');
 
 Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'goDetailHomework'])->name('teacher.details.ToHomeWorkPage');
 Route::get('teacher/details/classnotes/{sectionCourseTeacherId}',[teacherClassNotes::class,'goDetailClassnotes'])->name('teacher.details.ToClassNotesPage');
@@ -193,4 +194,5 @@ Route::get('student/studentAnnouncementDashboard',[studentAnnouncement::class,'i
 Route::get('student/studentClassNotesDashboard',[studentClassNotes::class,'index'])->name('student.studentClassNotesDashboard');
 
 Route::get('student/generalViewTest',[view_studentGeneral::class,'test'])->name('student.studentGeneralView');
+Route::get('student/generalViewTeacher',[view_studentGeneral::class,'goToTeacherStudentGeneralView'])->name('student.generalInfo');
 
