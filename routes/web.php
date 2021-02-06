@@ -30,6 +30,7 @@ use App\Http\Controllers\studentClassNotes;
 use App\Http\Controllers\view_studentGeneral;
 use App\Http\Controllers\studentMeetLink;
 use App\Http\Controllers\applicationStudent;
+use App\Http\Controllers\academicRecords;
 //False test comments.
 /*
 |--------------------------------------------------------------------------
@@ -151,6 +152,9 @@ Route::post('admin/deleteStudent',[adminStudentInfo::class,'delete']);
 Route::post('admin/goToReviewApplication/reviewStudentApplication',[applicationStudent::class,'adminReview']);
 
 Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
+Route::get('admin/previousAcademicInfo',[academicRecords::class,'index'])->name('admin.previousAcademicRecord');
+
+
 Route::get('admin/StudentApplication',[applicationStudent::class,'goAdminStudentApplication'])->name('admin.studentApplication');
 Route::get('admin/TeacherInfo',[adminTeacherInfo::class,'index'])->name('admin.teacherInfo');
 Route::get('admin/BuildingInfo',[adminBuildingInfo::class,'index'])->name('admin.buildingInfo');
@@ -161,6 +165,8 @@ Route::get('admin/course',[adminCourse::class,'index'])->name('admin.course');
 Route::post('admin/addRoomsView',[adminRoomInfo::class,'addDataView']);
 Route::post('admin/addRooms',[adminRoomInfo::class,'addData']);
 Route::post('admin/addSectionView',[adminSection::class,'addDataView']);
+
+Route::post('admin/addPreviousAcademicRecords',[academicRecords::class,'addData']);
 
 Route::post('admin/addSectionAdmin',[adminSection::class,'addData']);
 
