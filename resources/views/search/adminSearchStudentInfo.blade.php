@@ -10,6 +10,7 @@
 </head>
 <body>
 
+
 {{--add data modal--}}
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -40,41 +41,14 @@
 </div>
 {{--end add data modal--}}
 
-{{--delete modal--}}
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Delete this entry</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <form action="deleteStudent" method="POST">
-
-                {{csrf_field()}}
-                <div class="modal-body">
-
-                    <div class="mb-3">
-                        <label><font color="red">Are you sure?All data related with this record also be deleted</font></label>
-                        <input type="hidden" name="delete_input_id" id="cat_id" value="">
-
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 
 <div id="particles-js">
 
 </div>
 <div id="container">
     <h3><font color="white">Student Info Table</font></h3>
+    <br><br>
+    <h4><font color="white">Total {{$count}} record found</font> </h4>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -93,9 +67,6 @@
 @endif
 
 <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add data with modal
-    </button>
 
     <br><br>
     <nav class="navbar navbar-dark bg-dark" id="navbar">
@@ -150,7 +121,7 @@
         <th scope="col">Action</th>
         </thead>
         <tbody>
-            @foreach($students as $student)
+        @foreach($students as $student)
             <tr>
                 <td scope="col">{{$student['id']}}</td>
                 <td scope="col">{{$student['name']}}</td>
@@ -171,21 +142,16 @@
                 <td scope="col">{{$student['created_at']}}</td>
                 <td scope="col">{{$student['updated_at']}}</td>
                 <td scope="row">
-                    <a href="{{route('admin.goEditStudent', $student->id)}}" class="btn btn-primary">EDIT</a><br><br>
-                    <button type="button" class="btn btn-danger" data-catid="{{$student->id}}" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                        Delete
-                    </button>
+                    <a href="" class="btn btn-primary">EDIT</a><br><br>
+                    <a href="" class="btn btn-danger">DELETE</a>
                 </td>
 
             </tr>
-            @endforeach
+        @endforeach
         </tbody>
     </table>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="/js/particles.js"></script>
 <script type="text/javascript" src="/js/app.js"></script>
@@ -195,19 +161,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
         crossorigin="anonymous"></script>
-
-<script>
-    $('#deleteModal').on('show.bs.modal', function (event){
-        var button = $(event.relatedTarget)
-
-        var cat_id = button.data('catid')
-        var modal = $('#deleteModal')
-
-        console.log(cat_id)
-        modal.find('.modal-body input').val(cat_id);
-    })
-
-</script>
 </body>
 </html>
 

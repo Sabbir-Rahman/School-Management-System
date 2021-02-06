@@ -141,7 +141,10 @@ Route::post('motherSignUpCreate',[motherSignUp::class,'create'])->name('motherCr
 Route::post('loginCheck',[login::class,'loginCheck'])->name('loginCheck');
 
 Route::post('teacherSigningUp',[teacherAuth::class,'addData'])->name('teacherSigningUp');
-
+Route::post('admin/searchStudent',[adminStudentInfo::class,'searchStudent']);
+Route::get('admin/goToEditStudent/{id}',[adminStudentInfo::class,'goEditStudent'])->name('admin.goEditStudent');
+Route::post('admin/goToEditStudent/editStudentInfo',[adminStudentInfo::class,'editStudent']);
+Route::post('admin/deleteStudent',[adminStudentInfo::class,'delete']);
 
 Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
 Route::get('admin/TeacherInfo',[adminTeacherInfo::class,'index'])->name('admin.teacherInfo');
@@ -191,6 +194,7 @@ Route::post('teacher/details/announcements/addAnnouncements',[teacherAnnouncemen
 Route::post('teacher/details/meetingLinks/addMeetingLink',[teacherMeetingLink::class,'addMeetingLinks']);
 
 
+
 Route::get('student/studentDashboard',[studentDashboard::class,'index'])->name('student.studentDashboard');
 Route::get('student/studentHomeWorkDashboard',[studentHomeWorkDashboard::class,'index'])->name('student.studentHomeWorkDashboard');
 Route::get('student/studentAnnouncementDashboard',[studentAnnouncement::class,'index'])->name('student.studentAnnouncementDashboard');
@@ -199,4 +203,6 @@ Route::get('student/studentMeetingLinksDashboard',[studentMeetLink::class,'index
 
 Route::get('student/generalViewTest',[view_studentGeneral::class,'test'])->name('student.studentGeneralView');
 Route::get('student/generalViewTeacher',[view_studentGeneral::class,'goToTeacherStudentGeneralView'])->name('student.generalInfo');
+
+
 

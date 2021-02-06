@@ -69,11 +69,21 @@
     </button>
 
     <br><br>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark" id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand">Data Table</a>
-            <form action="" method="POST" class="d-flex">
+            <form action="search" method="POST" class="d-flex">
                 @csrf
+                <h6><font color="#dcdcdc">Search By:</font></h6>&nbsp&nbsp
+                <select name="search_option" class="form-select" aria-label="Default select example">
+                    <option value="fname" selected>First name</option>
+                    <option value="lname">Last name</option>
+                    <option value="email">Email</option>
+                    <option value="address">Address</option>
+                    <option value="mobile">Mobile</option>
+                </select>
+
+                &nbsp&nbsp&nbsp&nbsp
                 <input class="form-control me-2" type="search" name="search_data" placeholder="Search"
                        aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>

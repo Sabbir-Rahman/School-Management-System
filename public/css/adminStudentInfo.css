@@ -30,3 +30,7 @@ html {
     width: auto;
     top: 0; left: 20; bottom: 10; right: 20;
 }
+
+#navbar{
+    width: 1527px;
+}
