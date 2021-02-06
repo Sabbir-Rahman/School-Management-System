@@ -45,4 +45,11 @@ class applicationStudent extends Controller
 
 
     }
+
+    function goAdminStudentApplication(){
+
+        $data = studentApplication::all();
+
+        return view('admin/adminStudentApplication',['applications'=>$data]);
+    }
 }
