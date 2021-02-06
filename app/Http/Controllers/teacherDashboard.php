@@ -44,6 +44,6 @@ class teacherDashboard extends Controller
         $dataCourseSection = courseSectionTeacher::where('teacherId',session('userId'))->get();
 
 
-        return view('teacher/teacherMeetingLinks',['teacher'=>$data,'teacherCoursesSections'=>$dataCourseSection]);
+        return view('teacher/teacherMeetingLink',['teacher'=>$data,'teacherCoursesSections'=>$dataCourseSection]);
     }
 }

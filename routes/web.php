@@ -176,16 +176,18 @@ Route::get('teacher/teacherDashboard',[teacherDashboard::class,'index'])->name('
 Route::get('teacher/teacherHomeWork',[teacherDashboard::class,'goToHomeWorkPage'])->name('teacher.goToHomeWorkPage');
 Route::get('teacher/teacherClassNotes',[teacherClassNotes::class,'index'])->name('teacher.goToClassNotesPage');
 Route::get('teacher/teacherAnnouncement',[teacherAnnouncement::class,'index'])->name('teacher.goToAnnouncementPage');
-Route::get('teacher/teacherMeetingLinks',[teacherMeetingLink::class,'index'])->name('teacher.goToMeetingLinksPage');
+Route::get('teacher/teacherMeetingLinks',[teacherDashboard::class,'goToMeetingLinksPage'])->name('teacher.goToMeetingLinksPage');
 Route::get('teacher/teacherGoStudentInfo',[teacherDashboard::class,'goToStudentSection'])->name('teacher.goToStudentSection');
 
 Route::get('teacher/details/homework/{sectionCourseTeacherId}',[teacherHomeWork::class,'goDetailHomework'])->name('teacher.details.ToHomeWorkPage');
 Route::get('teacher/details/classnotes/{sectionCourseTeacherId}',[teacherClassNotes::class,'goDetailClassnotes'])->name('teacher.details.ToClassNotesPage');
 Route::get('teacher/details/announcements/{sectionCourseTeacherId}',[teacherAnnouncement::class,'goDetailAnnouncement'])->name('teacher.details.ToAnnouncementPage');
+Route::get('teacher/details/meetingLinks/{sectionCourseTeacherId}',[teacherMeetingLink::class,'goDetailHomework'])->name('teacher.details.meetingLink');
 
 Route::post('teacher/details/homework/addHomework',[teacherHomeWork::class,'addHomeWork']);
 Route::post('teacher/details/classnotes/addClassnotes',[teacherClassNotes::class,'addClassNotes']);
 Route::post('teacher/details/announcements/addAnnouncements',[teacherAnnouncement::class,'addAnnouncements']);
+Route::post('teacher/details/meetingLinks/addMeetingLink',[teacherMeetingLink::class,'addMeetingLinks']);
 
 
 Route::get('student/studentDashboard',[studentDashboard::class,'index'])->name('student.studentDashboard');

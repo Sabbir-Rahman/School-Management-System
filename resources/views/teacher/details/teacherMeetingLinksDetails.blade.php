@@ -19,13 +19,43 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form action="addClass" method="POST">
+            <form action="addMeetingLink" method="POST">
                 @csrf
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <label>Class name</label>
-                        <input type="text" name="class" class="form-control" placeholder="Enter class name">
+                        <input type="hidden" value="{{$idSectionCourseTeacher}}" name="courseTeacherSectionTableId"
+                               class="form-control">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>Meeting Title</label>
+                        <input type="text" name="meetingTitle" class="form-control" placeholder="Meeting title">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>Meeting Details</label>
+                        <input type="text" name="meetingDetails" class="form-control" placeholder="Meeting details">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>Meeting Link</label>
+                        <input type="text" name="meetingLink" class="form-control" placeholder="Meeting Link">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>Date</label>
+                        <input type="date" name="meetingDate" class="form-control" placeholder="Meeting date">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>Time</label>
+                        <input type="time" name="meetingTime" class="form-control" placeholder="Meeting Time">
+
+                    </div>
+                    <div class="mb-3">
+                        <label>Comment</label>
+                        <input type="text" name="meetingComment" class="form-control" placeholder="Comment">
 
                     </div>
 
@@ -45,7 +75,7 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Home Work Table</font></h3>
+    <h3><font color="white">Teacher meeting Table</font></h3>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -84,13 +114,34 @@
     <table id="datatable" class="table table-dark table-striped">
         <thead>
         <th scope="col">Id</th>
-        <th scope="col">Class Name</th>
+        <th scope="col">Title</th>
+        <th scope="col">Details</th>
+        <th scope="col">Link</th>
+        <th scope="col">Date</th>
+        <th scope="col">Time</th>
+        <th scope="col">Comment</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Updated at</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
+        @foreach($meetingLinks as $meetingLink)
         <tr>
-
+            <td scope="row">{{$meetingLink['id']}}</td>
+            <td scope="row">{{$meetingLink['meetingTitle']}}</td>
+            <td scope="row">{{$meetingLink['meetingDetails']}}</td>
+            <td scope="row">{{$meetingLink['meetingLink']}}</td>
+            <td scope="row">{{$meetingLink['meetingDate']}}</td>
+            <td scope="row">{{$meetingLink['meetingTime']}}</td>
+            <td scope="row">{{$meetingLink['comment']}}</td>
+            <td scope="row">{{$meetingLink['created_at']}}</td>
+            <td scope="row">{{$meetingLink['updated_at']}}</td>
+            <td scope="row">
+                <a href="" class="btn btn-primary">EDIT</a>
+                <a href="" class="btn btn-danger">DELETE</a>
+            </td>
         </tr>
+        @endforeach
         </tbody>
     </table>
 </div>
