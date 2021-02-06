@@ -69,11 +69,29 @@
     </button>
 
     <br><br>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark" id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand">Data Table</a>
-            <form action="" method="POST" class="d-flex">
+            <form action="searchStudent" method="POST" class="d-flex">
                 @csrf
+                <h6><font color="#dcdcdc">Search By:</font></h6>&nbsp&nbsp
+                <select name="search_option" class="form-select" aria-label="Default select example">
+                    <option value="name" selected>Name</option>
+                    <option value="student_birthdate">Birthdate</option>
+                    <option value="student_blood_group">Blood Group</option>
+                    <option value="student_address">Address</option>
+                    <option value="student_gender">Gender</option>
+                    <option value="student_school_branch">Branch</option>
+                    <option value="student_class">Class</option>
+                    <option value="student_shift">Shift</option>
+                    <option value="student_section">Section</option>
+                    <option value="student_medium">Medium</option>
+                    <option value="student_group">Group</option>
+                    <option value="student_religion">Religion</option>
+                    <option value="student_admission_year">Admission year</option>
+                </select>
+
+                &nbsp&nbsp&nbsp&nbsp
                 <input class="form-control me-2" type="search" name="search_data" placeholder="Search"
                        aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -124,7 +142,7 @@
                 <td scope="col">{{$student['created_at']}}</td>
                 <td scope="col">{{$student['updated_at']}}</td>
                 <td scope="row">
-                    <a href="" class="btn btn-primary">EDIT</a><br><br>
+                    <a href="{{route('admin.goEditStudent', $student->id)}}" class="btn btn-primary">EDIT</a><br><br>
                     <a href="" class="btn btn-danger">DELETE</a>
                 </td>
 

@@ -4,11 +4,12 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Admin Class</title>
-    <link rel="stylesheet" href="/css/adminTeacherInfo.css" media="screen">
+    <link rel="stylesheet" href="/css/adminStudentInfo.css" media="screen">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
+
 
 {{--add data modal--}}
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -45,7 +46,9 @@
 
 </div>
 <div id="container">
-    <h3><font color="white">Teacher Table</font></h3>
+    <h3><font color="white">Student Info Table</font></h3>
+    <br><br>
+    <h4><font color="white">Total {{$count}} record found</font> </h4>
     @if(count($errors)>0)
 
         <div class="alert alert-danger">
@@ -64,23 +67,28 @@
 @endif
 
 <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Add data with modal
-    </button>
 
     <br><br>
     <nav class="navbar navbar-dark bg-dark" id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand">Data Table</a>
-            <form action="search" method="POST" class="d-flex">
+            <form action="searchStudent" method="POST" class="d-flex">
                 @csrf
                 <h6><font color="#dcdcdc">Search By:</font></h6>&nbsp&nbsp
                 <select name="search_option" class="form-select" aria-label="Default select example">
-                    <option value="fname" selected>First name</option>
-                    <option value="lname">Last name</option>
-                    <option value="email">Email</option>
-                    <option value="address">Address</option>
-                    <option value="mobile">Mobile</option>
+                    <option value="name" selected>Name</option>
+                    <option value="student_birthdate">Birthdate</option>
+                    <option value="student_blood_group">Blood Group</option>
+                    <option value="student_address">Address</option>
+                    <option value="student_gender">Gender</option>
+                    <option value="student_school_branch">Branch</option>
+                    <option value="student_class">Class</option>
+                    <option value="student_shift">Shift</option>
+                    <option value="student_section">Section</option>
+                    <option value="student_medium">Medium</option>
+                    <option value="student_group">Group</option>
+                    <option value="student_religion">Religion</option>
+                    <option value="student_admission_year">Admission year</option>
                 </select>
 
                 &nbsp&nbsp&nbsp&nbsp
@@ -91,55 +99,53 @@
         </div>
     </nav>
     <table id="datatable" class="table table-dark table-striped">
-
         <thead>
         <th scope="col">Id</th>
         <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Education</th>
-        <th scope="col">Experience</th>
-        <th scope="col">Speciality</th>
-        <th scope="col">Joining</th>
-        <th scope="col">Father</th>
-        <th scope="col">Mother</th>
-        <th scope="col">NID</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Hobby</th>
+        <th scope="col">Birthdate</th>
+        <th scope="col">Blood Group</th>
         <th scope="col">Address</th>
-        <th scope="col">Contact1</th>
-        <th scope="col">Contact2</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Branch</th>
+        <th scope="col">Class</th>
+        <th scope="col">Shift</th>
+        <th scope="col">Section</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Group</th>
+        <th scope="col">Religion</th>
+        <th scope="col">Admission year</th>
+        <th scope="col">Hobby</th>
         <th scope="col">Comment</th>
-        <th scope="col">Leaving</th>
         <th scope="col">Created</th>
         <th scope="col">Updated</th>
         <th scope="col">Action</th>
         </thead>
         <tbody>
-        @foreach($teachers as $teacher)
+        @foreach($students as $student)
             <tr>
-                <td scope="col">{{$teacher['id']}}</td>
-                <td scope="col">{{$teacher['name']}}</td>
-                <td scope="col">{{$teacher['email']}}</td>
-                <td scope="col">{{$teacher['educational_qualification']}}</td>
-                <td scope="col">{{$teacher['experiences']}}</td>
-                <td scope="col">{{$teacher['speciality']}}</td>
-                <td scope="col">{{$teacher['joining_year']}}</td>
-                <td scope="col">{{$teacher['father_name']}}</td>
-                <td scope="col">{{$teacher['mother_name']}}</td>
-                <td scope="col">{{$teacher['nid']}}</td>
-                <td scope="col">{{$teacher['gender']}}</td>
-                <td scope="col">{{$teacher['hobby']}}</td>
-                <td scope="col">{{$teacher['address']}}</td>
-                <td scope="col">{{$teacher['contact']}}</td>
-                <td scope="col">{{$teacher['optional_contact']}}</td>
-                <td scope="col">{{$teacher['comment']}}</td>
-                <td scope="col">{{$teacher['leaving_year']}}</td>
-                <td scope="col">{{$teacher['created_at']}}</td>
-                <td scope="col">{{$teacher['updated_at']}}</td>
-                <td scope="col">
-                    <a href="" class="btn btn-primary">EDIT</a><br>
+                <td scope="col">{{$student['id']}}</td>
+                <td scope="col">{{$student['name']}}</td>
+                <td scope="col">{{$student['student_birthdate']}}</td>
+                <td scope="col">{{$student['student_blood_group']}}</td>
+                <td scope="col">{{$student['student_address']}}</td>
+                <td scope="col">{{$student['student_gender']}}</td>
+                <td scope="col">{{$student['student_school_branch']}}</td>
+                <td scope="col">{{$student['student_class']}}</td>
+                <td scope="col">{{$student['student_shift']}}</td>
+                <td scope="col">{{$student['student_section']}}</td>
+                <td scope="col">{{$student['student_medium']}}</td>
+                <td scope="col">{{$student['student_group']}}</td>
+                <td scope="col">{{$student['student_religion']}}</td>
+                <td scope="col">{{$student['student_admission_year']}}</td>
+                <td scope="col">{{$student['student_hobby']}}</td>
+                <td scope="col">{{$student['comment']}}</td>
+                <td scope="col">{{$student['created_at']}}</td>
+                <td scope="col">{{$student['updated_at']}}</td>
+                <td scope="row">
+                    <a href="" class="btn btn-primary">EDIT</a><br><br>
                     <a href="" class="btn btn-danger">DELETE</a>
                 </td>
+
             </tr>
         @endforeach
         </tbody>
@@ -157,3 +163,4 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
