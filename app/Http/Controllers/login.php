@@ -9,6 +9,7 @@ use App\Models\father_info;
 use App\Models\mother_info;
 use App\Models\teacher_info;
 use App\Http\Controllers\teacherDashboard;
+use App\Models\admin;
 
 class login extends Controller
 {
@@ -32,9 +33,15 @@ class login extends Controller
             $id = StudentInfo::where('id', '=', $request->Login_id)->first();
             $this->afterLoginView = 'student';
         }
+        //teacher id
         else if(strlen($request->Login_id)==12) {
             $id = teacher_info::where('id', '=', $request->Login_id)->first();
             $this->afterLoginView = 'teacher';
+        }
+        //admin id
+        else if(strlen($request->Login_id)==15) {
+            $id = admin::where('id', '=', $request->Login_id)->first();
+            $this->afterLoginView = 'admin';
         }
         else {
             return "No account";
@@ -56,6 +63,10 @@ class login extends Controller
 
                 if($this->afterLoginView == 'teacher'){
                     return redirect('teacher/teacherDashboard');
+                }
+                if($this->afterLoginView == 'admin'){
+                    $user->name = 'admin';
+                    return redirect('adminAcademics');
                 }
                 else if($this->afterLoginView == 'student'){
                     return redirect('student/studentDashboard');
