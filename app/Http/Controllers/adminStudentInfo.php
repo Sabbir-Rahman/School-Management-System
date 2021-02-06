@@ -35,33 +35,10 @@ class adminStudentInfo extends Controller
 
     function editStudent(Request $request){
 
-        $data = StudentInfo::all();
-
         $query = StudentInfo::where('id', $request->studentId)
             ->update(['name' => $request->studentName,'student_address'=>$request->studentAddress]);
 
-//        $student = new StudentInfo();
-//        $student->id = $data->id;
-//        $student->name = $request->studentName;
-//        $student->student_birthdate = $data->student_birthdate;
-//        $student->student_blood_group = $data->student_blood_group;
-//        $student->student_address = $request->studentAddress;
-//        $student->student_gender = $data->student_gender;
-//        $student->student_school_branch = $data->student_school_branch;
-//        $student->student_class = $data->student_class;
-//        $student->student_shift = $data->student_shift;
-//        $student->student_section = $data->student_section;
-//        $student->student_medium = $data->student_medium;
-//        $student->student_group = $data->student_group;
-//        $student->student_religion = $data->student_religion;
-//        $student->student_admission_year = $data->student_admission_year;
-//        $student->student_hobby = $data->student_hobby;
-//        $student->password = $data->password;
-//        $student->comment = $data->comment;
-//        $student->created_at = $data->created_at;
-//        $student->updated_at = time();
 
-//        $query = $student->save();
 
         if($query){
 

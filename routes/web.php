@@ -144,8 +144,11 @@ Route::post('loginCheck',[login::class,'loginCheck'])->name('loginCheck');
 Route::post('teacherSigningUp',[teacherAuth::class,'addData'])->name('teacherSigningUp');
 Route::post('admin/searchStudent',[adminStudentInfo::class,'searchStudent']);
 Route::get('admin/goToEditStudent/{id}',[adminStudentInfo::class,'goEditStudent'])->name('admin.goEditStudent');
+Route::get('admin/goToReviewApplication/{id}',[applicationStudent::class,'goreviewStudentApplication'])->name('admin.goReviewApplication');
+
 Route::post('admin/goToEditStudent/editStudentInfo',[adminStudentInfo::class,'editStudent']);
 Route::post('admin/deleteStudent',[adminStudentInfo::class,'delete']);
+Route::post('admin/goToReviewApplication/reviewStudentApplication',[applicationStudent::class,'adminReview']);
 
 Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
 Route::get('admin/StudentApplication',[applicationStudent::class,'goAdminStudentApplication'])->name('admin.studentApplication');

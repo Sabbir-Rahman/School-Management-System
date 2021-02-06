@@ -52,4 +52,28 @@ class applicationStudent extends Controller
 
         return view('admin/adminStudentApplication',['applications'=>$data]);
     }
+
+    function goreviewStudentApplication($id){
+
+        $data = studentApplication::find($id);
+
+        return view('admin/adminReviewStudentApplication',['application'=>$data]);
+    }
+
+    function adminReview(Request $request){
+
+        $query = studentApplication::where('id', $request->id)
+            ->update(['status' => $request->search_option,'adminComment'=>$request->comment]);
+
+
+        if($query){
+
+            return redirect('admin/StudentApplication')->with('success','Data Saved');
+            //return redirect()->route('signUpFather');
+        }
+        else
+            return  "Something went wrong";
+
+        return $request->input();
+    }
 }

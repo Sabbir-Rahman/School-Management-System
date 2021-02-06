@@ -103,7 +103,7 @@
             <td scope="row">{{$application['created_at']}}</td>
             <td scope="row">{{$application['updated_at']}}</td>
             <td scope="row">
-                <a href="" class="btn btn-info">Review</a>
+                <a href="{{route('admin.goReviewApplication', $application->id)}}" class="btn btn-info">REVIEW</a><br><br>
             </td>
         </tr>
         @endforeach
