@@ -20,7 +20,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editing Teacher in school {{$teacher->id}}</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Editing Teacher in school {{$teachers->id}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -29,47 +29,47 @@
                 <div class="modal-body">
 
                     <div class="mb-3">
-                        <input type="hidden" name="teacherId" value="{{$teacher->id}}" class="form-control" >
+                        <input type="hidden" name="teacherId" value="{{$teachers->id}}" class="form-control" >
                     </div>
                     <div class="mb-3">
                         <div class="mb-3">
                             <label>Name</label>
-                            <input type="text" name="teacherName" value="{{$teacher->name}}" class="form-control" placeholder="Enter name">
+                            <input type="text" name="teacherName" value="{{$teachers->name}}" class="form-control" placeholder="Enter name">
 
                         </div>
                         <div class="mb-3">
                             <label>Email</label>
-                            <input type="text" name="email" value="{{$teacher->email}}" class="form-control" placeholder="Enter section name">
+                            <input type="text" name="email" value="{{$teachers->email}}" class="form-control" placeholder="Enter section name">
 
                         </div>
                         <div class="mb-3">
                             <label>Education</label>
-                            <input type="text" name="education" value="{{$teacher->educational_qualification}}" class="form-control" placeholder="Enter section name">
+                            <input type="text" name="education" value="{{$teachers->educational_qualification}}" class="form-control" placeholder="Enter section name">
 
                         </div>
                         <div class="mb-3">
                             <label>Experience</label>
-                            <input type="text" name="experience" value="{{$teacher->experiences}}" class="form-control" placeholder="Enter section name">
+                            <input type="text" name="experience" value="{{$teachers->experiences}}" class="form-control" placeholder="Enter section name">
 
                         </div>
                         <div class="mb-3">
                             <label>Hobby</label>
-                            <input type="text" name="hobby" value="{{$teacher->hobby}}" class="form-control" placeholder="Enter section name">
+                            <input type="text" name="hobby" value="{{$teachers->hobby}}" class="form-control" placeholder="Enter section name">
 
                         </div>
                         <div class="mb-3">
                             <label>Address</label>
-                            <input type="text" name="address" value="{{$teacher->address}}" class="form-control" placeholder="Enter section name">
+                            <input type="text" name="address" value="{{$teachers->address}}" class="form-control" placeholder="Enter section name">
 
                         </div>
                         <div class="mb-3">
                             <label>Contact1</label>
-                            <input type="text" name="contact" value="{{$teacher->contact}}" class="form-control" placeholder="Enter section name">
+                            <input type="text" name="contact" value="{{$teachers->contact}}" class="form-control" placeholder="Enter section name">
 
                         </div>
                         <div class="mb-3">
                             <label>Contact2</label>
-                            <input type="text" name="optional_contact" value="{{$teacher->optional_contact}}" class="form-control" placeholder="Enter section name">
+                            <input type="text" name="optional_contact" value="{{$teachers->optional_contact}}" class="form-control" placeholder="Enter section name">
 
                         </div>
 
@@ -78,7 +78,9 @@
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Save data</button>
                         </div>
-            </form>
+                    </div>
+                </div>
+               </form>
         </div>
     </div>
 </div>

@@ -37,7 +37,7 @@ class adminTeacherInfo extends Controller
         $data = teacher_info::all();
 
         $query = teacher_info::where('id', $request->teacherId)
-            ->update(['name' => $request->teacherName,'email'=>$request->email,'educational_qualification'=>$request->education,'experience'=>$request->experiences,'hobby'=>$request->hobby,'address'=>$request->address,'contact'=>$request->contact,'optional_contact'=>$request->optional_contact]);
+            ->update(['name' => $request->teacherName,'email'=>$request->email,'educational_qualification'=>$request->education,'experiences'=>$request->experience,'hobby'=>$request->hobby,'address'=>$request->address,'contact'=>$request->contact,'optional_contact'=>$request->optional_contact]);
 
 
 
