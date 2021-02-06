@@ -33,7 +33,7 @@
                         <label>Class name</label>
                         <select name="search_option_class" class="form-select" aria-label="Default select example">
                             @foreach($classes as $class)
-                                <option value="{{$class['class']}}" selected>{{$class['class']}}</option>
+                                <option value="{{$class['class']}}" selected>{{$class['student_class']}}</option>
                             @endforeach
                         </select>
 

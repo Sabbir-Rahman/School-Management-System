@@ -15,6 +15,11 @@ class CreateStudentPaymentsTable extends Migration
     {
         Schema::create('student_payments', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('studentId')->unique();
+            $table->integer('basePayment');
+            $table->integer('discount')->default(0);
+            $table->integer('total')->default(0);
+            $table->foreign('studentId')->references('id')->on('course_section_teachers');
             $table->timestamps();
         });
     }
