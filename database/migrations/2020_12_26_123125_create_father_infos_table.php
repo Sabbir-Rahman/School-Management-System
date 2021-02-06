@@ -15,6 +15,7 @@ class CreateFatherInfosTable extends Migration
     {
         Schema::create('father_infos', function (Blueprint $table) {
             $table->id();
+            $table->string('studentId')->unique();
             $table->text('name');
             $table->text('birthdate');
             $table->text('occupation');
