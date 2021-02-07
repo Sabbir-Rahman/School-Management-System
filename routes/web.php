@@ -161,6 +161,10 @@ Route::post('admin/goToReviewApplication/reviewStudentApplication',[applicationS
 
 Route::get('admin/StudentInfo',[adminStudentInfo::class,'index'])->name('admin.studentInfo');
 Route::get('admin/StudentFinancialCondition',[adminStudentFinancial::class,'goToStudentFinancialCondition'])->name('admin.studentFinancialState');
+
+Route::post('admin/discountStudentPayment',[adminStudentFinancial::class,'discountPaymentStudent'])->name('admin.discountPaymentSystem');
+
+
 Route::get('admin/StudentPayment',[adminStudentFinancial::class,'goToStudentPayment'])->name('admin.studentPayment');
 Route::get('admin/previousAcademicInfo',[academicRecords::class,'index'])->name('admin.previousAcademicRecord');
 
