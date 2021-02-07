@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\teacher_info;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class teacherAuth extends Controller
 {
@@ -77,6 +78,9 @@ class teacherAuth extends Controller
         else
             return "Something bad happen";
 
+        $hashed = Hash::make($request->teacher_password, [
+            'rounds' => 12,
+        ]);
 
 
 
@@ -97,7 +101,7 @@ class teacherAuth extends Controller
         $teacher->address = $request->teacher_address;
         $teacher->contact = $request->teacher_contact;
         $teacher->optional_contact = $request->teacher_contact_optional;
-        $teacher->password = $request->teacher_password;
+        $teacher->password = $hashed;
         $teacher->comment = $request->teacher_comment;
 
         $query = $teacher->save();

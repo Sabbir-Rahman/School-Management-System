@@ -10,6 +10,7 @@ use App\Models\mother_info;
 use App\Models\teacher_info;
 use App\Http\Controllers\teacherDashboard;
 use App\Models\admin;
+use Illuminate\Support\Facades\Hash;
 
 class login extends Controller
 {
@@ -48,7 +49,8 @@ class login extends Controller
         }
 
         if($id){
-            if($request->Login_password==$id->password){
+
+            if(Hash::check($request->Login_password, $id->password)){
                 $request->session()->put('userId',$request->Login_id);
 
                 $user = new userLoginTime();
