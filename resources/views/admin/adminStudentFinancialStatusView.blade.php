@@ -70,20 +70,20 @@
     <br><br>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <form action="search" method="POST" class="d-flex">
+            <form action="discountStudentPayment" method="POST" class="d-flex">
                 @csrf
                 &nbsp&nbsp&nbsp&nbsp
                 <h6><font color="#dcdcdc">Father income less than</font></h6>&nbsp&nbsp
-                <input class="form-control me-2" type="search" name="search_data" placeholder="Father income"
+                <input class="form-control me-2" type="search" name="father_income" placeholder="Father income"
                        aria-label="Search">
                 &nbsp&nbsp&nbsp&nbsp
                 <h6><font color="#dcdcdc">Mother Income less than</font></h6>&nbsp&nbsp
-                <input class="form-control me-2" type="search" name="search_data" placeholder="Mother income"
+                <input class="form-control me-2" type="search" name="mother_income" placeholder="Mother income"
                        aria-label="Search">
 
                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                 <h6><font color="#dcdcdc">Discount:</font></h6>&nbsp&nbsp
-                <input class="form-control me-2" type="search" name="search_data" placeholder="Discount"
+                <input class="form-control me-2" type="search" name="discount" placeholder="Discount"
                        aria-label="Discount">
                 <button class="btn btn-outline-success" type="submit">Proceed</button>
             </form>
@@ -96,7 +96,7 @@
         <th scope="col">Father occupation</th>
         <th scope="col">Father monthly income</th>
         <th scope="col">Mother occupation</th>
-        <th scope="col">Father monthly income</th>
+        <th scope="col">Mother monthly income</th>
         </thead>
         <tbody>
         @foreach($students as $student)

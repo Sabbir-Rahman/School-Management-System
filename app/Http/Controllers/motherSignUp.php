@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\mother_info;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class motherSignUp extends Controller
 {
@@ -22,6 +23,10 @@ class motherSignUp extends Controller
 
         $this->motherId = strval($this->studentId).'2';
 
+        $hashed = Hash::make($request->Mother_password, [
+            'rounds' => 12,
+        ]);
+
         //register new user
         $mother = new mother_info();
         $mother->id = $this->motherId;
@@ -33,7 +38,7 @@ class motherSignUp extends Controller
         $mother->nid = $request->Mother_nid;
         $mother->address = $request->Mother_address;
         $mother->phone = $request->Mother_phone;
-        $mother->password = $request->Mother_password;
+        $mother->password = $hashed;
         $mother->comment = $request->Mother_comment;
 
         $query = $mother->save();

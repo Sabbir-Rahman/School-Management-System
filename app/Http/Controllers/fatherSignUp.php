@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\father_info;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class fatherSignUp extends Controller
 {
@@ -21,6 +22,9 @@ class fatherSignUp extends Controller
         if($this->studentCount==0)
             return "Student not exist so how can student father??";
 
+        $hashed = Hash::make($request->Father_password, [
+            'rounds' => 12,
+        ]);
 
         $this->fatherId = strval($this->studentId).'1';
         //register new user
@@ -34,7 +38,7 @@ class fatherSignUp extends Controller
         $father->nid = $request->Father_nid;
         $father->address = $request->Father_address;
         $father->phone = $request->Father_phone;
-        $father->password = $request->Father_password;
+        $father->password = $hashed;
         $father->comment = $request->Father_comment;
 
         $query = $father->save();

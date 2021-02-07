@@ -15,3 +15,11 @@ batch roll no system
 
 ===staff id=====
 branch no(two digit)/occupation(two digit)/special skill-subject(two digit)/joining year(4 digit)/id(three digit)
+
+==section id==
+
+Section id format:branch(2 digit)+class(2 digit)+medium(1 digit)+group(1 digit)+sectionCount(4 digit)
+
+
+==medium group branch===
+branch(2)/class(2)/medium(1)/branch(1)

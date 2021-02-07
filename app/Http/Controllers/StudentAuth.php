@@ -12,6 +12,7 @@ use App\Models\sectionTable;
 use App\Models\StudentInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 
 
@@ -209,6 +210,10 @@ class StudentAuth extends Controller
 
         $this->section = $uniqueIdSession;
 
+        $hashed = Hash::make($request->student_password, [
+            'rounds' => 12,
+        ]);
+
 
 
 
@@ -233,7 +238,7 @@ class StudentAuth extends Controller
         $student->student_religion = $request->student_religion;
         $student->student_admission_year = $request->student_admission_year;
         $student->student_hobby = $request->student_hobby;
-        $student->password = $request->student_password;
+        $student->password = $hashed;
         $student->comment = $request->student_comment;
         $query = $student->save();
 
