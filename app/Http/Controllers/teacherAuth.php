@@ -108,7 +108,7 @@ class teacherAuth extends Controller
 
 
         if($query)
-            return "Data added succesfully";
+            return "Data added teacher is $this->uniqueId";
         else
             return "Something error try again";
     }
